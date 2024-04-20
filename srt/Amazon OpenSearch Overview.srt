@@ -1,0 +1,224 @@
+1
+00:00:00,440 --> 00:00:02,430
+Amazon OpenSearch Overview.
+
+2
+00:00:03,300 --> 00:00:07,630
+Amazon OpenSearch Service is a managed service that makes it easy to deploy,
+
+3
+00:00:07,780 --> 00:00:11,440
+operate, and scale open-search clusters in the AWS Cloud.
+
+4
+00:00:11,970 --> 00:00:13,750
+Amazon OpenSearch Service is
+
+5
+00:00:13,750 --> 00:00:16,490
+the successor to Amazon Elasticsearch Service and
+
+6
+00:00:16,490 --> 00:00:19,180
+supports OpenSearch and legacy Elasticsearch.
+
+7
+00:00:19,700 --> 00:00:22,040
+OpenSearch is a fully open-source search and
+
+8
+00:00:22,040 --> 00:00:25,260
+analytics engine for use cases such as log analytics,
+
+9
+00:00:25,400 --> 00:00:27,180
+real-time application monitoring,
+
+10
+00:00:27,310 --> 00:00:28,790
+and clickstream analysis.
+
+11
+00:00:29,320 --> 00:00:31,520
+Amazon OpenSearch Service provisions
+
+12
+00:00:31,530 --> 00:00:33,860
+all the resources for your cluster and launches it.
+
+13
+00:00:34,300 --> 00:00:37,550
+It also automatically detects and replaces failed nodes,
+
+14
+00:00:37,660 --> 00:00:41,320
+reducing the overhead associated with self-managed infrastructures.
+
+15
+00:00:41,680 --> 00:00:45,840
+You can scale your cluster with a single API call or a few clicks in the console.
+
+16
+00:00:46,320 --> 00:00:50,590
+Here are the key benefits. Harness the power of OpenSearch.
+
+17
+00:00:51,110 --> 00:00:54,980
+Amazon OpenSearch Service offers the latest versions of OpenSearch,
+
+18
+00:00:55,090 --> 00:01:00,530
+support for 19 versions of open-source Elasticsearch versions 1.5 to 7.10,
+
+19
+00:01:00,710 --> 00:01:03,320
+and visualization capabilities powered by OpenSearch
+
+20
+00:01:03,320 --> 00:01:06,220
+dashboards and corresponding versions of Kibana.
+
+21
+00:01:06,420 --> 00:01:10,130
+Operate OpenSearch with the leading contributor of the community-driven
+
+22
+00:01:10,290 --> 00:01:11,510
+open-source software.
+
+23
+00:01:12,570 --> 00:01:13,890
+Increase efficiency.
+
+24
+00:01:14,780 --> 00:01:18,910
+Eliminate operational overhead and reduce cost with automated provisioning,
+
+25
+00:01:19,060 --> 00:01:20,400
+software installation,
+
+26
+00:01:20,570 --> 00:01:21,160
+patching,
+
+27
+00:01:21,300 --> 00:01:22,310
+storage tiering,
+
+28
+00:01:22,480 --> 00:01:23,180
+and more.
+
+29
+00:01:23,910 --> 00:01:26,180
+Go beyond basic search and analytics.
+
+30
+00:01:26,270 --> 00:01:29,250
+Use machine learning to detect anomalies in real time.
+
+31
+00:01:29,350 --> 00:01:32,780
+Auto-tune your clusters and personalize your search results.
+
+32
+00:01:33,270 --> 00:01:35,590
+Access operational data in real time.
+
+33
+00:01:35,690 --> 00:01:39,150
+You can use Amazon OpenSearch Service to quickly search and analyze
+
+34
+00:01:39,150 --> 00:01:42,380
+your unstructured and semi-structured data to find what you need.
+
+35
+00:01:44,370 --> 00:01:46,040
+OpenSearch Features.
+
+36
+00:01:46,160 --> 00:01:46,690
+Scale.
+
+37
+00:01:47,290 --> 00:01:49,820
+OpenSearch provides a highly scalable system
+
+38
+00:01:49,820 --> 00:01:52,140
+for fast access to large volumes of data
+
+39
+00:01:52,280 --> 00:01:55,170
+and many configurations of CPU, memory,
+
+40
+00:01:55,350 --> 00:01:57,550
+and storage capacity up to three petabytes,
+
+41
+00:01:57,710 --> 00:01:59,300
+with cost-effective, UltraWarm,
+
+42
+00:01:59,480 --> 00:02:01,500
+and cold storage for read-only data.
+
+43
+00:02:02,080 --> 00:02:03,500
+Security.
+
+44
+00:02:03,510 --> 00:02:06,380
+Meet and maintain high security for authentication,
+
+45
+00:02:06,460 --> 00:02:08,910
+authorization, encryption, audit,
+
+46
+00:02:09,020 --> 00:02:13,350
+and regulatory compliance using index, document, and field-level security,
+
+47
+00:02:13,360 --> 00:02:16,300
+HTTP basic or SAML authentication,
+
+48
+00:02:16,490 --> 00:02:21,660
+and integration with AWS IAM, Amazon VPC, and Amazon Cognito.
+
+49
+00:02:22,330 --> 00:02:23,330
+Flexibility.
+
+50
+00:02:23,450 --> 00:02:26,850
+OpenSearch provides SQL integration with business-intelligence
+
+51
+00:02:26,850 --> 00:02:30,300
+applications and custom packages to improve search results.
+
+52
+00:02:30,820 --> 00:02:31,670
+Stability.
+
+53
+00:02:31,820 --> 00:02:34,590
+OpenSearch is available in multiple Regions and
+
+54
+00:02:34,590 --> 00:02:37,720
+allocates nodes across two or three Availability Zones
+
+55
+00:02:37,840 --> 00:02:40,880
+And dedicated management nodes automate cluster tasks,
+
+56
+00:02:41,020 --> 00:02:43,830
+such as snapshots to back up and restore your domains.
+

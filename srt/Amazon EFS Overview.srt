@@ -1,0 +1,144 @@
+1
+00:00:00,000 --> 00:00:03,670
+Amazon Elastic File System (Amazon EFS) Overview.
+
+2
+00:00:03,730 --> 00:00:05,570
+Amazon EFS provides a simple, scalable,
+
+3
+00:00:05,575 --> 00:00:09,170
+fully managed elastic network file system, or NFS,
+
+4
+00:00:09,175 --> 00:00:14,870
+for use with AWS Cloud services and on-premises resources.
+
+5
+00:00:14,880 --> 00:00:16,850
+The service manages all the file-storage infrastructure for you,
+
+6
+00:00:16,860 --> 00:00:19,420
+meaning that you can avoid the complexity of deploying,
+
+7
+00:00:19,430 --> 00:00:24,240
+patching, and maintaining complex file-system configurations.
+
+8
+00:00:24,242 --> 00:00:30,220
+Amazon EFS supports the network file system version 4 protocol,
+
+9
+00:00:30,360 --> 00:00:34,050
+NFS version 4.1, and NFS version 4.0.
+
+10
+00:00:34,150 --> 00:00:36,580
+So the applications and tools that you use today
+
+11
+00:00:36,700 --> 00:00:38,640
+work seamlessly with Amazon EFS.
+
+12
+00:00:38,780 --> 00:00:42,310
+Amazon EFS is highly scalable.
+
+13
+00:00:42,320 --> 00:00:46,790
+It is built to scale on demand to petabytes without disrupting applications,
+
+14
+00:00:46,790 --> 00:00:48,225
+growing and shrinking automatically as you add and remove files.
+
+15
+00:00:48,310 --> 00:00:52,425
+Amazon EFS is designed to provide massively parallel shared access
+
+16
+00:00:52,425 --> 00:00:55,547
+to thousands of Amazon EC2 instances,
+
+17
+00:00:55,549 --> 00:00:59,270
+where they can access the data and EFS at the same time.
+
+18
+00:00:59,380 --> 00:01:02,100
+This enables your applications to achieve high levels of aggregate throughput
+
+19
+00:01:02,200 --> 00:01:05,400
+and IOPS with consistent low latencies.
+
+20
+00:01:05,860 --> 00:01:08,199
+Amazon EFS is a regional service
+
+21
+00:01:08,250 --> 00:01:11,150
+that is designed to be highly available and highly durable.
+
+22
+00:01:11,300 --> 00:01:18,050
+It stores data within and across multiple Availability Zones, or AZs.
+
+23
+00:01:18,125 --> 00:01:19,670
+Amazon EC2 instances can access your file system across AZs,
+
+24
+00:01:19,770 --> 00:01:25,900
+Regions, and VPCs, while on-premises servers
+
+25
+00:01:25,900 --> 00:01:27,280
+can access using AWS Direct Connect or AWS VPN.
+
+26
+00:01:28,790 --> 00:01:32,930
+Amazon EFS is well-suited to support a broad spectrum of use cases,
+
+27
+00:01:33,150 --> 00:01:36,200
+from home directories to business-critical applications.
+
+28
+00:01:37,290 --> 00:01:41,200
+Customers can use EFS to lift and
+
+29
+00:01:41,202 --> 00:01:43,260
+shift existing enterprise applications to the AWS Cloud.
+
+30
+00:01:43,620 --> 00:01:47,750
+Other use cases include web serving and content management, big-data analytics,
+
+31
+00:01:47,800 --> 00:01:51,530
+application development and testing, media and entertainment workflows,
+
+32
+00:01:51,630 --> 00:01:54,500
+database backups, and container storage.
+
+33
+00:01:55,180 --> 00:01:58,630
+Amazon EFS is designed for Linux-based applications.
+
+34
+00:01:59,080 --> 00:02:00,430
+In addition, Amazon FSx provides you with two file systems from which to choose:
+
+35
+00:02:00,590 --> 00:02:11,030
+Amazon FSx for Windows File Server for Windows-based applications
+
+36
+00:02:11,039 --> 00:02:15,040
+and Amazon FSx for Lustre for compute-intensive workloads.
+

@@ -1,0 +1,152 @@
+1
+00:00:00,360 --> 00:00:02,690
+Amazon Elastic Block Store Overview.
+
+2
+00:00:03,490 --> 00:00:06,260
+Amazon Elastic Block Store, or Amazon EBS,
+
+3
+00:00:06,260 --> 00:00:09,140
+is a service that provides block-level storage volumes
+
+4
+00:00:09,149 --> 00:00:11,470
+for use with Amazon Elastic Compute Cloud, or
+
+5
+00:00:11,470 --> 00:00:13,159
+EC2, instances.
+
+6
+00:00:14,010 --> 00:00:18,120
+EBS volumes behave like raw, unformatted block devices in the cloud.
+
+7
+00:00:18,379 --> 00:00:22,139
+You can mount EBS volumes as a device on your EC2 instance.
+
+8
+00:00:22,329 --> 00:00:26,059
+Each EBS volume can be attached to only one instance at a time,
+
+9
+00:00:26,059 --> 00:00:29,399
+but multiple volumes of EBS can be on the same instance.
+
+10
+00:00:31,149 --> 00:00:33,919
+Since EBS volumes are mounted to the instances,
+
+11
+00:00:33,930 --> 00:00:36,529
+they can provide single-digit millisecond latency,
+
+12
+00:00:36,540 --> 00:00:39,650
+which is extremely low latency between where the data is stored
+
+13
+00:00:39,650 --> 00:00:41,479
+and where it might be used on the instance.
+
+14
+00:00:41,970 --> 00:00:44,189
+EBS volumes are designed for both
+
+15
+00:00:44,189 --> 00:00:47,459
+throughput- and transaction-intensive workloads at any scale.
+
+16
+00:00:47,799 --> 00:00:50,360
+Amazon EBS offers data persistence.
+
+17
+00:00:50,479 --> 00:00:53,770
+All the data on the attached EBS volume remains available
+
+18
+00:00:53,770 --> 00:00:57,099
+even after you stop or terminate an Amazon EC2 instance.
+
+19
+00:00:58,729 --> 00:01:01,900
+Amazon EBS provides two major storage volume types.
+
+20
+00:01:01,909 --> 00:01:07,580
+Solid-state drive, or SSD-backed storage, and hard disk drive, or HDD-backed storage.
+
+21
+00:01:08,319 --> 00:01:12,180
+SSD-backed storage is optimized for transactional workloads, which
+
+22
+00:01:12,190 --> 00:01:15,370
+involve frequent read/write operations with small I/O size.
+
+23
+00:01:16,029 --> 00:01:19,739
+Some use case examples include databases and boot volumes.
+
+24
+00:01:19,949 --> 00:01:22,809
+SSD-backed volumes include the highest-performance
+
+25
+00:01:22,809 --> 00:01:25,769
+provisioned IOPS SSD, io2 and io1,
+
+26
+00:01:25,769 --> 00:01:28,379
+for latency-sensitive transactional workloads.
+
+27
+00:01:28,680 --> 00:01:32,300
+General-purpose SSD volumes, gp3 and gp2,
+
+28
+00:01:32,300 --> 00:01:35,959
+balance price and performance for a wide variety of transactional data.
+
+29
+00:01:36,580 --> 00:01:38,760
+gp3 volumes enable customers
+
+30
+00:01:38,760 --> 00:01:41,709
+to provision performance independent of storage capacity.
+
+31
+00:01:42,819 --> 00:01:47,230
+The dominant performance for SSD-backed volumes depends primarily on IOPS (input/output operations per sec).
+
+32
+00:01:48,870 --> 00:01:53,290
+HDD-backed storage is for throughput-intensive workloads such as MapReduce,
+
+33
+00:01:53,290 --> 00:01:55,540
+data warehouse, and log processing.
+
+34
+00:01:57,790 --> 00:02:01,279
+HDD-backed volumes include throughput-optimized HDD,
+
+35
+00:02:01,279 --> 00:02:05,269
+st1, for frequently accessed throughput-intensive workloads.
+
+36
+00:02:05,620 --> 00:02:10,380
+The lowest cost Cold HDD, sc1, is for less frequently accessed data.
+
+37
+00:02:11,369 --> 00:02:14,949
+Dominant performance for HDD-backed volumes depends primarily
+
+38
+00:02:14,960 --> 00:02:17,369
+on throughput measured in megabytes per second.
+

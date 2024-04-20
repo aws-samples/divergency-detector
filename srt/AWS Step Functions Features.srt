@@ -1,0 +1,174 @@
+1
+00:00:00,000 --> 00:00:02,220
+AWS Step Functions Features.
+
+2
+00:00:02,950 --> 00:00:04,340
+Here are the key features.
+
+3
+00:00:05,160 --> 00:00:06,900
+Workflow configuration.
+
+4
+00:00:07,060 --> 00:00:11,490
+Using AWS Step Functions, you define your workflows of state machines
+
+5
+00:00:11,500 --> 00:00:15,990
+which transform complex code into easy-to-understand statements and diagrams.
+
+6
+00:00:16,770 --> 00:00:19,450
+Building applications and confirming that they are
+
+7
+00:00:19,460 --> 00:00:22,920
+implementing your desired functionality is quicker and easier.
+
+8
+00:00:23,650 --> 00:00:25,410
+Built-in service primitives.
+
+9
+00:00:25,420 --> 00:00:29,520
+AWS Step Functions provides ready-made steps for your workflow,
+
+10
+00:00:29,520 --> 00:00:32,680
+called states, that implement basic service primitives for you.
+
+11
+00:00:34,150 --> 00:00:36,400
+AWS service integrations.
+
+12
+00:00:36,400 --> 00:00:39,350
+Using AWS Step Functions service tasks,
+
+13
+00:00:39,350 --> 00:00:39,360
+you can configure your step functions workflow to call other AWS services.
+Using AWS Step Functions service tasks,
+
+14
+00:00:39,360 --> 00:00:43,890
+you can configure your step functions workflow to call other AWS services.
+
+15
+00:00:43,960 --> 00:00:48,910
+This includes compute services, such as AWS Lambda, Amazon ECS,
+
+16
+00:00:48,920 --> 00:00:51,840
+AWS Fargate, database services
+
+17
+00:00:51,850 --> 00:00:57,480
+Amazon DynamoDB, messaging services, such as Amazon SNS and Amazon SQS,
+
+18
+00:00:57,580 --> 00:01:02,320
+data processing services, such as AWS Batch and AWS Glue,
+
+19
+00:01:02,510 --> 00:01:03,980
+and machine-learning services
+
+20
+00:01:04,129 --> 00:01:05,319
+Amazon SageMaker.
+
+21
+00:01:06,890 --> 00:01:09,150
+Coordination of distributed components.
+
+22
+00:01:09,160 --> 00:01:13,360
+AWS Step Functions can coordinate any application that can make
+
+23
+00:01:13,360 --> 00:01:16,780
+an https://-connection, regardless of where it is hosted.
+
+24
+00:01:16,790 --> 00:01:22,690
+For example, on Amazon EC2 instances, mobile devices, or on-premises servers.
+
+25
+00:01:22,700 --> 00:01:24,340
+Using Step Functions,
+
+26
+00:01:24,350 --> 00:01:26,920
+you can quickly create distributed applications
+
+27
+00:01:26,920 --> 00:01:31,500
+that leverage AWS services as well as your own microservices.
+
+28
+00:01:31,500 --> 00:01:32,070
+Component reuse.
+that leverage AWS services as well as your own microservices.
+
+29
+00:01:32,070 --> 00:01:32,700
+Component reuse.
+
+30
+00:01:33,120 --> 00:01:36,760
+AWS Step Functions coordinates your existing Lambda functions
+
+31
+00:01:36,790 --> 00:01:39,280
+and microservices into robust applications
+
+32
+00:01:39,290 --> 00:01:42,560
+and lets you quickly rewire them into new compositions.
+
+33
+00:01:44,020 --> 00:01:45,590
+Workflow abstraction.
+
+34
+00:01:45,600 --> 00:01:49,190
+AWS Step Functions keeps the logic of your application
+
+35
+00:01:49,200 --> 00:01:52,380
+strictly separated from the implementation of your application.
+
+36
+00:01:52,390 --> 00:01:54,370
+Through this separation of concerns,
+
+37
+00:01:54,380 --> 00:01:59,790
+your workflows gain modularity, simplified maintenance, scalability, and code reuse.
+
+38
+00:02:00,490 --> 00:02:01,900
+State management.
+
+39
+00:02:01,910 --> 00:02:06,630
+AWS Step Functions maintains the state of your application during execution,
+
+40
+00:02:06,640 --> 00:02:10,400
+including tracking what step of execution it is in and storing
+
+41
+00:02:10,400 --> 00:02:13,550
+data that is moving between the steps of your workflow.
+
+42
+00:02:13,560 --> 00:02:15,580
+This means you don't have to manage state
+
+43
+00:02:15,620 --> 00:02:18,040
+or build complex state management yourself.
+

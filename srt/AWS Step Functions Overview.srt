@@ -1,0 +1,200 @@
+1
+00:00:00,000 --> 00:00:02,210
+AWS Step Functions Overview.
+
+2
+00:00:03,010 --> 00:00:08,010
+AWS Step Functions provides serverless orchestration for modern applications.
+
+3
+00:00:08,340 --> 00:00:12,240
+It lets you coordinate multiple AWS services into workflows.
+
+4
+00:00:12,700 --> 00:00:13,960
+Using Step Functions,
+
+5
+00:00:13,960 --> 00:00:19,330
+you can design and run workflows that stitch together services such as AWS Lambda,
+
+6
+00:00:19,340 --> 00:00:23,950
+AWS Fargate, and Amazon SageMaker into feature-rich applications.
+
+7
+00:00:24,660 --> 00:00:27,280
+Workflows are made up of a series of steps with the
+
+8
+00:00:27,280 --> 00:00:29,890
+output of one step acting as input into the next.
+
+9
+00:00:30,470 --> 00:00:33,370
+It translates your workflow into a state machine.
+
+10
+00:00:33,380 --> 00:00:37,540
+State machines contain a number of states and a transition between each state.
+
+11
+00:00:37,550 --> 00:00:41,130
+For example, states can perform work, pass parameters,
+
+12
+00:00:41,140 --> 00:00:44,210
+initiate parallel execution, manage timeouts,
+
+13
+00:00:44,220 --> 00:00:48,580
+make choices, or terminate your workflow with a success or failure.
+
+14
+00:00:48,590 --> 00:00:52,850
+You define state machines using the JSON-based Amazon States Language.
+
+15
+00:00:53,570 --> 00:00:56,360
+The Step Functions console displays a graphical
+
+16
+00:00:56,360 --> 00:00:58,340
+view of your state-machine structure.
+
+17
+00:00:58,350 --> 00:01:00,520
+This provides a way to visually check
+
+18
+00:01:00,520 --> 00:01:03,640
+your state machine's logic and monitor executions.
+
+19
+00:01:03,650 --> 00:01:08,530
+Common use cases include data processing such as machine-learning model training,
+
+20
+00:01:08,540 --> 00:01:10,930
+modernize a monolith where you can easily
+
+21
+00:01:10,930 --> 00:01:14,140
+transform monolithic applications into microservices as a
+
+22
+00:01:14,140 --> 00:01:16,700
+series of small steps, and automate tasks,
+
+23
+00:01:16,700 --> 00:01:19,780
+such as recurring tasks and application orchestration.
+
+24
+00:01:21,070 --> 00:01:22,460
+Here are the key benefits.
+
+25
+00:01:23,300 --> 00:01:25,150
+Build and update apps quickly.
+
+26
+00:01:25,160 --> 00:01:29,380
+AWS Step Functions lets you build visual workflows that enable
+
+27
+00:01:29,380 --> 00:01:33,010
+fast translation of business requirements into technical requirements.
+
+28
+00:01:33,020 --> 00:01:37,390
+You can build applications in a matter of minutes, and when needs change,
+
+29
+00:01:37,400 --> 00:01:41,360
+you can swap or reorganize components without customizing any code.
+
+30
+00:01:42,470 --> 00:01:44,160
+Improve resiliency.
+
+31
+00:01:44,170 --> 00:01:48,420
+AWS Step Functions manages state, checkpoints, and restarts for you
+
+32
+00:01:48,680 --> 00:01:51,910
+to make sure that your application executes in order and as expected.
+
+33
+00:01:52,480 --> 00:01:55,960
+Built-in try/catch, retry, and rollback capabilities
+
+34
+00:01:56,060 --> 00:01:58,060
+deal with errors and exceptions automatically.
+
+35
+00:01:59,220 --> 00:02:00,450
+Write less code.
+
+36
+00:02:00,460 --> 00:02:04,940
+AWS Step Functions manages the logic of your application for you
+
+37
+00:02:05,080 --> 00:02:07,720
+and implements basic primitives such as branching,
+
+38
+00:02:07,960 --> 00:02:10,190
+parallel execution, and timeouts.
+
+39
+00:02:10,680 --> 00:02:15,120
+This removes extra code that may be repeated in your microservices and functions.
+
+40
+00:02:16,210 --> 00:02:17,630
+This is how it works.
+
+41
+00:02:18,100 --> 00:02:19,200
+First, configure.
+
+42
+00:02:19,660 --> 00:02:22,770
+You can define your workflow as a series of steps.
+
+43
+00:02:23,310 --> 00:02:26,480
+Then you can populate by connecting the defined tasks
+
+44
+00:02:26,620 --> 00:02:28,100
+to the code hosted in functions,
+
+45
+00:02:28,110 --> 00:02:30,760
+containers, instances, and on-premises servers.
+
+46
+00:02:31,480 --> 00:02:35,120
+Next, you can run your application by providing any needed input
+
+47
+00:02:35,280 --> 00:02:38,940
+and run your workflows as many times as needed for up to one year.
+
+48
+00:02:38,950 --> 00:02:41,460
+You can also easily evolve your workflow.
+
+49
+00:02:41,840 --> 00:02:46,510
+You can swap out tasks, change the order of steps, or add new steps,
+
+50
+00:02:46,520 --> 00:02:48,040
+all without changing code.
+

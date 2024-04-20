@@ -1,0 +1,216 @@
+1
+00:00:00,100 --> 00:00:03,000
+Welcome to an Overview of Amazon SageMaker.
+
+2
+00:00:04,190 --> 00:00:05,600
+Amazon SageMaker
+
+3
+00:00:05,740 --> 00:00:07,400
+is a fully managed service
+
+4
+00:00:07,520 --> 00:00:10,050
+that provides developers and data scientists
+
+5
+00:00:10,180 --> 00:00:12,130
+with the ability to collect and prepare,
+
+6
+00:00:12,440 --> 00:00:14,240
+build, train,
+
+7
+00:00:14,690 --> 00:00:16,950
+and deploy machine-learning models quickly.
+
+8
+00:00:18,450 --> 00:00:19,850
+Amazon SageMaker
+
+9
+00:00:19,990 --> 00:00:23,510
+removes the heavy lifting from each step of the machine-learning process
+
+10
+00:00:23,630 --> 00:00:26,240
+to make it easier to develop high-quality models.
+
+11
+00:00:26,600 --> 00:00:27,940
+Amazon SageMaker
+
+12
+00:00:28,080 --> 00:00:30,910
+provides all of the components used for machine learning
+
+13
+00:00:31,030 --> 00:00:32,170
+in a single toolset,
+
+14
+00:00:32,580 --> 00:00:34,600
+so models get to production faster
+
+15
+00:00:34,720 --> 00:00:35,940
+with much less effort
+
+16
+00:00:36,370 --> 00:00:37,700
+and at a lower cost.
+
+17
+00:00:39,010 --> 00:00:42,060
+Here are some of the benefits of using Amazon SageMaker.
+
+18
+00:00:42,910 --> 00:00:45,070
+Make machine learning more accessible.
+
+19
+00:00:45,630 --> 00:00:47,210
+With Amazon SageMaker,
+
+20
+00:00:47,330 --> 00:00:51,610
+machine learning becomes more accessible, enabling people to innovate with ML,
+
+21
+00:00:52,010 --> 00:00:53,770
+through a choice of tools,
+
+22
+00:00:53,910 --> 00:00:55,670
+an integrated IDE,
+
+23
+00:00:56,140 --> 00:00:58,140
+and no-code visual interfaces.
+
+24
+00:01:00,000 --> 00:01:01,790
+Prepare data at scale.
+
+25
+00:01:02,090 --> 00:01:05,590
+With Amazon SageMaker, you can access, label,
+
+26
+00:01:06,000 --> 00:01:10,600
+and process large amounts of structured data like tabular data from spreadsheets
+
+27
+00:01:11,010 --> 00:01:14,640
+and unstructured data like photos, video,
+
+28
+00:01:15,070 --> 00:01:15,960
+and audio.
+
+29
+00:01:17,250 --> 00:01:19,250
+Accelerate ML development.
+
+30
+00:01:19,620 --> 00:01:21,180
+With Amazon SageMaker,
+
+31
+00:01:21,300 --> 00:01:23,770
+you can reduce training time from hours to minutes
+
+32
+00:01:23,890 --> 00:01:25,540
+with an optimized infrastructure,
+
+33
+00:01:25,980 --> 00:01:27,510
+and you can boost productivity
+
+34
+00:01:27,640 --> 00:01:29,210
+with purpose-built tools.
+
+35
+00:01:29,490 --> 00:01:32,480
+Amazon SageMaker also enables you to automate
+
+36
+00:01:32,480 --> 00:01:35,660
+and standardize MLOps practices across your organization,
+
+37
+00:01:35,840 --> 00:01:38,290
+allowing you to train and deploy models at scale.
+
+38
+00:01:39,980 --> 00:01:44,010
+Amazon SageMaker can be utilized for specific use cases as well.
+
+39
+00:01:44,420 --> 00:01:49,100
+With Amazon SageMaker Canvas, business analysts can easily prepare data,
+
+40
+00:01:49,420 --> 00:01:50,680
+train models,
+
+41
+00:01:51,020 --> 00:01:54,200
+and generate predictions using a point-and-click interface.
+
+42
+00:01:54,630 --> 00:01:57,240
+They can then share the results with data scientists
+
+43
+00:01:57,340 --> 00:02:00,350
+and integrate them into common business intelligence tools.
+
+44
+00:02:01,910 --> 00:02:04,320
+With Amazon SageMaker Studio Notebook,
+
+45
+00:02:04,580 --> 00:02:09,120
+data scientists can access data from structured and unstructured data sources,
+
+46
+00:02:09,550 --> 00:02:12,300
+improve productivity with purpose-built tools
+
+47
+00:02:12,630 --> 00:02:15,690
+and fully managed Jupyter notebooks with just a few clicks.
+
+48
+00:02:16,950 --> 00:02:19,340
+And with Amazon SageMaker MLOps,
+
+49
+00:02:19,540 --> 00:02:24,320
+software developers can build CI/CD pipelines to reduce model management overhead,
+
+50
+00:02:24,680 --> 00:02:29,660
+automate ML workflows to accelerate data preparation and model building, training,
+
+51
+00:02:30,120 --> 00:02:31,310
+and experiments.
+
+52
+00:02:31,760 --> 00:02:36,420
+It can also monitor ML model quality by automatically detecting bias and drift,
+
+53
+00:02:36,840 --> 00:02:39,670
+and automatically track code datasets and artifacts
+
+54
+00:02:39,670 --> 00:02:41,720
+at each step of the ML lifecycle.
+

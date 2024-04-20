@@ -1,0 +1,181 @@
+1
+00:00:01,100 --> 00:00:03,200
+AWS CodeDeploy Overview.
+
+2
+00:00:05,580 --> 00:00:09,000
+AWS CodeDeploy is a fully managed deployment service
+
+3
+00:00:09,140 --> 00:00:12,420
+that automates software deployments to a variety of compute services
+
+4
+00:00:12,460 --> 00:00:14,060
+such as Amazon EC2,
+
+5
+00:00:14,160 --> 00:00:18,280
+AWS Fargate, AWS Lambda, and your on-premises servers.
+
+6
+00:00:20,060 --> 00:00:23,060
+It eliminates the need for error-prone manual operations.
+
+7
+00:00:25,000 --> 00:00:28,400
+You can deploy a nearly unlimited variety of application content,
+
+8
+00:00:28,400 --> 00:00:31,140
+including code, AWS Lambda functions,
+
+9
+00:00:31,260 --> 00:00:33,920
+web and configuration files, executables,
+
+10
+00:00:34,100 --> 00:00:36,820
+packages, scripts, and multimedia files.
+
+11
+00:00:38,000 --> 00:00:42,240
+AWS CodeDeploy can deploy application content that runs on a server
+
+12
+00:00:42,420 --> 00:00:46,880
+and is stored in Amazon S3 buckets, GitHub or Bitbucket repositories.
+
+13
+00:00:48,300 --> 00:00:52,740
+AWS CodeDeploy makes it easier for you to rapidly release new features.
+
+14
+00:00:53,760 --> 00:00:56,740
+It helps you avoid downtime during application deployment
+
+15
+00:00:56,900 --> 00:00:59,430
+and handles the complexity of updating your applications.
+
+16
+00:01:01,133 --> 00:01:04,499
+The service scales with your infrastructure to match your deployment needs.
+
+17
+00:01:06,800 --> 00:01:11,600
+Here are the key benefits: automated deployments.
+
+18
+00:01:11,600 --> 00:01:15,540
+AWS CodeDeploy fully automates your software deployments
+
+19
+00:01:15,700 --> 00:01:18,060
+allowing you to deploy reliably and rapidly.
+
+20
+00:01:18,930 --> 00:01:21,960
+You can consistently deploy your application across your development,
+
+21
+00:01:22,200 --> 00:01:24,030
+test, and production environments.
+
+22
+00:01:25,633 --> 00:01:28,030
+Centralized control.
+
+23
+00:01:28,030 --> 00:01:31,440
+AWS CodeDeploy allows you to easily launch and track
+
+24
+00:01:31,680 --> 00:01:33,680
+the status of your application deployments
+
+25
+00:01:33,880 --> 00:01:38,020
+through the AWS Management Console or the AWS CLI.
+
+26
+00:01:39,100 --> 00:01:42,880
+CodeDeploy gives you a detailed report allowing you to view when and to where
+
+27
+00:01:42,980 --> 00:01:46,060
+each application revision was deployed.
+
+28
+00:01:46,060 --> 00:01:48,160
+You can also create push notifications
+
+29
+00:01:48,300 --> 00:01:50,460
+to receive live updates about your deployments.
+
+30
+00:01:52,260 --> 00:01:53,560
+Minimize downtime:
+
+31
+00:01:54,700 --> 00:01:58,780
+AWS CodeDeploy helps maximize your application availability
+
+32
+00:01:58,960 --> 00:02:01,760
+during the software deployment process.
+
+33
+00:02:01,760 --> 00:02:03,840
+It introduces changes incrementally
+
+34
+00:02:03,980 --> 00:02:06,940
+and tracks application health according to configurable rules.
+
+35
+00:02:07,860 --> 00:02:10,020
+Software deployments can easily be stopped
+
+36
+00:02:10,180 --> 00:02:11,890
+and rolled back if there are errors.
+
+37
+00:02:13,630 --> 00:02:14,680
+Easy to adopt:
+
+38
+00:02:16,020 --> 00:02:19,440
+AWS CodeDeploy is platform- and language-agnostic.
+
+39
+00:02:20,800 --> 00:02:22,500
+It works with any application
+
+40
+00:02:22,680 --> 00:02:26,240
+and provides the same experience, whether you're deploying to Amazon EC2,
+
+41
+00:02:26,360 --> 00:02:29,100
+AWS Fargate, or AWS Lambda.
+
+42
+00:02:30,366 --> 00:02:33,999
+You can easily reuse your existing setup code.
+
+43
+00:02:34,000 --> 00:02:37,680
+or continuous delivery tool chain,
+CodeDeploy can also integrate with your existing software release process
+
+44
+00:02:37,680 --> 00:02:39,800
+or continuous delivery tool chain,
+
+45
+00:02:39,800 --> 00:02:43,866
+for example, AWS CodePipeline, GitHub and Jenkins.
+

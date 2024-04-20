@@ -1,0 +1,220 @@
+1
+00:00:00,110 --> 00:00:02,310
+Data Lakes on AWS Overview.
+
+2
+00:00:03,190 --> 00:00:06,150
+A data lake is a centralized repository that you can use
+
+3
+00:00:06,150 --> 00:00:09,690
+to store all your structured and unstructured data at any scale.
+
+4
+00:00:10,230 --> 00:00:14,070
+You can store your data as is, without having to first structure the data.
+
+5
+00:00:15,030 --> 00:00:17,490
+You can then run different types of analytics to guide
+
+6
+00:00:17,490 --> 00:00:22,000
+better decisions, from dashboards and visualizations to big-data processing,
+
+7
+00:00:22,100 --> 00:00:23,430
+real-time analytics,
+
+8
+00:00:23,530 --> 00:00:24,590
+and machine learning.
+
+9
+00:00:26,420 --> 00:00:28,770
+Essential Elements of a Data Lake Solution.
+
+10
+00:00:29,640 --> 00:00:30,660
+Data Movement.
+
+11
+00:00:31,490 --> 00:00:35,950
+You can use data lakes to import any amount of data that can come in real time.
+
+12
+00:00:36,010 --> 00:00:39,200
+Data is collected from multiple sources, and it is
+
+13
+00:00:39,200 --> 00:00:41,660
+moved into the data lake in its original format.
+
+14
+00:00:42,460 --> 00:00:44,960
+This process can scale to data of any size
+
+15
+00:00:44,960 --> 00:00:48,320
+while saving you the time of defining data structures, schema,
+
+16
+00:00:48,450 --> 00:00:49,900
+and transformations.
+
+17
+00:00:50,870 --> 00:00:52,930
+Securely Store and Catalog Data.
+
+18
+00:00:53,780 --> 00:00:56,110
+You have the ability to understand what data is
+
+19
+00:00:56,110 --> 00:00:59,760
+in your data lake through crawling, cataloging, and indexing.
+
+20
+00:00:59,770 --> 00:01:04,129
+You should also secure this data to protect the assets in data lakes.
+
+21
+00:01:05,080 --> 00:01:09,560
+Analytics. Data lakes allow various roles in your organization to
+
+22
+00:01:09,560 --> 00:01:12,900
+access data with their choice of analytic tools and frameworks.
+
+23
+00:01:12,920 --> 00:01:15,920
+You can run analytics in your data lake without the
+
+24
+00:01:15,920 --> 00:01:18,760
+need to move your data to a separate analytics system.
+
+25
+00:01:19,910 --> 00:01:21,030
+Machine Learning.
+
+26
+00:01:21,230 --> 00:01:25,770
+Organizations can use data lakes to generate different types of insights.
+
+27
+00:01:26,600 --> 00:01:28,720
+They can run reports on historical data,
+
+28
+00:01:28,850 --> 00:01:32,350
+and they can use machine-learning models to forecast likely outcomes,
+
+29
+00:01:32,460 --> 00:01:36,200
+suggesting a range of prescribed actions to achieve the optimal result.
+
+30
+00:01:37,950 --> 00:01:40,520
+Build a Data Lake on Amazon S3.
+
+31
+00:01:41,340 --> 00:01:44,700
+Amazon Simple Storage Service, or Amazon S3,
+
+32
+00:01:44,840 --> 00:01:47,030
+is the largest and most performant object
+
+33
+00:01:47,030 --> 00:01:49,680
+storage service for structured and unstructured data.
+
+34
+00:01:49,840 --> 00:01:52,710
+And it is the storage service of choice to build a data lake.
+
+35
+00:01:53,570 --> 00:01:55,040
+With Amazon S3,
+
+36
+00:01:55,170 --> 00:01:58,530
+you can cost-effectively build and scale a data lake of any size
+
+37
+00:01:58,530 --> 00:02:02,560
+in a secure environment where data is protected by eleven 9s of durability.
+
+38
+00:02:03,230 --> 00:02:07,530
+Amazon S3 automatically creates and stores copies of all uploaded
+
+39
+00:02:07,530 --> 00:02:10,160
+S3 objects across multiple systems.
+
+40
+00:02:10,289 --> 00:02:14,520
+This means that your data is available when needed and protected against failures,
+
+41
+00:02:14,570 --> 00:02:16,130
+errors, and threats.
+
+42
+00:02:17,940 --> 00:02:19,310
+Build a Data Lake with
+
+43
+00:02:19,900 --> 00:02:20,940
+AWS Lake Formation.
+
+44
+00:02:21,680 --> 00:02:22,430
+You can use
+
+45
+00:02:22,920 --> 00:02:26,810
+AWS Lake Formation to create a secure data lake in days instead of months.
+
+46
+00:02:27,590 --> 00:02:29,920
+In the streamlined Lake Formation process,
+
+47
+00:02:29,930 --> 00:02:34,600
+you define where data resides and what data access and security policies to apply.
+
+48
+00:02:34,860 --> 00:02:38,120
+Lake Formation then collects data from different sources
+
+49
+00:02:38,130 --> 00:02:39,690
+and moves it into a new data lake
+
+50
+00:02:39,690 --> 00:02:40,930
+in Amazon S3.
+
+51
+00:02:41,600 --> 00:02:44,210
+You can use machine-learning algorithms to clean,
+
+52
+00:02:44,310 --> 00:02:47,560
+catalog, and classify the data in Amazon S3
+
+53
+00:02:47,720 --> 00:02:49,960
+and define your access control policies.
+
+54
+00:02:50,690 --> 00:02:53,670
+Users can then access a centralized catalog of data
+
+55
+00:02:53,670 --> 00:02:56,930
+that lists the available datasets and their usage terms.
+

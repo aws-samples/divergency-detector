@@ -1,0 +1,200 @@
+1
+00:00:00,000 --> 00:00:04,220
+Amazon Virtual Private Cloud (VPC) - Internet Connectivity.
+
+2
+00:00:04,920 --> 00:00:09,840
+An internet gateway is horizontally scaled, redundant, and highly available by default.
+
+3
+00:00:10,280 --> 00:00:13,730
+It allows communication between your VPC and the internet.
+
+4
+00:00:13,740 --> 00:00:15,510
+Internet gateway supports both
+
+5
+00:00:15,510 --> 00:00:17,740
+IPv4 and IPv6 traffic.
+
+6
+00:00:18,460 --> 00:00:21,770
+To enable internet access for instances in a VPC subnet,
+
+7
+00:00:21,780 --> 00:00:25,360
+you must attach an internet gateway to your VPC,
+
+8
+00:00:25,660 --> 00:00:27,920
+add a route to your subnet's route table,
+
+9
+00:00:28,000 --> 00:00:30,360
+and point your route table to the internet gateway.
+
+10
+00:00:30,520 --> 00:00:33,560
+Make sure your instances have public IPv4 address,
+
+11
+00:00:33,640 --> 00:00:36,850
+IPv6 address, or elastic IP address.
+
+12
+00:00:37,240 --> 00:00:41,100
+An elastic IP address is a static, public IPv4 address.
+
+13
+00:00:41,200 --> 00:00:43,900
+Static means it does not change over time.
+
+14
+00:00:44,360 --> 00:00:46,740
+You can rapidly move an elastic IP address
+
+15
+00:00:46,940 --> 00:00:49,420
+from one instance or network interface to another.
+
+16
+00:00:49,910 --> 00:00:50,510
+Lastly,
+
+17
+00:00:50,630 --> 00:00:53,800
+ensure that your network access control lists, or NACLs,
+
+18
+00:00:53,960 --> 00:00:56,140
+and security groups allow the relevant traffic
+
+19
+00:00:56,300 --> 00:00:57,680
+to flow to and from your instance.
+
+20
+00:00:58,710 --> 00:00:59,710
+On the other hand,
+
+21
+00:00:59,820 --> 00:01:01,780
+you need a NAT gateway in the public internet
+
+22
+00:01:02,020 --> 00:01:03,930
+to enable instances in a private subnet
+
+23
+00:01:04,010 --> 00:01:05,950
+to connect to the internet but prevent the
+
+24
+00:01:05,950 --> 00:01:08,470
+internet from initiating connections with the instances.
+
+25
+00:01:09,420 --> 00:01:11,920
+NAT stands for Network Address Translation.
+
+26
+00:01:12,540 --> 00:01:14,080
+When traffic goes to the internet,
+
+27
+00:01:14,180 --> 00:01:17,870
+the source IPv4 address in the private subnet is translated to
+
+28
+00:01:17,870 --> 00:01:20,370
+the NAT gateway's address at the public subnet.
+
+29
+00:01:20,510 --> 00:01:22,770
+Similarly for the response traffic,
+
+30
+00:01:22,810 --> 00:01:25,380
+the NAT gateway translates the address back to
+
+31
+00:01:25,380 --> 00:01:27,690
+the instance's private IPv4 address.
+
+32
+00:01:28,440 --> 00:01:29,990
+To create a NAT gateway,
+
+33
+00:01:30,000 --> 00:01:33,890
+you must specify the public subnet in which the NAT gateway should reside.
+
+34
+00:01:34,320 --> 00:01:37,000
+You must also specify an elastic IP address
+
+35
+00:01:37,160 --> 00:01:39,420
+to associate with the NAT gateway when you create it.
+
+36
+00:01:39,680 --> 00:01:41,830
+After you've created a NAT gateway,
+
+37
+00:01:41,840 --> 00:01:44,350
+you must update your route table for your private subnet
+
+38
+00:01:44,490 --> 00:01:46,820
+to point internet traffic to the NAT gateway.
+
+39
+00:01:46,830 --> 00:01:50,970
+Note that NAT gateways are not supported for IPv6 traffic.
+
+40
+00:01:52,210 --> 00:01:56,660
+For IPv6 traffic, you would use an egress-only internet gateway instead.
+
+41
+00:01:57,220 --> 00:01:59,020
+It allows outbound communication over
+
+42
+00:01:59,080 --> 00:02:02,520
+IPv6 from instances in your VPC to the internet.
+
+43
+00:02:02,940 --> 00:02:06,240
+At the same time, it also prevents resources on the internet
+
+44
+00:02:06,260 --> 00:02:09,160
+from initiating communication with your instance directly.
+
+45
+00:02:09,750 --> 00:02:12,480
+An egress-only internet gateway is stateful.
+
+46
+00:02:13,040 --> 00:02:16,080
+It forwards traffic from the instances and the subnet to the internet
+
+47
+00:02:16,300 --> 00:02:18,700
+and then sends the response back to the instances.
+
+48
+00:02:19,080 --> 00:02:22,320
+To route traffic from instances in your private subnet to the internet,
+
+49
+00:02:22,330 --> 00:02:26,880
+you would need to add a route in the route table and point all internet-bound IPv6 traffic
+
+50
+00:02:27,040 --> 00:02:28,930
+to an egress-only internet gateway.
+

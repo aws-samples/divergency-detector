@@ -1,0 +1,260 @@
+1
+00:00:00,000 --> 00:00:02,299
+AWS Global Infrastructure Overview.
+
+2
+00:00:03,700 --> 00:00:05,780
+The AWS Global Infrastructure
+
+3
+00:00:05,780 --> 00:00:07,530
+delivers a cloud infrastructure
+
+4
+00:00:07,530 --> 00:00:09,100
+companies can depend on,
+
+5
+00:00:09,350 --> 00:00:12,369
+no matter their size, changing needs, or challenges.
+
+6
+00:00:13,220 --> 00:00:15,819
+It is designed and built to deliver the most flexible,
+
+7
+00:00:15,819 --> 00:00:16,399
+reliable,
+
+8
+00:00:16,399 --> 00:00:17,329
+scalable,
+
+9
+00:00:17,329 --> 00:00:19,229
+and secure cloud computing environment
+
+10
+00:00:19,510 --> 00:00:22,670
+with the highest quality global network performance available today.
+
+11
+00:00:24,650 --> 00:00:27,579
+AWS provides the most extensive global footprint
+
+12
+00:00:27,680 --> 00:00:30,079
+to ensure your worldwide customers are served.
+
+13
+00:00:31,379 --> 00:00:35,110
+You can rapidly expand operations to virtually any region or country.
+
+14
+00:00:36,100 --> 00:00:41,459
+AWS now spans 69 Availability Zones within 22 geographic Regions around the world.
+
+15
+00:00:42,389 --> 00:00:44,800
+The footprint is expanding continuously,
+
+16
+00:00:44,919 --> 00:00:47,700
+with plans for 13 more Availability Zones,
+
+17
+00:00:47,799 --> 00:00:52,799
+and four more AWS Regions in Indonesia, Italy, South Africa and Spain.
+
+18
+00:00:54,209 --> 00:00:57,060
+This fast-paced expansion of Regions is also paired with
+
+19
+00:00:57,060 --> 00:00:59,659
+Amazon's long-term commitment to a sustainable future
+
+20
+00:00:59,860 --> 00:01:01,639
+using renewable energy sources.
+
+21
+00:01:04,760 --> 00:01:08,610
+The AWS Global Infrastructure consists of the following main components.
+
+22
+00:01:09,059 --> 00:01:13,239
+Amazon Cloud computing resources are hosted in multiple worldwide locations
+
+23
+00:01:13,250 --> 00:01:15,269
+referred to as AWS Regions.
+
+24
+00:01:15,839 --> 00:01:17,260
+Each AWS Region
+
+25
+00:01:17,260 --> 00:01:18,910
+is a separate geographic area
+
+26
+00:01:19,209 --> 00:01:22,830
+and has multiple isolated locations, known as Availability Zones.
+
+27
+00:01:23,839 --> 00:01:25,089
+An AWS Region
+
+28
+00:01:25,089 --> 00:01:26,760
+has at least two Availability Zones,
+
+29
+00:01:26,760 --> 00:01:27,860
+most have three,
+
+30
+00:01:27,860 --> 00:01:31,000
+including all new Regions, and several have as many as six.
+
+31
+00:01:32,379 --> 00:01:33,880
+They are fully isolated
+
+32
+00:01:33,980 --> 00:01:36,529
+and are many kilometers apart from each other
+
+33
+00:01:36,529 --> 00:01:38,029
+for complete redundancy.
+
+34
+00:01:39,000 --> 00:01:42,550
+Each Availability Zone consists of one or more discrete data centers,
+
+35
+00:01:42,559 --> 00:01:43,760
+typically three,
+
+36
+00:01:43,760 --> 00:01:46,330
+and at full scale, it can be hundreds of thousands of servers.
+
+37
+00:01:47,790 --> 00:01:49,379
+To ensure maximum reliability,
+
+38
+00:01:49,379 --> 00:01:51,349
+each data center has redundant power,
+
+39
+00:01:51,349 --> 00:01:53,500
+dedicated Metro Fiber connectivity,
+
+40
+00:01:53,500 --> 00:01:55,180
+and are housed in separate facilities.
+
+41
+00:01:57,550 --> 00:01:58,199
+Network.
+
+42
+00:01:59,000 --> 00:02:01,720
+Every data center, AZ, and AWS Region
+
+43
+00:02:01,720 --> 00:02:05,339
+is interconnected via a purpose-built, highly available
+
+44
+00:02:05,339 --> 00:02:07,970
+and low-latency, private global network infrastructure.
+
+45
+00:02:09,059 --> 00:02:10,720
+The network is built on a global,
+
+46
+00:02:10,720 --> 00:02:14,899
+fully redundant parallel 100 gigabit Ethernet Metro Fiber network.
+
+47
+00:02:15,970 --> 00:02:17,119
+Points of Presence.
+
+48
+00:02:18,139 --> 00:02:19,630
+With Amazon CloudFront,
+
+49
+00:02:19,630 --> 00:02:23,660
+AWS operates the largest global content delivery network, or CDN,
+
+50
+00:02:23,660 --> 00:02:25,029
+of any cloud provider.
+
+51
+00:02:26,039 --> 00:02:29,820
+It enables customers to securely deliver customers' data content to end users
+
+52
+00:02:29,820 --> 00:02:32,039
+with low latency and high transfer speeds,
+
+53
+00:02:32,039 --> 00:02:35,870
+through a worldwide network of global points of presence, PoP locations,
+
+54
+00:02:35,970 --> 00:02:39,270
+which consist of edge locations and regional edge cache servers.
+
+55
+00:02:41,759 --> 00:02:45,889
+Availability Zones make partitioning applications as easy as it can be.
+
+56
+00:02:47,240 --> 00:02:50,289
+If an application is partitioned across Availability Zones,
+
+57
+00:02:50,300 --> 00:02:54,470
+companies are better protected from natural disasters such as lightning strikes,
+
+58
+00:02:54,479 --> 00:02:56,020
+tornadoes, earthquakes,
+
+59
+00:02:56,020 --> 00:02:56,570
+and more.
+
+60
+00:02:58,330 --> 00:02:59,320
+In this example,
+
+61
+00:02:59,330 --> 00:03:02,740
+you can deploy your application across three Availability Zones,
+
+62
+00:03:02,740 --> 00:03:05,869
+and a load balancer is used to distribute traffic across them.
+
+63
+00:03:07,259 --> 00:03:09,750
+If one Availability Zone experiences an outage,
+
+64
+00:03:09,759 --> 00:03:12,309
+traffic is routed to another Availability Zone.
+
+65
+00:03:12,539 --> 00:03:14,789
+Customer application is still up and running.
+

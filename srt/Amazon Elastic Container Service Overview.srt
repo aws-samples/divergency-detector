@@ -1,0 +1,311 @@
+1
+00:00:00,140 --> 00:00:04,090
+Amazon Elastic Container Service (Amazon ECS) Overview.
+
+2
+00:00:04,860 --> 00:00:06,060
+Amazon ECS
+
+3
+00:00:06,060 --> 00:00:06,080
+is a fully managed, highly scalable,
+Amazon ECS
+
+4
+00:00:06,080 --> 00:00:08,370
+is a fully managed, highly scalable,
+
+5
+00:00:08,540 --> 00:00:11,330
+and high-performance container orchestration service.
+
+6
+00:00:11,700 --> 00:00:12,920
+You can use it to run,
+
+7
+00:00:13,030 --> 00:00:14,400
+stop, manage,
+
+8
+00:00:14,520 --> 00:00:18,030
+and scale containerized applications across Availability Zones
+
+9
+00:00:18,150 --> 00:00:21,290
+without the complexity of managing a control plane or nodes.
+
+10
+00:00:21,680 --> 00:00:22,800
+Amazon ECS
+
+11
+00:00:22,820 --> 00:00:23,700
+supports Docker
+
+12
+00:00:23,810 --> 00:00:25,550
+as well as Windows containers.
+
+13
+00:00:26,030 --> 00:00:28,110
+For more control over your infrastructure,
+
+14
+00:00:28,270 --> 00:00:33,030
+you can run your container workloads on a cluster of Amazon EC2 instances.
+
+15
+00:00:33,370 --> 00:00:34,450
+Alternatively,
+
+16
+00:00:34,570 --> 00:00:37,730
+you can choose to launch your containers on a serverless infrastructure
+
+17
+00:00:37,900 --> 00:00:38,970
+that is managed by
+
+18
+00:00:38,980 --> 00:00:40,110
+AWS Fargate.
+
+19
+00:00:40,450 --> 00:00:41,290
+In addition,
+
+20
+00:00:41,680 --> 00:00:45,890
+Amazon ECS Anywhere enables you to run applications in both
+
+21
+00:00:45,890 --> 00:00:47,910
+the cloud and on-premises environment.
+
+22
+00:00:47,920 --> 00:00:50,550
+When you require particularly low latencies
+
+23
+00:00:50,670 --> 00:00:55,460
+to on-premises systems, you can use Amazon ECS on AWS Outposts.
+
+24
+00:00:55,600 --> 00:00:57,720
+Here are the key benefits.
+
+25
+00:00:57,850 --> 00:01:01,300
+Scalability and CI/CD integration.
+
+26
+00:01:01,520 --> 00:01:04,489
+Amazon ECS enables you to grow from a single
+
+27
+00:01:04,489 --> 00:01:08,830
+Docker container to managing your entire enterprise application portfolio.
+
+28
+00:01:09,400 --> 00:01:11,980
+You can also launch thousands of containers across the
+
+29
+00:01:11,980 --> 00:01:16,810
+cloud using your preferred continuous integration and delivery, or CI/CD,
+
+30
+00:01:16,980 --> 00:01:18,590
+and automation tools.
+
+31
+00:01:18,740 --> 00:01:20,160
+Save on compute costs.
+
+32
+00:01:20,830 --> 00:01:23,360
+Amazon ECS enables you to save up
+
+33
+00:01:23,360 --> 00:01:26,770
+to 50 percent on compute costs with autonomous provisioning,
+
+34
+00:01:26,780 --> 00:01:29,530
+autoscaling, and pay-as-you-go pricing.
+
+35
+00:01:29,590 --> 00:01:32,480
+There is no additional charge for Amazon ECS.
+
+36
+00:01:33,070 --> 00:01:35,200
+Seamless AWS integration.
+
+37
+00:01:35,610 --> 00:01:36,900
+Amazon ECS
+
+38
+00:01:36,930 --> 00:01:37,940
+offers seamless
+
+39
+00:01:37,940 --> 00:01:37,950
+AWS integration with
+offers seamless
+
+40
+00:01:37,950 --> 00:01:39,460
+AWS integration with
+
+41
+00:01:39,460 --> 00:01:39,480
+AWS management
+AWS integration with
+
+42
+00:01:39,480 --> 00:01:40,760
+AWS management
+
+43
+00:01:40,890 --> 00:01:42,260
+and governance solutions,
+
+44
+00:01:42,310 --> 00:01:45,980
+standardized for compliance with virtually every regulatory agency
+
+45
+00:01:46,100 --> 00:01:47,120
+around the globe.
+
+46
+00:01:47,200 --> 00:01:48,180
+For example,
+
+47
+00:01:48,390 --> 00:01:50,250
+it is integrated with these familiar
+
+48
+00:01:50,260 --> 00:01:51,660
+AWS services,
+
+49
+00:01:52,070 --> 00:01:53,640
+Elastic Load Balancing,
+
+50
+00:01:54,150 --> 00:01:57,370
+EBS volumes, Amazon Virtual Private Cloud,
+
+51
+00:01:57,540 --> 00:01:58,860
+or Amazon VPC,
+
+52
+00:01:59,220 --> 00:02:02,400
+AWS IAM, AWS code suite,
+
+53
+00:02:02,510 --> 00:02:05,630
+AWS Cloud Map, and AWS App Mesh.
+
+54
+00:02:06,690 --> 00:02:10,789
+Now let's go through some of the key components of Amazon ECS.
+
+55
+00:02:11,030 --> 00:02:14,520
+To prepare your application to run on Amazon ECS,
+
+56
+00:02:14,530 --> 00:02:16,760
+you need to create a task definition.
+
+57
+00:02:16,840 --> 00:02:20,370
+The task definition is a text file in JSON format.
+
+58
+00:02:20,720 --> 00:02:21,890
+It describes how
+
+59
+00:02:22,000 --> 00:02:23,920
+one or more containers should launch.
+
+60
+00:02:24,250 --> 00:02:25,190
+For example,
+
+61
+00:02:25,320 --> 00:02:28,760
+it specifies the container image, which launch type to use,
+
+62
+00:02:28,850 --> 00:02:31,080
+which ports should be opened for your application,
+
+63
+00:02:31,250 --> 00:02:34,540
+and what data volumes should be used with the containers in the task.
+
+64
+00:02:34,890 --> 00:02:37,470
+A task is an instance of a task definition.
+
+65
+00:02:37,830 --> 00:02:40,410
+Tasks are ideal for batch processing jobs
+
+66
+00:02:40,520 --> 00:02:42,710
+where you can perform work and then stop.
+
+67
+00:02:43,120 --> 00:02:45,920
+If you want to maintain a specified number of tasks
+
+68
+00:02:46,060 --> 00:02:47,350
+running simultaneously,
+
+69
+00:02:47,490 --> 00:02:50,230
+such as for long-running tasks and applications,
+
+70
+00:02:50,630 --> 00:02:52,110
+you can launch a service.
+
+71
+00:02:52,640 --> 00:02:54,740
+The Amazon ECS service scheduler
+
+72
+00:02:54,870 --> 00:02:58,980
+will launch another task instance to replace any failed or stopped tasks,
+
+73
+00:02:59,380 --> 00:03:03,600
+so that the desired number of tasks in the service can always be maintained.
+
+74
+00:03:04,450 --> 00:03:06,380
+An Amazon ECS cluster
+
+75
+00:03:06,400 --> 00:03:09,180
+is a logical grouping of tasks or services.
+
+76
+00:03:09,330 --> 00:03:14,190
+After a cluster is up and running, you can run tasks or services within the cluster
+
+77
+00:03:14,350 --> 00:03:16,640
+to launch your containerized applications.
+

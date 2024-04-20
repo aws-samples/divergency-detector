@@ -1,0 +1,212 @@
+1
+00:00:00,120 --> 00:00:03,200
+Amazon Virtual Private Cloud (VPC) Concepts.
+
+2
+00:00:03,940 --> 00:00:06,690
+The following are some of the key concepts for VPCs.
+
+3
+00:00:07,290 --> 00:00:08,810
+When you create a VPC,
+
+4
+00:00:08,860 --> 00:00:11,790
+you must specify a range of private IP addresses for
+
+5
+00:00:11,790 --> 00:00:15,020
+the VPC in the form of a Classless Inter-Domain Routing, or CIDR,
+
+6
+00:00:15,130 --> 00:00:16,500
+block notation.
+
+7
+00:00:17,300 --> 00:00:21,440
+The allowed CIDR block size is between a /16 and /28,
+
+8
+00:00:21,720 --> 00:00:27,930
+for example, this IPv4 CIDR block 10.0.0.0/16 notation.
+
+9
+00:00:27,970 --> 00:00:31,340
+When you write this out in 32 bits binary, you get the following:
+
+10
+00:00:31,890 --> 00:00:34,340
+The number followed by the slash symbol, in this case 16,
+
+11
+00:00:34,350 --> 00:00:38,150
+means that the first 16 bits remains fixed.
+
+12
+00:00:38,300 --> 00:00:40,260
+And you can vary the next 16 bits,
+
+13
+00:00:40,380 --> 00:00:45,000
+providing you with a total of 65,536 IP address ranges.
+
+14
+00:00:45,820 --> 00:00:49,700
+A CIDR block of 0.0.0.0/0
+
+15
+00:00:49,830 --> 00:00:51,870
+would allow access to any IP address.
+
+16
+00:00:52,620 --> 00:00:54,790
+To the original primary CIDR block,
+
+17
+00:00:54,830 --> 00:00:57,320
+you can assign additional private IP addresses,
+
+18
+00:00:57,330 --> 00:01:00,420
+a secondary CIDR block, to expand your VPC.
+
+19
+00:01:02,470 --> 00:01:06,430
+Private IP addresses are local addresses in your VPC.
+
+20
+00:01:06,440 --> 00:01:08,630
+They are not reachable over the internet.
+
+21
+00:01:08,660 --> 00:01:12,390
+They are used for communication between the instances in your VPC.
+
+22
+00:01:13,020 --> 00:01:14,890
+To connect to your instance over the internet,
+
+23
+00:01:14,970 --> 00:01:18,990
+you can assign a globally unique public IPv4 address to your instance.
+
+24
+00:01:19,580 --> 00:01:20,600
+On the other hand,
+
+25
+00:01:20,710 --> 00:01:24,220
+IPv6 addresses are public and reachable over the internet.
+
+26
+00:01:24,750 --> 00:01:30,480
+When you create a VPC with CIDR block such as 10.0.0.0/16,
+
+27
+00:01:30,630 --> 00:01:34,840
+note that you will not have all 65,536 IP addresses.
+
+28
+00:01:35,280 --> 00:01:39,930
+It is because five IP addresses are reserved by AWS for internal use.
+
+29
+00:01:40,610 --> 00:01:43,250
+To create more than one subnet in your VPC,
+
+30
+00:01:43,340 --> 00:01:46,060
+make sure that the CIDR blocks do not overlap.
+
+31
+00:01:46,210 --> 00:01:52,140
+That's why we specify 10.0.10.0 and 10.0.20.0 for the two subnets.
+
+32
+00:01:53,000 --> 00:01:57,490
+/24 indicates assigning 251 IP addresses for the subnet.
+
+33
+00:01:59,160 --> 00:02:00,710
+When you create a VPC,
+
+34
+00:02:00,810 --> 00:02:03,520
+it automatically has a main route table by default.
+
+35
+00:02:03,580 --> 00:02:06,030
+You can also create your custom route tables.
+
+36
+00:02:06,810 --> 00:02:09,740
+A route table contains a set of rules, called routes,
+
+37
+00:02:10,160 --> 00:02:13,260
+that are used to determine where network traffic is directed.
+
+38
+00:02:13,820 --> 00:02:17,590
+Each route in a table specifies a destination and a target.
+
+39
+00:02:17,610 --> 00:02:20,270
+This main route table shows a local route that
+
+40
+00:02:20,270 --> 00:02:23,630
+enables communication for all resources within this VPC.
+
+41
+00:02:25,000 --> 00:02:28,760
+Each subnet in your VPC must be associated with a route table.
+
+42
+00:02:29,520 --> 00:02:33,180
+You use a public subnet for resources that must be connected to the internet,
+
+43
+00:02:33,460 --> 00:02:37,090
+and a private subnet for resources that won't be connected to the internet.
+
+44
+00:02:37,960 --> 00:02:40,540
+You can make a subnet a public subnet by adding a
+
+45
+00:02:40,540 --> 00:02:43,260
+route in your subnet route table to an internet gateway
+
+46
+00:02:43,310 --> 00:02:46,390
+to support inbound and outbound access to the public internet.
+
+47
+00:02:47,090 --> 00:02:48,110
+On the other hand,
+
+48
+00:02:48,160 --> 00:02:50,200
+private subnet does not have a route
+
+49
+00:02:50,260 --> 00:02:52,200
+to an internet gateway in the subnet route table.
+
+50
+00:02:52,840 --> 00:02:53,760
+Also note that
+
+51
+00:02:53,770 --> 00:02:56,120
+most architectures allocate significantly more
+
+52
+00:02:56,140 --> 00:02:58,500
+IP addresses available for private subnets
+
+53
+00:02:58,630 --> 00:02:59,860
+than for public subnets.
+

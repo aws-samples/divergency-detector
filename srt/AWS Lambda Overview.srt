@@ -1,0 +1,159 @@
+1
+00:00:00,333 --> 00:00:02,291
+AWS Lambda Overview
+
+2
+00:00:03,416 --> 00:00:12,208
+AWS Lambda is a serverless compute service
+you can configure with a trigger. AWS Lambda then runs your code automatically in response to your trigger.
+
+3
+00:00:12,416 --> 00:00:16,416
+AWS Lambda manages all the underlying
+compute resources for you,
+
+4
+00:00:16,750 --> 00:00:24,333
+all you need to do is supply the code. AWS
+Lambda takes care of everything required to run and scale your code with high availability.
+
+5
+00:00:24,833 --> 00:00:26,250
+This is how it works.
+
+6
+00:00:26,458 --> 00:00:31,458
+First, simply upload your code to AWS
+Lambda or write code in Lambda's code editor.
+
+7
+00:00:32,000 --> 00:00:35,666
+The code you run on AWS Lambda is called a
+Lambda function.
+
+8
+00:00:35,916 --> 00:00:43,583
+Next, you can set up your code to trigger
+from other AWS services, HTTP endpoints, in-app activity, or run on a schedule.
+
+9
+00:00:44,041 --> 00:00:52,875
+Then, AWS Lambda is ready to run your code
+only when invoked, using only the compute resources needed. You just pay for the compute time you use.
+
+10
+00:00:53,125 --> 00:01:01,541
+You can invoke Lambda functions directly
+or configure triggers to invoke Lambda functions in response to incoming HTTP requests or AWS services.
+
+11
+00:01:02,000 --> 00:01:08,791
+You can also configure Lambda to read from
+a queue or a stream and invoke a function or run on a schedule using EventBridge triggers.
+
+12
+00:01:10,041 --> 00:01:11,541
+Here are some examples
+
+13
+00:01:12,333 --> 00:01:15,250
+Amazon Simple Storage Service, or S3
+
+14
+00:01:15,500 --> 00:01:23,875
+When there is a change in the Amazon S3
+bucket content, such as when an object file is created, deleted, or updated, the lambda function is invoked.
+
+15
+00:01:24,666 --> 00:01:28,000
+Amazon Simple Notification Service, or SNS
+
+16
+00:01:28,458 --> 00:01:34,333
+When a message is published to an SNS
+topic that the lambda function subscribed to it, the lambda function is invoked.
+
+17
+00:01:35,583 --> 00:01:37,416
+Amazon API Gateway
+
+18
+00:01:37,708 --> 00:01:45,416
+You can create APIs using Amazon API
+Gateway. When the API is called, API Gateway invokes the Lambda function.
+
+19
+00:01:46,208 --> 00:01:47,958
+Amazon Dynamo DB
+
+20
+00:01:48,291 --> 00:01:54,333
+When a DynamoDB record is created or
+modified, the lambda function can be configured to trigger and run the code.
+
+21
+00:01:55,583 --> 00:01:58,458
+Amazon Simple Queue Service, or SQS
+
+22
+00:01:58,708 --> 00:02:07,208
+You can use AWS Lambda function to process
+messages in a Amazon SQS queue. Lambda pulls the queue and invokes your function synchronously.
+
+23
+00:02:08,083 --> 00:02:10,583
+What are the benefits of AWS Lambda?
+
+24
+00:02:10,708 --> 00:02:13,541
+You do not need to provision or manage any
+servers.
+
+25
+00:02:13,791 --> 00:02:19,833
+All you need is to write the code, upload
+it to Lambda, and then AWS Lambda automatically runs your code for you.
+
+26
+00:02:20,416 --> 00:02:22,750
+Another benefit is continuous scaling.
+
+27
+00:02:22,916 --> 00:02:27,833
+In response to each trigger, AWS Lambda
+automatically scales your application.
+
+28
+00:02:28,208 --> 00:02:34,416
+Your code runs in parallel and processes
+each trigger individually, scaling precisely with the size of the workload.
+
+29
+00:02:35,291 --> 00:02:36,666
+Sub-second metering
+
+30
+00:02:36,875 --> 00:02:40,208
+With AWS Lambda, you pay only for what you
+use.
+
+31
+00:02:40,333 --> 00:02:47,208
+Pricing is based on the number of times
+your code is triggered, that is the number of requests and the duration, the time it takes to run your code.
+
+32
+00:02:47,791 --> 00:02:50,541
+Billing is metered in increments of 1
+millisecond.
+
+33
+00:02:51,000 --> 00:02:53,833
+When your code isn't running, you do not
+pay anything.
+
+34
+00:02:54,416 --> 00:03:01,458
+With AWS Lambda, it makes it easy to build
+cost-effective serverless applications that respond quickly to your customer needs.
+

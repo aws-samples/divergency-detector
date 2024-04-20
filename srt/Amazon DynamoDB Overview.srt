@@ -1,0 +1,173 @@
+1
+00:00:00,000 --> 00:00:02,208
+Amazon DynamoDB Overview
+
+2
+00:00:03,333 --> 00:00:07,000
+Amazon DynamoDB is a key value and
+document database.
+
+3
+00:00:07,166 --> 00:00:10,666
+It delivers single-digit millisecond
+performance at any scale.
+
+4
+00:00:10,875 --> 00:00:20,291
+It's a fully managed, multi-region,
+multi-active, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications.
+
+5
+00:00:20,458 --> 00:00:27,041
+DynamoDB can handle more than 10 trillion
+requests per day and can support peaks of more than 20 million requests per second.
+
+6
+00:00:28,291 --> 00:00:29,833
+Here are the key benefits.
+
+7
+00:00:29,916 --> 00:00:31,333
+Performance at scale.
+
+8
+00:00:31,500 --> 00:00:38,125
+DynamoDB is a key-value and document
+database that can support tables of virtually any size with horizontal scaling.
+
+9
+00:00:38,250 --> 00:00:46,625
+Since DynamoDB is both a key value and
+document data models, it enables flexible schema, which allows you to adapt to your business requirement change easily.
+
+10
+00:00:47,958 --> 00:00:56,500
+For use cases that require even faster
+access with microsecond latency, DynamoDB Accelerator, or DAX provides a fully managed-in-memory cache.
+
+11
+00:00:56,541 --> 00:01:01,833
+Using DAX, you can improve the read
+performance of your DynamoDB tables by up to 10 times.
+
+12
+00:01:02,166 --> 00:01:08,083
+The time required for reads reduces from
+milliseconds to microseconds, even at millions of requests per second.
+
+13
+00:01:09,666 --> 00:01:18,750
+DynamoDB Global Tables replicate your data
+across multiple AWS regions to give you fast, local access to data for your globally distributed applications.
+
+14
+00:01:19,375 --> 00:01:28,541
+DynamoDB Streams capture a time-ordered
+sequence of item-level modifications in any DynamoDB table and store this information in a log for up to 24 hours.
+
+15
+00:01:29,208 --> 00:01:33,208
+DynamoDB provides both provisioned and
+on-demand capacity modes.
+
+16
+00:01:33,375 --> 00:01:37,791
+Tables using Provisioned Capacity mode
+require you to set Read and Write Capacity.
+
+17
+00:01:37,958 --> 00:01:45,333
+For workloads that are less predictable,
+On-Demand Capacity Mode takes care of managing capacity for you, and you only pay for what you consume.
+
+18
+00:01:45,375 --> 00:01:52,875
+With the two capacity modes, you can
+optimize costs by specifying capacity per workload, or paying for only the resources you consume.
+
+19
+00:01:53,125 --> 00:02:01,541
+For tables using on-demand capacity mode,
+DynamoDB instantly accommodates your workloads as they ramp up or down to any previously reached traffic level.
+
+20
+00:02:01,666 --> 00:02:07,500
+For tables using provisioned capacity,
+DynamoDB delivers automatic scaling of throughput and storage.
+
+21
+00:02:07,625 --> 00:02:19,083
+If your application traffic grows,
+DynamoDB increases throughput to accommodate the load. If your application traffic shrinks, DynamoDB scales down, so that you pay less for unused capacity.
+
+22
+00:02:19,291 --> 00:02:23,083
+DynamoDB integrates with AWS Lambda to
+provide triggers.
+
+23
+00:02:23,166 --> 00:02:28,708
+With Triggers, you can build applications
+that react to data modifications in DynamoDB tables.
+
+24
+00:02:28,958 --> 00:02:35,166
+The Lambda function can perform any
+actions you specify, such as sending a notification or initiating a workflow.
+
+25
+00:02:35,583 --> 00:02:36,916
+Encryption at rest.
+
+26
+00:02:37,041 --> 00:02:39,708
+DynamoDB encrypts all data by default.
+
+27
+00:02:39,791 --> 00:02:46,375
+Encryption at rest enhances the security
+of your data by using encryption keys stored in AWS Key Management Service.
+
+28
+00:02:46,500 --> 00:02:48,041
+ACID Transactions
+
+29
+00:02:48,291 --> 00:02:58,125
+It provides native server-side support for
+transactions, simplifying the developer experience of making coordinated, all-or-nothing changes to multiple items both within and across tables.
+
+30
+00:02:58,541 --> 00:03:05,208
+Point-In-Time Recovery, or PITR, helps
+protect your DynamoDB tables from accidental write or delete operations.
+
+31
+00:03:05,791 --> 00:03:09,666
+PITR provides continuous backups of your
+DynamoDB table data.
+
+32
+00:03:09,791 --> 00:03:15,333
+You can recover to any point in time up to
+the second, during the preceding 35 days with no downtime.
+
+33
+00:03:16,125 --> 00:03:18,041
+On Demand Backup and Restore
+
+34
+00:03:18,208 --> 00:03:23,833
+You can create full backups of hundreds of
+terabytes of data instantly with no performance impact to your tables.
+
+35
+00:03:24,000 --> 00:03:28,541
+The archived data can help you meet your
+corporate and governmental regulatory requirements.
+
+36
+00:03:28,708 --> 00:03:33,333
+DynamoDB is also backed by a service level
+agreement for guaranteed availability.
+

@@ -1,0 +1,256 @@
+1
+00:00:00,000 --> 00:00:03,840
+Amazon DynamoDB - Secondary Indexes Comparison.
+
+2
+00:00:04,720 --> 00:00:08,750
+Let's look at the main differences between a global secondary index, or GSI,
+
+3
+00:00:08,780 --> 00:00:11,080
+and a local secondary index, or LSI.
+
+4
+00:00:11,590 --> 00:00:12,860
+Key schema.
+
+5
+00:00:12,870 --> 00:00:16,700
+The primary key of a global secondary index can be either simple,
+
+6
+00:00:16,710 --> 00:00:19,500
+including just the partition key, or composite,
+
+7
+00:00:19,510 --> 00:00:21,960
+including both the partition key and the sort key.
+
+8
+00:00:22,530 --> 00:00:24,280
+For local secondary index,
+
+9
+00:00:24,300 --> 00:00:26,170
+the primary key must be composite,
+
+10
+00:00:26,180 --> 00:00:28,800
+which includes both the partition key and the sort key.
+
+11
+00:00:29,490 --> 00:00:30,440
+Key attributes.
+
+12
+00:00:31,140 --> 00:00:33,380
+The GSI partition key and sort key,
+
+13
+00:00:33,740 --> 00:00:36,780
+if present, can be any base table attributes of type,
+
+14
+00:00:36,780 --> 00:00:38,620
+string, number, or binary.
+
+15
+00:00:38,630 --> 00:00:39,910
+For LSI,
+
+16
+00:00:39,920 --> 00:00:41,400
+the partition key of the index
+
+17
+00:00:41,660 --> 00:00:44,480
+is the same attribute as the partition key of the base table.
+
+18
+00:00:44,990 --> 00:00:49,890
+The sort key can be any base table attribute of type, string, number, or binary.
+
+19
+00:00:50,560 --> 00:00:53,390
+Size restrictions per partition key value.
+
+20
+00:00:53,400 --> 00:00:56,890
+There are no size restrictions for global secondary indexes.
+
+21
+00:00:57,440 --> 00:01:00,140
+However, in the case of local secondary index,
+
+22
+00:01:00,240 --> 00:01:04,069
+for each partition key value, the total size of all indexed items
+
+23
+00:01:04,170 --> 00:01:05,870
+must be 10 gigabytes or less.
+
+24
+00:01:06,630 --> 00:01:08,090
+Default limit per table.
+
+25
+00:01:08,620 --> 00:01:12,030
+You can create up to 20 global secondary indexes per table.
+
+26
+00:01:12,040 --> 00:01:15,880
+For local secondary indexes, you can create up to 5 per table.
+
+27
+00:01:16,630 --> 00:01:18,530
+Online index operations.
+
+28
+00:01:18,540 --> 00:01:23,370
+Global secondary indexes can be created at the same time that you create a table.
+
+29
+00:01:23,380 --> 00:01:26,180
+You can also add a new global secondary index to
+
+30
+00:01:26,180 --> 00:01:29,850
+an existing table or delete an existing global secondary index.
+
+31
+00:01:30,530 --> 00:01:31,510
+On the other hand,
+
+32
+00:01:31,520 --> 00:01:35,620
+local secondary indexes are created at the same time that you create a table.
+
+33
+00:01:35,650 --> 00:01:39,240
+You cannot add a local secondary index to an existing table,
+
+34
+00:01:39,270 --> 00:01:42,470
+nor can you delete any existing local secondary indexes.
+
+35
+00:01:44,090 --> 00:01:45,910
+Queries and partitions.
+
+36
+00:01:45,920 --> 00:01:48,690
+A global secondary index lets you query
+
+37
+00:01:48,690 --> 00:01:51,200
+over the entire table across all partitions.
+
+38
+00:01:51,730 --> 00:01:53,300
+A local secondary index
+
+39
+00:01:53,500 --> 00:01:55,780
+only lets you query over a single partition
+
+40
+00:01:55,940 --> 00:01:58,640
+as specified by the partition key value in the query.
+
+41
+00:01:59,050 --> 00:02:00,380
+Read consistency.
+
+42
+00:02:01,240 --> 00:02:03,220
+Queries on global secondary index
+
+43
+00:02:03,460 --> 00:02:05,460
+only support eventual consistency,
+
+44
+00:02:05,470 --> 00:02:10,050
+while local secondary indexes support eventual consistency or strong consistency.
+
+45
+00:02:12,330 --> 00:02:13,620
+Provisioned throughput.
+
+46
+00:02:14,150 --> 00:02:17,990
+Every global secondary index has its own provisioned throughput settings
+
+47
+00:02:18,000 --> 00:02:19,790
+for read and write activity.
+
+48
+00:02:19,800 --> 00:02:24,200
+Read capacity units, or RCUs, and write capacity units, or WCUs,
+
+49
+00:02:24,320 --> 00:02:26,110
+are provisioned separately for GSIs.
+
+50
+00:02:26,750 --> 00:02:31,730
+Queries or scans on a global secondary index consume capacity units from the index,
+
+51
+00:02:31,740 --> 00:02:33,240
+not from the base table.
+
+52
+00:02:33,270 --> 00:02:37,370
+The same holds true for global secondary index updates due to table writes.
+
+53
+00:02:38,210 --> 00:02:39,160
+On the other hand,
+
+54
+00:02:39,170 --> 00:02:41,920
+queries or scans on a local secondary index
+
+55
+00:02:41,970 --> 00:02:44,450
+consume read capacity units from the base table.
+
+56
+00:02:45,030 --> 00:02:49,070
+When you write to a table, its local secondary indexes are also updated.
+
+57
+00:02:49,170 --> 00:02:52,500
+These updates consume write capacity units from the base table.
+
+58
+00:02:54,010 --> 00:02:55,440
+Projected attributes.
+
+59
+00:02:56,000 --> 00:02:58,740
+With global secondary index queries or scans,
+
+60
+00:02:58,750 --> 00:03:02,330
+you can only request the attributes that are projected into the index.
+
+61
+00:03:02,340 --> 00:03:05,860
+DynamoDB does not fetch any attributes from the table.
+
+62
+00:03:06,580 --> 00:03:09,350
+If you query or scan a local secondary index,
+
+63
+00:03:09,360 --> 00:03:12,780
+you can request attributes that are not projected into the index.
+
+64
+00:03:13,280 --> 00:03:16,570
+DynamoDB automatically fetches those attributes from the table.
+

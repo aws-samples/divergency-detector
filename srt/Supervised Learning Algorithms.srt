@@ -1,0 +1,164 @@
+1
+00:00:00,120 --> 00:00:02,260
+Supervised Learning Algorithms.
+
+2
+00:00:03,380 --> 00:00:05,270
+Here are some of the algorithms
+
+3
+00:00:05,370 --> 00:00:06,970
+used in supervised learning.
+
+4
+00:00:07,960 --> 00:00:11,700
+K-nearest neighbor, or KNN, classifies a data point
+
+5
+00:00:11,820 --> 00:00:14,220
+based on similarity of the k-nearest neighbor.
+
+6
+00:00:14,630 --> 00:00:15,660
+In this example,
+
+7
+00:00:15,770 --> 00:00:17,780
+if we choose k = four,
+
+8
+00:00:17,780 --> 00:00:20,610
+KNN finds the four nearest neighbors to the new data point.
+
+9
+00:00:21,410 --> 00:00:25,930
+Since the new data point is closer to more apples, it belongs to the apple class.
+
+10
+00:00:26,790 --> 00:00:28,460
+In terms of applications,
+
+11
+00:00:28,470 --> 00:00:31,970
+KNN algorithm can be used for recommendation systems
+
+12
+00:00:31,990 --> 00:00:35,190
+and search applications where you are finding similar items.
+
+13
+00:00:36,580 --> 00:00:39,540
+Support vector machine, or SVM:
+
+14
+00:00:40,740 --> 00:00:45,380
+SVM algorithm creates a line, or a hyper plane,
+
+15
+00:00:45,510 --> 00:00:48,480
+which separates the data into classes in classification
+
+16
+00:00:48,580 --> 00:00:50,890
+or predicts a specific value in regression.
+
+17
+00:00:51,750 --> 00:00:53,940
+It is a popular approach in research.
+
+18
+00:00:55,520 --> 00:00:56,720
+Random forest:
+
+19
+00:00:57,790 --> 00:01:01,370
+A random-forest algorithm consists of many decision trees.
+
+20
+00:01:02,170 --> 00:01:06,430
+The algorithm predicts by taking the average of the output from various trees.
+
+21
+00:01:06,940 --> 00:01:11,630
+Some random-forest algorithm applications include credit-card fraud detection
+
+22
+00:01:11,760 --> 00:01:13,020
+and disease prediction.
+
+23
+00:01:15,030 --> 00:01:16,230
+Naive Bayes:
+
+24
+00:01:17,150 --> 00:01:21,100
+Naive Bayes algorithm is based on applying Bayes's theorem,
+
+25
+00:01:21,110 --> 00:01:23,500
+which calculates the probability, the likelihood of
+
+26
+00:01:23,500 --> 00:01:26,290
+an event A happening given B happens.
+
+27
+00:01:26,340 --> 00:01:31,160
+Common applications include text classification and spam filtering.
+
+28
+00:01:33,110 --> 00:01:34,330
+Linear regression:
+
+29
+00:01:35,480 --> 00:01:38,320
+Linear regression trains an algorithm to find
+
+30
+00:01:38,320 --> 00:01:41,400
+a linear relationship between the input and output data.
+
+31
+00:01:41,790 --> 00:01:45,270
+It predicts a numeric value within a continuous range.
+
+32
+00:01:45,480 --> 00:01:46,440
+For example,
+
+33
+00:01:46,540 --> 00:01:49,230
+linear regression can be used for weather forecasting,
+
+34
+00:01:49,340 --> 00:01:52,070
+price estimation, and stock price prediction.
+
+35
+00:01:53,450 --> 00:01:54,840
+Logistic regression:
+
+36
+00:01:55,770 --> 00:01:59,950
+Logistic regression is used to predict one of the two possible outcomes,
+
+37
+00:02:00,030 --> 00:02:02,070
+such as the likelihood of an event.
+
+38
+00:02:02,490 --> 00:02:03,450
+For example,
+
+39
+00:02:03,560 --> 00:02:07,630
+logistic-regression algorithms can be used to predict election results,
+
+40
+00:02:07,750 --> 00:02:09,680
+probabilities of a natural disaster,
+
+41
+00:02:09,810 --> 00:02:11,020
+and other such events.
+

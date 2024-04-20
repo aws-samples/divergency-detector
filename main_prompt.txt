@@ -1,0 +1,24 @@
+Human: Here is a text:
+
+<text>
+    {{text}}
+</text>
+
+List the statements of the text and classify each statements as true, false or ambiguous. Only show the false statements. List in JSON format like this example:
+
+<example>
+[
+  {
+    "original_statement": "some statement",
+    "truth_value": "true|false|ambiguous"
+  },
+  {
+    "original_statement": "another statement",
+    "truth_value": "true|false|ambiguous"
+  }
+]
+</example>
+
+Write only the JSON content and nothing else.
+
+Assistant:

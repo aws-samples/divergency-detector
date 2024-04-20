@@ -1,0 +1,232 @@
+1
+00:00:00,130 --> 00:00:02,340
+AWS CodePipeline Overview.
+
+2
+00:00:03,250 --> 00:00:07,580
+AWS CodePipeline is a fully managed continuous delivery service
+
+3
+00:00:07,720 --> 00:00:09,870
+that helps you automate your release pipelines
+
+4
+00:00:10,010 --> 00:00:13,280
+for fast and reliable application and infrastructure updates.
+
+5
+00:00:14,020 --> 00:00:16,060
+Based on the release model you define,
+
+6
+00:00:16,080 --> 00:00:19,720
+every time there is a code change, CodePipeline automates the build,
+
+7
+00:00:19,730 --> 00:00:22,480
+test, and deploy phases of your release process.
+
+8
+00:00:23,120 --> 00:00:24,360
+You can easily integrate
+
+9
+00:00:24,490 --> 00:00:27,490
+AWS CodePipeline with third-party services.
+
+10
+00:00:28,200 --> 00:00:31,630
+With AWS CodePipeline, you only pay for what you use.
+
+11
+00:00:31,640 --> 00:00:34,940
+You just need to pay for the active pipeline per month.
+
+12
+00:00:34,950 --> 00:00:37,950
+There are no up-front fees or long-term commitments.
+
+13
+00:00:39,410 --> 00:00:40,790
+Here are the key benefits.
+
+14
+00:00:41,630 --> 00:00:42,790
+Rapid delivery.
+
+15
+00:00:43,410 --> 00:00:44,600
+With CodePipeline,
+
+16
+00:00:44,610 --> 00:00:48,660
+you can quickly iterate on feedback and get new features to your users faster.
+
+17
+00:00:48,670 --> 00:00:52,780
+Automating your release process allows you to quickly and easily test
+
+18
+00:00:52,800 --> 00:00:54,670
+each code change and catch bugs
+
+19
+00:00:54,670 --> 00:00:56,730
+while they are small and simple to fix.
+
+20
+00:00:57,450 --> 00:01:01,010
+You can ensure the quality of your application or infrastructure code
+
+21
+00:01:01,020 --> 00:01:04,060
+by running each change through your staging and release process.
+
+22
+00:01:05,650 --> 00:01:06,790
+Get started fast.
+
+23
+00:01:07,500 --> 00:01:09,300
+With AWS CodePipeline,
+
+24
+00:01:09,370 --> 00:01:12,670
+you can immediately begin to model your software release process.
+
+25
+00:01:13,360 --> 00:01:15,750
+There are no servers to provision or set up.
+
+26
+00:01:16,380 --> 00:01:18,830
+It can connect to your existing tools and systems.
+
+27
+00:01:20,490 --> 00:01:21,870
+Configurable workflow.
+
+28
+00:01:22,580 --> 00:01:26,360
+AWS CodePipeline allows you to model the different stages of
+
+29
+00:01:26,360 --> 00:01:30,790
+your software release process using the AWS Management Console interface,
+
+30
+00:01:30,960 --> 00:01:36,210
+the AWS CLI, AWS CloudFormation, or the AWS SDKs.
+
+31
+00:01:36,960 --> 00:01:39,300
+You can easily specify the tests to run and
+
+32
+00:01:39,300 --> 00:01:43,230
+customize the steps to deploy your application and its dependencies.
+
+33
+00:01:44,290 --> 00:01:45,510
+Easy to integrate.
+
+34
+00:01:46,200 --> 00:01:50,910
+AWS CodePipeline can easily be extended to adapt to your specific needs.
+
+35
+00:01:51,530 --> 00:01:54,800
+You can use our pre-built plug-ins or your own custom plug-ins
+
+36
+00:01:54,860 --> 00:01:56,800
+in any step of your release process.
+
+37
+00:01:57,180 --> 00:02:00,280
+For example, you can pull your source code from GitHub,
+
+38
+00:02:00,780 --> 00:02:03,020
+use your on-premises Jenkins build server,
+
+39
+00:02:03,620 --> 00:02:06,080
+run load tests using a third-party service,
+
+40
+00:02:06,090 --> 00:02:10,130
+or pass on deployment information to your custom operations dashboard.
+
+41
+00:02:11,720 --> 00:02:12,850
+This is how it works.
+
+42
+00:02:13,600 --> 00:02:14,650
+In this example,
+
+43
+00:02:14,660 --> 00:02:17,480
+when developers commit changes to a source repository,
+
+44
+00:02:17,960 --> 00:02:20,740
+CodePipeline automatically detects the changes.
+
+45
+00:02:20,750 --> 00:02:22,620
+Those changes are then built.
+
+46
+00:02:23,370 --> 00:02:26,260
+If any tests are configured, those tests are run.
+
+47
+00:02:26,300 --> 00:02:28,040
+After the tests are complete,
+
+48
+00:02:28,040 --> 00:02:30,870
+the build code is deployed to staging servers for testing.
+
+49
+00:02:31,600 --> 00:02:34,670
+From the staging server, CodePipeline runs more tests,
+
+50
+00:02:34,840 --> 00:02:36,640
+such as integration or load tests.
+
+51
+00:02:37,610 --> 00:02:41,090
+Upon the successful completion of those tests and after a manual
+
+52
+00:02:41,090 --> 00:02:44,380
+approval action that was added to the pipeline, the code is approved,
+
+53
+00:02:44,390 --> 00:02:47,740
+CodePipeline deploys the tested and approved code to production,
+
+54
+00:02:47,840 --> 00:02:50,000
+and delivers applications to the customers.
+
+55
+00:02:51,130 --> 00:02:55,280
+Developers can quickly respond to any bugs, customer ideas, and requests
+
+56
+00:02:55,420 --> 00:02:58,640
+with bug fixes, changes, and updates to the applications.
+
+57
+00:02:59,330 --> 00:03:02,200
+The new changes are committed to the source code repository,
+
+58
+00:03:02,240 --> 00:03:04,480
+and the entire process automatically repeats.
+

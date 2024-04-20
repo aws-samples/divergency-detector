@@ -1,0 +1,208 @@
+1
+00:00:00,000 --> 00:00:02,440
+AWS Service Catalog Overview.
+
+2
+00:00:03,160 --> 00:00:06,700
+Organizations can use the AWS Service Catalog
+
+3
+00:00:07,220 --> 00:00:10,000
+to create and manage catalogs of IT services
+
+4
+00:00:10,080 --> 00:00:12,500
+that are approved by Amazon Web Services.
+
+5
+00:00:13,170 --> 00:00:17,970
+These IT services can include everything from virtual machine images,
+
+6
+00:00:18,220 --> 00:00:21,700
+servers, software, databases, and more
+
+7
+00:00:22,080 --> 00:00:24,910
+to complete multi-tier application architectures.
+
+8
+00:00:25,490 --> 00:00:27,500
+With AWS Service Catalog,
+
+9
+00:00:28,000 --> 00:00:32,340
+organizations can centrally manage commonly deployed IT services,
+
+10
+00:00:32,500 --> 00:00:34,780
+which helps them achieve consistent governance
+
+11
+00:00:34,900 --> 00:00:36,690
+and meet compliance requirements.
+
+12
+00:00:38,340 --> 00:00:41,020
+First, let's understand some key concepts.
+
+13
+00:00:41,690 --> 00:00:42,800
+What is a product
+
+14
+00:00:43,370 --> 00:00:46,600
+and what is a portfolio in AWS Service Catalog?
+
+15
+00:00:47,810 --> 00:00:53,360
+A product is an IT service that is available for deployment on AWS.
+
+16
+00:00:54,090 --> 00:00:58,180
+A product consists of one or more AWS resources.
+
+17
+00:00:59,080 --> 00:01:00,250
+A portfolio
+
+18
+00:01:00,680 --> 00:01:04,470
+is a collection of products that contain configuration information.
+
+19
+00:01:05,370 --> 00:01:08,740
+Portfolios help manage who can use specific products
+
+20
+00:01:08,850 --> 00:01:10,030
+and how they can use them.
+
+21
+00:01:11,300 --> 00:01:15,070
+AWS Service Catalog supports two types of users,
+
+22
+00:01:15,120 --> 00:01:18,220
+catalog administrators and end users.
+
+23
+00:01:18,950 --> 00:01:20,610
+Catalog administrators
+
+24
+00:01:21,000 --> 00:01:24,890
+manage a catalog of products such as applications and services.
+
+25
+00:01:25,830 --> 00:01:29,820
+Administrators organize products into portfolios, set constraints,
+
+26
+00:01:29,960 --> 00:01:31,810
+and grant access to end users.
+
+27
+00:01:32,710 --> 00:01:36,840
+End users are the users who receive AWS credentials
+
+28
+00:01:37,060 --> 00:01:39,140
+from their IT department or manager.
+
+29
+00:01:39,800 --> 00:01:44,040
+Then end users can access and use the AWS Management Console to
+
+30
+00:01:44,040 --> 00:01:47,920
+launch or deploy products to which they have been granted access.
+
+31
+00:01:49,230 --> 00:01:52,020
+Now, let's go through some of the key benefits.
+
+32
+00:01:52,910 --> 00:01:54,190
+Standardization.
+
+33
+00:01:55,430 --> 00:01:59,760
+You can use AWS Service Catalog to administer and manage
+
+34
+00:01:59,760 --> 00:02:03,630
+approved assets by restricting where the product can be launched,
+
+35
+00:02:03,680 --> 00:02:08,280
+the type of instance that can be used, and many other configuration options.
+
+36
+00:02:08,360 --> 00:02:09,530
+As a result,
+
+37
+00:02:09,539 --> 00:02:13,490
+you can standardize product provisioning for your entire organization.
+
+38
+00:02:16,800 --> 00:02:19,000
+Self-service discovery and launch.
+
+39
+00:02:19,960 --> 00:02:24,030
+End users can browse the listings of products available for them,
+
+40
+00:02:24,080 --> 00:02:26,280
+locate the products they want to use,
+
+41
+00:02:26,680 --> 00:02:29,770
+and launch it all on their own as a provisioned product.
+
+42
+00:02:34,080 --> 00:02:35,840
+Fine-grain access control.
+
+43
+00:02:37,180 --> 00:02:40,310
+AWS Service Catalog administrators assemble portfolios
+
+44
+00:02:40,310 --> 00:02:42,510
+of products from their catalog,
+
+45
+00:02:42,600 --> 00:02:46,510
+add constraints and resource tags to be used at provisioning.
+
+46
+00:02:47,170 --> 00:02:51,400
+Then catalog administrators grant access to the portfolio through
+
+47
+00:02:51,460 --> 00:02:55,600
+AWS Identity and Access Management, or IAM, users and groups.
+
+48
+00:02:58,920 --> 00:03:00,980
+Extensibility and version control.
+
+49
+00:03:01,840 --> 00:03:05,280
+AWS Service Catalog administrators can add a product
+
+50
+00:03:05,460 --> 00:03:09,600
+to any number of portfolios and restrict it without creating another copy.
+
+51
+00:03:10,160 --> 00:03:12,350
+Updating the product to a new version
+
+52
+00:03:12,410 --> 00:03:16,650
+propagates the update to all products in every portfolio that references it.
+

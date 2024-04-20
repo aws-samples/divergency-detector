@@ -1,0 +1,320 @@
+1
+00:00:00,000 --> 00:00:01,720
+Welcome to a brief lesson
+
+2
+00:00:01,740 --> 00:00:04,690
+on the AWS Shared Responsibility Model.
+
+3
+00:00:05,460 --> 00:00:10,400
+The AWS Shared Responsibility Model details the division of responsibilities
+
+4
+00:00:10,400 --> 00:00:12,950
+between AWS and customers.
+
+5
+00:00:13,030 --> 00:00:15,740
+This differentiation is commonly referred to as
+
+6
+00:00:15,760 --> 00:00:19,200
+security in the cloud, which is the customer's responsibility,
+
+7
+00:00:19,220 --> 00:00:23,740
+versus security of the cloud, which is AWS's responsibility.
+
+8
+00:00:25,450 --> 00:00:28,760
+Security and compliance is a shared responsibility
+
+9
+00:00:28,760 --> 00:00:31,210
+between AWS and the customer.
+
+10
+00:00:31,610 --> 00:00:32,650
+This shared model
+
+11
+00:00:32,770 --> 00:00:35,400
+can help relieve the customer's operational burden
+
+12
+00:00:35,420 --> 00:00:37,050
+as AWS operates,
+
+13
+00:00:37,190 --> 00:00:39,050
+manages, and controls
+
+14
+00:00:39,170 --> 00:00:40,600
+the host operating system
+
+15
+00:00:40,760 --> 00:00:42,100
+and virtualization layer,
+
+16
+00:00:42,250 --> 00:00:44,630
+down to the physical security of the facilities
+
+17
+00:00:44,760 --> 00:00:46,360
+in which the service operates.
+
+18
+00:00:46,380 --> 00:00:50,280
+AWS is responsible for protecting the infrastructure
+
+19
+00:00:50,450 --> 00:00:53,790
+that runs all of the services offered in the AWS Cloud.
+
+20
+00:00:54,260 --> 00:00:56,630
+This infrastructure is composed of the hardware,
+
+21
+00:00:56,740 --> 00:00:58,340
+software, networking,
+
+22
+00:00:58,500 --> 00:00:59,510
+and facilities
+
+23
+00:00:59,640 --> 00:01:01,880
+that run AWS Cloud services.
+
+24
+00:01:03,200 --> 00:01:05,800
+For customers, they assume responsibility
+
+25
+00:01:05,960 --> 00:01:08,490
+and management of the guest operating system,
+
+26
+00:01:08,550 --> 00:01:10,660
+including updates and security patches,
+
+27
+00:01:10,750 --> 00:01:12,940
+other associated application software,
+
+28
+00:01:13,090 --> 00:01:16,820
+and configuration of the AWS-provided security group firewall.
+
+29
+00:01:18,000 --> 00:01:20,320
+Customers should carefully consider the services
+
+30
+00:01:20,320 --> 00:01:22,840
+they choose as their responsibilities vary.
+
+31
+00:01:23,340 --> 00:01:25,050
+Depending on the services used,
+
+32
+00:01:25,060 --> 00:01:28,230
+the integration of those services into their IT environment,
+
+33
+00:01:28,230 --> 00:01:31,390
+and applicable laws and regulations,
+
+34
+00:01:31,390 --> 00:01:34,370
+customers are also responsible for managing their data,
+
+35
+00:01:34,440 --> 00:01:37,580
+including encryption options, classifying their assets,
+
+36
+00:01:37,730 --> 00:01:40,710
+and using IAM tools to apply the appropriate permissions.
+
+37
+00:01:41,860 --> 00:01:43,900
+Let's take a look at how responsibilities
+
+38
+00:01:43,900 --> 00:01:47,060
+change depending on the AWS services selected.
+
+39
+00:01:48,070 --> 00:01:53,930
+Amazon EC2 is categorized as infrastructure as a service, or IaaS,
+
+40
+00:01:54,080 --> 00:01:54,960
+and as such
+
+41
+00:01:55,080 --> 00:01:59,150
+requires the customer to perform all of the necessary security configuration
+
+42
+00:01:59,310 --> 00:02:00,610
+and management tasks.
+
+43
+00:02:01,080 --> 00:02:03,420
+When working with EC2 instances,
+
+44
+00:02:03,540 --> 00:02:06,110
+customers are responsible for resources in the cloud,
+
+45
+00:02:06,260 --> 00:02:07,800
+which includes customer data,
+
+46
+00:02:07,950 --> 00:02:09,360
+the guest operating system
+
+47
+00:02:09,479 --> 00:02:12,860
+including updates and security patches, application software,
+
+48
+00:02:13,030 --> 00:02:14,030
+IAM policies,
+
+49
+00:02:14,160 --> 00:02:16,240
+networking and firewall configuration,
+
+50
+00:02:16,360 --> 00:02:17,650
+client-side encryption,
+
+51
+00:02:17,780 --> 00:02:19,020
+server-side encryption,
+
+52
+00:02:19,170 --> 00:02:20,700
+and network-traffic encryption.
+
+53
+00:02:21,460 --> 00:02:24,900
+AWS is responsible for security of the cloud,
+
+54
+00:02:25,070 --> 00:02:29,060
+which involves protecting the infrastructure that runs EC2 instances.
+
+55
+00:02:29,480 --> 00:02:32,340
+This is composed of virtualization software for compute,
+
+56
+00:02:32,450 --> 00:02:35,420
+storage, database, and networking services,
+
+57
+00:02:35,840 --> 00:02:38,440
+the underlying hardware within each data center that
+
+58
+00:02:38,440 --> 00:02:41,090
+comprises the AWS Global Infrastructure,
+
+59
+00:02:41,240 --> 00:02:43,750
+and the physical infrastructure that supports
+
+60
+00:02:43,750 --> 00:02:47,840
+AWS Regions, Availability Zones, and edge locations.
+
+61
+00:02:48,780 --> 00:02:50,370
+With AWS Lambda,
+
+62
+00:02:50,530 --> 00:02:52,200
+the responsibilities change
+
+63
+00:02:52,310 --> 00:02:54,880
+as customers must manage the security of their code
+
+64
+00:02:55,060 --> 00:02:58,560
+and identity and access management to the Lambda service
+
+65
+00:02:58,700 --> 00:03:00,340
+as well as within their functions.
+
+66
+00:03:00,540 --> 00:03:01,640
+More specifically,
+
+67
+00:03:01,790 --> 00:03:05,560
+customers are responsible for managing customer function code libraries,
+
+68
+00:03:05,720 --> 00:03:07,260
+resource configurations,
+
+69
+00:03:07,380 --> 00:03:09,230
+and identity and access management
+
+70
+00:03:09,360 --> 00:03:10,560
+for Lambda functions.
+
+71
+00:03:10,860 --> 00:03:12,630
+When using AWS Lambda,
+
+72
+00:03:12,680 --> 00:03:16,240
+AWS is responsible for managing the underlying infrastructure
+
+73
+00:03:16,390 --> 00:03:19,030
+that includes the compute and execution environments,
+
+74
+00:03:19,190 --> 00:03:20,790
+the Lambda runtime language,
+
+75
+00:03:20,900 --> 00:03:22,230
+networking infrastructure,
+
+76
+00:03:22,400 --> 00:03:23,420
+the service software,
+
+77
+00:03:23,580 --> 00:03:24,680
+underlying hardware,
+
+78
+00:03:24,850 --> 00:03:26,950
+and the facilities that support the Regions,
+
+79
+00:03:27,060 --> 00:03:28,440
+Availability Zones,
+
+80
+00:03:28,500 --> 00:03:29,860
+and EC2 hardware.
+

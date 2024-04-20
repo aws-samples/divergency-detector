@@ -1,0 +1,104 @@
+1
+00:00:00,000 --> 00:00:04,166
+AWS Identity and Access Management - IAM
+- Overview
+
+2
+00:00:04,583 --> 00:00:12,875
+AWS Identity and Access Management, AWS
+IAM, enables you to manage access to AWS services and resources securely.
+
+3
+00:00:13,583 --> 00:00:19,333
+An IAM user is an entity that
+represents the person or application that interacts with AWS.
+
+4
+00:00:20,000 --> 00:00:25,916
+An IAM group is a collection of users.
+Each user in the group inherits the permissions of the group.
+
+5
+00:00:26,000 --> 00:00:30,291
+Using IAM you can create IAM users
+and groups, and manage them.
+
+6
+00:00:30,541 --> 00:00:38,333
+IAM controls who is authenticated in
+order to sign in to AWS. Each user is assigned an individual security credential.
+
+7
+00:00:39,208 --> 00:00:44,916
+By default, IAM users cannot access any
+resources in your account until you give them permissions.
+
+8
+00:00:45,250 --> 00:00:51,750
+You need to apply an IAM policy to
+grant permissions in order to allow and deny their access to AWS resources.
+
+9
+00:00:52,625 --> 00:01:06,166
+You can also use IAM roles to delegate
+access to users, applications, or services that don't normally have access to your AWS resources. When you assume a role, it provides you with temporary security credentials for your role session.
+
+10
+00:01:07,166 --> 00:01:11,666
+IAM is a feature of your AWS account,
+offered at no additional charge.
+
+11
+00:01:12,083 --> 00:01:16,250
+You will be charged only for use of other
+AWS services by your users.
+
+12
+00:01:18,000 --> 00:01:19,875
+Here are the common use cases.
+
+13
+00:01:20,375 --> 00:01:24,625
+IAM provides fine-grained access
+control to AWS resources.
+
+14
+00:01:25,000 --> 00:01:39,875
+IAM also enables you to add specific
+conditions, such as time of day, to control how a user can use AWS, their originating IP address, whether they are using SSL, or whether they have authenticated with a multi-factor authentication device, or MFA.
+
+15
+00:01:41,500 --> 00:01:45,458
+IAM helps you analyze access across
+your AWS environment.
+
+16
+00:01:46,375 --> 00:01:54,125
+Your security teams and administrators can
+quickly validate that your policies only provide the intended public and cross-account access to your resources.
+
+17
+00:01:55,250 --> 00:02:04,458
+You can also easily identify and refine
+your policies to allow access to only the services being used. This helps you to better adhere to the principle of least privilege.
+
+18
+00:02:06,416 --> 00:02:12,333
+By using multi-factor authentication for
+highly privileged users, you can protect your AWS environment.
+
+19
+00:02:13,000 --> 00:02:26,916
+Once activated, signing into MFA protected
+account requires a username, password and a valid MFA code provided by an MFA device, either a hardware MFA token or a virtual MFA device such as a MFA-enabled mobile device.
+
+20
+00:02:29,500 --> 00:02:33,958
+IAM can integrate with your corporate
+directory by enabling Identity Federation.
+
+21
+00:02:34,583 --> 00:02:49,458
+It can grant your employees an application
+access to AWS Management Console, AWS Service APIs, and resources using your existing identity systems, such as Microsoft Active Directory, or any identity management solution that supports SAML 2.0.
+

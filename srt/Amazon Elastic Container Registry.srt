@@ -1,0 +1,292 @@
+1
+00:00:00,140 --> 00:00:02,820
+Amazon Elastic Container Registry (Amazon ECR) Overview.
+
+2
+00:00:06,070 --> 00:00:08,520
+Amazon Elastic Container Registry,
+
+3
+00:00:08,600 --> 00:00:09,920
+or Amazon ECR,
+
+4
+00:00:10,040 --> 00:00:12,580
+is a fully managed container registry
+
+5
+00:00:12,620 --> 00:00:14,350
+offering high-performance hosting,
+
+6
+00:00:14,950 --> 00:00:17,780
+so you can reliably deploy application images
+
+7
+00:00:17,820 --> 00:00:19,180
+and artifacts anywhere.
+
+8
+00:00:22,020 --> 00:00:24,290
+You can push container images to Amazon ECR
+
+9
+00:00:24,300 --> 00:00:27,280
+without installing or scaling infrastructure.
+
+10
+00:00:29,080 --> 00:00:31,750
+And you can pull images using any management tool.
+
+11
+00:00:33,700 --> 00:00:35,790
+You can share and download images
+
+12
+00:00:37,120 --> 00:00:40,570
+securely over HTTPS with automatic encryption
+
+13
+00:00:41,610 --> 00:00:43,380
+and access controls.
+
+14
+00:00:45,010 --> 00:00:47,770
+You can access and distribute your images faster,
+
+15
+00:00:48,610 --> 00:00:50,370
+reduce download times,
+
+16
+00:00:51,320 --> 00:00:53,930
+and improve availability by using a scalable,
+
+17
+00:00:54,740 --> 00:00:56,050
+durable architecture.
+
+18
+00:01:00,110 --> 00:01:00,970
+Features.
+
+19
+00:01:02,130 --> 00:01:04,650
+Amazon container orchestrator integration.
+
+20
+00:01:06,070 --> 00:01:08,240
+Amazon ECR is integrated with
+
+21
+00:01:08,260 --> 00:01:11,110
+Amazon Elastic Container Service, or Amazon ECS,
+
+22
+00:01:12,580 --> 00:01:16,660
+and Amazon Elastic Kubernetes Service, or Amazon EKS,
+
+23
+00:01:17,530 --> 00:01:19,150
+which means you can store and run
+
+24
+00:01:19,150 --> 00:01:22,260
+container images for applications with either orchestrator.
+
+25
+00:01:24,960 --> 00:01:26,430
+OCI and Docker support.
+
+26
+00:01:28,320 --> 00:01:28,960
+Amazon ECR
+
+27
+00:01:29,280 --> 00:01:31,530
+supports Open Container Initiative,
+
+28
+00:01:31,640 --> 00:01:36,470
+or OCI, standards in the Docker registry HTTP API V2.
+
+29
+00:01:38,290 --> 00:01:41,240
+Therefore you can use Docker CLI commands
+
+30
+00:01:42,100 --> 00:01:44,790
+or your preferred Docker tools to interact with Amazon ECR
+
+31
+00:01:46,620 --> 00:01:49,060
+maintaining your existing development workflow.
+
+32
+00:01:51,130 --> 00:01:53,680
+Public container image and artifact gallery.
+
+33
+00:01:55,030 --> 00:01:57,320
+You can discover and use container software that
+
+34
+00:01:57,320 --> 00:02:00,120
+vendors and community developers share publicly in the
+
+35
+00:02:00,140 --> 00:02:02,050
+Amazon ECR public gallery.
+
+36
+00:02:03,800 --> 00:02:05,880
+You don't need to use an AWS account
+
+37
+00:02:05,940 --> 00:02:07,730
+to search or pull a public image.
+
+38
+00:02:12,830 --> 00:02:13,880
+AWS Marketplace.
+
+39
+00:02:16,150 --> 00:02:17,960
+Amazon ECR stores containers
+
+40
+00:02:18,000 --> 00:02:20,020
+that you create in any container software
+
+41
+00:02:20,060 --> 00:02:22,320
+that you buy through AWS Marketplace.
+
+42
+00:02:24,520 --> 00:02:26,600
+High availability and durability.
+
+43
+00:02:28,610 --> 00:02:31,040
+Amazon ECR stores your container images
+
+44
+00:02:31,080 --> 00:02:33,880
+and artifacts in Amazon Simple Storage Service,
+
+45
+00:02:33,980 --> 00:02:35,660
+or Amazon S3.
+
+46
+00:02:36,710 --> 00:02:40,800
+Amazon S3 is designed for eleven 9s of data durability,
+
+47
+00:02:40,900 --> 00:02:42,800
+because it automatically creates
+
+48
+00:02:43,900 --> 00:02:48,240
+and stores copies of all Amazon S3 objects across multiple systems.
+
+49
+00:02:50,420 --> 00:02:51,680
+Access control.
+
+50
+00:02:54,150 --> 00:02:55,790
+Amazon ECR uses
+
+51
+00:02:56,360 --> 00:02:59,400
+AWS Identity and Access Management, or IAM,
+
+52
+00:02:59,420 --> 00:03:01,340
+to control and monitor who
+
+53
+00:03:01,910 --> 00:03:04,970
+and what resources can access your container images.
+
+54
+00:03:06,200 --> 00:03:07,180
+Through IAM,
+
+55
+00:03:07,300 --> 00:03:11,300
+you can define policies to allow users within the same AWS account
+
+56
+00:03:12,070 --> 00:03:15,160
+or other accounts to access your container images
+
+57
+00:03:15,180 --> 00:03:16,600
+in private repositories.
+
+58
+00:03:20,110 --> 00:03:21,000
+Encryption.
+
+59
+00:03:22,940 --> 00:03:25,020
+You can transfer your container images
+
+60
+00:03:25,100 --> 00:03:28,340
+to and from Amazon ECR through HTTPS.
+
+61
+00:03:30,140 --> 00:03:32,760
+Your images are also automatically encrypted at rest
+
+62
+00:03:32,760 --> 00:03:35,300
+using Amazon S3 server-side encryption.
+
+63
+00:03:37,340 --> 00:03:39,070
+Third-party integrations.
+
+64
+00:03:40,630 --> 00:03:41,220
+Amazon ECR
+
+65
+00:03:41,650 --> 00:03:44,620
+is integrated with third-party developer tools.
+
+66
+00:03:46,010 --> 00:03:47,850
+You can integrate Amazon ECR
+
+67
+00:03:47,850 --> 00:03:51,090
+into your continuous integration and delivery process
+
+68
+00:03:51,130 --> 00:03:54,730
+so you can maintain your existing development workflow.
+
+69
+00:03:57,110 --> 00:03:58,870
+Pull through cache repositories.
+
+70
+00:04:00,280 --> 00:04:02,920
+Using pull through cache repositories in Amazon ECR,
+
+71
+00:04:03,680 --> 00:04:05,450
+you can retrieve, store,
+
+72
+00:04:05,880 --> 00:04:07,750
+and sync container artifacts stored
+
+73
+00:04:07,750 --> 00:04:10,310
+in publicly accessible container registries.
+

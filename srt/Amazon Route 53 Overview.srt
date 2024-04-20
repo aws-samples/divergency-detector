@@ -1,0 +1,268 @@
+1
+00:00:00,000 --> 00:00:03,230
+Welcome to an Overview of Amazon Route 53.
+
+2
+00:00:03,640 --> 00:00:05,160
+Amazon Route 53
+
+3
+00:00:05,310 --> 00:00:06,520
+is a highly available
+
+4
+00:00:06,660 --> 00:00:08,750
+and scalable cloud domain name system,
+
+5
+00:00:08,900 --> 00:00:11,400
+that provides a reliable and cost effective way
+
+6
+00:00:11,540 --> 00:00:13,140
+for developers and businesses
+
+7
+00:00:13,260 --> 00:00:15,660
+to route end users to internet applications.
+
+8
+00:00:16,210 --> 00:00:20,850
+This is achieved by translating names like www.example.com
+
+9
+00:00:21,010 --> 00:00:23,080
+into numeric IP addresses like
+
+10
+00:00:23,480 --> 00:00:25,740
+192.0.2.1,
+
+11
+00:00:25,900 --> 00:00:28,180
+that enable computers to connect to each other.
+
+12
+00:00:28,560 --> 00:00:31,700
+Amazon Route 53 is also fully compliant
+
+13
+00:00:31,800 --> 00:00:33,810
+with internet protocol version six, or IPv6.
+
+14
+00:00:34,450 --> 00:00:36,000
+Amazon Route 53
+
+15
+00:00:36,120 --> 00:00:39,500
+connects user requests to infrastructure running in AWS
+
+16
+00:00:39,630 --> 00:00:43,760
+such as Amazon S3 buckets or Amazon Elastic Load Balances,
+
+17
+00:00:43,920 --> 00:00:48,060
+and can also be used to route users to infrastructure outside of AWS.
+
+18
+00:00:48,730 --> 00:00:50,970
+Amazon Route 53 traffic flow
+
+19
+00:00:51,100 --> 00:00:53,260
+simplifies traffic management globally
+
+20
+00:00:53,410 --> 00:00:55,170
+through a variety of rooting types,
+
+21
+00:00:55,300 --> 00:00:57,030
+including latency based routing
+
+22
+00:00:57,190 --> 00:01:01,610
+that routes uses to the AWS region that provides the lowest possible latency.
+
+23
+00:01:02,100 --> 00:01:03,500
+Geo DNS routing
+
+24
+00:01:03,640 --> 00:01:06,100
+that routes users to a particular endpoint that you
+
+25
+00:01:06,140 --> 00:01:08,900
+specify based on the end user's geographic location.
+
+26
+00:01:09,340 --> 00:01:10,870
+Geoproximity routing
+
+27
+00:01:11,040 --> 00:01:13,140
+that routes traffic to your resources based on
+
+28
+00:01:13,140 --> 00:01:16,420
+the geographic location of your users and your resources.
+
+29
+00:01:16,820 --> 00:01:18,480
+Weighted round robin routing
+
+30
+00:01:18,640 --> 00:01:20,220
+that specifies the frequency
+
+31
+00:01:20,350 --> 00:01:22,430
+with which different DNS responses
+
+32
+00:01:22,580 --> 00:01:24,070
+are returned to end users.
+
+33
+00:01:24,500 --> 00:01:25,710
+And Failover routing
+
+34
+00:01:25,880 --> 00:01:27,960
+that lets you route traffic to a resource when
+
+35
+00:01:27,960 --> 00:01:30,710
+the resource is healthy, or to a different resource
+
+36
+00:01:30,840 --> 00:01:32,780
+when the first resource is unhealthy.
+
+37
+00:01:33,230 --> 00:01:37,370
+You can also use Amazon Route 53 Application Recovery Controller
+
+38
+00:01:37,500 --> 00:01:39,290
+to configure DNS health checks,
+
+39
+00:01:39,420 --> 00:01:43,400
+that continuously monitor your application's ability to recover from failures
+
+40
+00:01:43,510 --> 00:01:45,340
+and control application recovery.
+
+41
+00:01:47,290 --> 00:01:50,650
+Amazon Route 53 has a simple web services interface
+
+42
+00:01:50,810 --> 00:01:52,620
+that lets you get started in minutes.
+
+43
+00:01:53,030 --> 00:01:56,560
+You start by creating an Amazon Route 53 Hosted Zone
+
+44
+00:01:56,750 --> 00:01:59,130
+that can store DNS records for your domain.
+
+45
+00:01:59,570 --> 00:02:01,280
+Once you create a hosted zone,
+
+46
+00:02:01,440 --> 00:02:03,950
+you receive four Route 53 name servers
+
+47
+00:02:04,060 --> 00:02:07,430
+to help ensure a high level of availability for your applications.
+
+48
+00:02:08,539 --> 00:02:12,220
+If you don't have a domain name, you can create one with route 53
+
+49
+00:02:12,590 --> 00:02:15,440
+or transfer an existing domain that you already own.
+
+50
+00:02:15,550 --> 00:02:18,160
+So you can conveniently manage your domain names
+
+51
+00:02:18,250 --> 00:02:20,840
+and DNS configuration in a single location.
+
+52
+00:02:21,520 --> 00:02:25,990
+Your hosted zone will be initially populated with a basic set of DNS records,
+
+53
+00:02:26,100 --> 00:02:28,100
+including four virtual name servers
+
+54
+00:02:28,230 --> 00:02:30,080
+that will answer queries for your domain.
+
+55
+00:02:30,530 --> 00:02:31,350
+You can add,
+
+56
+00:02:31,480 --> 00:02:33,590
+delete or change records in this set
+
+57
+00:02:33,730 --> 00:02:36,160
+using the AWS Management Console
+
+58
+00:02:36,280 --> 00:02:39,320
+or by calling the change resource record set API.
+
+59
+00:02:40,040 --> 00:02:41,570
+Amazon Route 53
+
+60
+00:02:41,720 --> 00:02:43,970
+supports many DNS record types,
+
+61
+00:02:44,110 --> 00:02:47,330
+including a records that route traffic to a resource
+
+62
+00:02:47,440 --> 00:02:48,620
+such as a web server
+
+63
+00:02:49,040 --> 00:02:53,510
+and CNAME records that allow you to redirect one domain name to another.
+
+64
+00:02:53,950 --> 00:02:56,780
+Route 53 also includes alias records
+
+65
+00:02:56,910 --> 00:03:00,230
+that let you route traffic to selected AWS resources
+
+66
+00:03:00,350 --> 00:03:01,690
+like Amazon S3,
+
+67
+00:03:01,850 --> 00:03:03,150
+and Amazon CloudFront.
+

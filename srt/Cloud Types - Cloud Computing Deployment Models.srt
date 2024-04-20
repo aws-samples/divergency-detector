@@ -1,0 +1,116 @@
+1
+00:00:00,480 --> 00:00:03,630
+Welcome to Types of Cloud Computing Deployment Models.
+
+2
+00:00:07,700 --> 00:00:11,630
+There are three types of cloud computing deployment models: on-premises,
+
+3
+00:00:11,640 --> 00:00:12,860
+cloud and hybrid.
+
+4
+00:00:13,520 --> 00:00:17,810
+On-premises deployment model is the same as the legacy IT infrastructure.
+
+5
+00:00:18,520 --> 00:00:20,840
+Physical servers, databases,
+
+6
+00:00:20,860 --> 00:00:24,430
+applications, and storage are located in their own facilities.
+
+7
+00:00:26,030 --> 00:00:29,290
+Applications are deployed and run on these physical servers.
+
+8
+00:00:30,910 --> 00:00:35,020
+On-premises deployment does not provide many of the benefits of cloud computing,
+
+9
+00:00:35,140 --> 00:00:38,830
+but it is sometimes sought for its ability to provide dedicated resources.
+
+10
+00:00:40,290 --> 00:00:41,580
+Cloud deployment model.
+
+11
+00:00:42,570 --> 00:00:43,660
+In the cloud model,
+
+12
+00:00:43,800 --> 00:00:46,270
+IT resources and applications are migrated
+
+13
+00:00:46,270 --> 00:00:48,260
+from existing infrastructure to the cloud.
+
+14
+00:00:53,500 --> 00:00:56,500
+Physical servers are replaced by scalable virtual servers.
+
+15
+00:00:57,840 --> 00:01:00,790
+A cloud-based application is fully deployed in the cloud,
+
+16
+00:01:00,790 --> 00:01:02,970
+and all parts of the application run in the cloud
+
+17
+00:01:02,970 --> 00:01:05,590
+taking advantage of the benefits of cloud computing.
+
+18
+00:01:08,310 --> 00:01:10,090
+Hybrid cloud deployment model.
+
+19
+00:01:10,920 --> 00:01:14,310
+Hybrid cloud is a mixture of cloud and on-premises computing.
+
+20
+00:01:15,680 --> 00:01:19,540
+The existing on-premises infrastructure can satisfy your need for control,
+
+21
+00:01:19,660 --> 00:01:22,540
+latency, and sensitive data security requirements
+
+22
+00:01:23,150 --> 00:01:26,310
+while connecting cloud resources to your internal systems.
+
+23
+00:01:26,950 --> 00:01:28,080
+At the same time,
+
+24
+00:01:28,200 --> 00:01:31,300
+you can extend your existing infrastructure and grow to the cloud.
+
+25
+00:01:31,740 --> 00:01:34,280
+Each type of cloud computing model and deployment
+
+26
+00:01:34,280 --> 00:01:36,760
+method provides you with different levels of control,
+
+27
+00:01:36,900 --> 00:01:38,450
+flexibility, and management.
+
+28
+00:01:39,190 --> 00:01:41,890
+Understanding their differences can help you decide what
+
+29
+00:01:41,890 --> 00:01:43,990
+set of services is right for your needs.
+

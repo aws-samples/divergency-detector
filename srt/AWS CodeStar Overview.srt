@@ -1,0 +1,212 @@
+1
+00:00:00,000 --> 00:00:02,730
+AWS CodeStar Overview.
+
+2
+00:00:04,550 --> 00:00:07,870
+AWS CodeStar enables you to quickly develop,
+
+3
+00:00:07,880 --> 00:00:10,630
+build, and deploy applications on AWS.
+
+4
+00:00:10,800 --> 00:00:14,950
+AWS CodeStar provides a unified user interface, allowing you
+
+5
+00:00:14,950 --> 00:00:18,190
+to easily manage your software development activities in one place.
+
+6
+00:00:18,340 --> 00:00:19,600
+With CodeStar,
+
+7
+00:00:19,610 --> 00:00:22,970
+you can set up your entire continuous delivery toolchain in minutes,
+
+8
+00:00:22,990 --> 00:00:25,380
+enabling you to start releasing code faster.
+
+9
+00:00:25,430 --> 00:00:28,750
+CodeStar simplifies secure team collaboration, allowing
+
+10
+00:00:28,750 --> 00:00:30,470
+you to manage access and add owners,
+
+11
+00:00:30,470 --> 00:00:32,900
+contributors, and viewers to your projects.
+
+12
+00:00:33,260 --> 00:00:37,750
+Each AWS CodeStar project comes with a project management dashboard,
+
+13
+00:00:37,760 --> 00:00:40,260
+including an integrated issue-tracking capability.
+
+14
+00:00:40,740 --> 00:00:42,230
+With a CodeStar dashboard,
+
+15
+00:00:42,240 --> 00:00:45,370
+you can track progress across your entire software development
+
+16
+00:00:45,370 --> 00:00:48,710
+process from your backlog to recent code deployments.
+
+17
+00:00:50,440 --> 00:00:53,670
+Here are some benefits from using AWS CodeStar.
+
+18
+00:00:54,400 --> 00:00:58,190
+With AWS CodeStar, it's easy to start developing in minutes.
+
+19
+00:00:58,220 --> 00:01:01,490
+You can choose from a variety of CodeStar templates such as
+
+20
+00:01:01,490 --> 00:01:06,000
+Amazon EC2, AWS Lambda, and AWS Elastic Beanstalk.
+
+21
+00:01:06,660 --> 00:01:07,690
+For source control,
+
+22
+00:01:07,700 --> 00:01:11,990
+you can choose AWS CodeCommit or GitHub for your project, and you can
+
+23
+00:01:11,990 --> 00:01:17,130
+edit your source code using AWS Cloud9, Microsoft Visual Studio, or Eclipse.
+
+24
+00:01:17,410 --> 00:01:18,970
+After you make your selections,
+
+25
+00:01:19,010 --> 00:01:22,120
+the underlying AWS services are provisioned in minutes,
+
+26
+00:01:22,130 --> 00:01:25,600
+allowing you to quickly start coding and deploying your applications.
+
+27
+00:01:25,610 --> 00:01:28,330
+CodeStar provides an easy way to coordinate your day-to-day
+
+28
+00:01:28,330 --> 00:01:31,720
+development activities through a unified user interface.
+
+29
+00:01:31,990 --> 00:01:34,640
+AWS CodeStar's project dashboard
+
+30
+00:01:34,700 --> 00:01:35,950
+lets you monitor code commits,
+
+31
+00:01:35,960 --> 00:01:39,420
+builds, tests, and deployments from a central place.
+
+32
+00:01:39,550 --> 00:01:42,640
+CodeStar also integrates with Atlassian Jira software,
+
+33
+00:01:42,880 --> 00:01:44,390
+a third-party issue tracking and
+
+34
+00:01:44,390 --> 00:01:47,150
+project management tool, allowing you to easily manage
+
+35
+00:01:47,150 --> 00:01:50,430
+Jira issues directly in the AWS CodeStar dashboard.
+
+36
+00:01:51,760 --> 00:01:55,220
+AWS CodeStar also enables you to collaborate on
+
+37
+00:01:55,220 --> 00:01:57,490
+projects across your team in a secure manner.
+
+38
+00:01:57,590 --> 00:02:00,290
+You can easily manage access for project owners,
+
+39
+00:02:00,300 --> 00:02:03,080
+contributors, and viewers without needing to manually
+
+40
+00:02:03,080 --> 00:02:05,340
+configure your own policy for each service.
+
+41
+00:02:05,520 --> 00:02:08,060
+CodeStar simplifies the process of setting up
+
+42
+00:02:08,140 --> 00:02:10,190
+project access for teams by providing
+
+43
+00:02:10,199 --> 00:02:12,430
+built-in role-based policies that follow
+
+44
+00:02:12,430 --> 00:02:15,670
+AWS Identity and Access Management best practices.
+
+45
+00:02:16,260 --> 00:02:21,660
+AWS CodeStar accelerates software release by integrating AWS CodeBuild,
+
+46
+00:02:21,730 --> 00:02:26,600
+AWS CodePipeline, and AWS CodeDeploy into the CodeStar service.
+
+47
+00:02:27,020 --> 00:02:30,240
+Each project comes preconfigured with an automated pipeline that
+
+48
+00:02:30,240 --> 00:02:33,730
+continuously builds, tests, and deploys your code with each commit.
+
+49
+00:02:34,150 --> 00:02:36,390
+And with CodeStar's IDE integrations,
+
+50
+00:02:36,440 --> 00:02:40,260
+you can begin developing your code directly using AWS Cloud9,
+
+51
+00:02:40,410 --> 00:02:43,890
+that comes with a pre-authenticated AWS Command Line Interface.
+
+52
+00:02:44,240 --> 00:02:47,620
+Once your application is deployed, you can monitor its performance with
+
+53
+00:02:47,640 --> 00:02:49,910
+Amazon CloudWatch or Atlassian Jira.
+

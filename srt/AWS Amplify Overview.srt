@@ -1,0 +1,177 @@
+1
+00:00:00,120 --> 00:00:02,160
+AWS Amplify Overview.
+
+2
+00:00:02,960 --> 00:00:06,820
+AWS Amplify is a set of purpose-built tools and features that
+
+3
+00:00:06,820 --> 00:00:09,600
+frontend web developers and mobile developers can use
+
+4
+00:00:09,600 --> 00:00:12,720
+to quickly build full-stack applications on AWS.
+
+5
+00:00:13,200 --> 00:00:14,130
+With Amplify,
+
+6
+00:00:14,260 --> 00:00:17,350
+you can configure a web or mobile application backend
+
+7
+00:00:17,500 --> 00:00:19,000
+and connect your app in minutes.
+
+8
+00:00:19,610 --> 00:00:22,010
+You can visually build a web frontend UI
+
+9
+00:00:22,140 --> 00:00:25,620
+and manage app content outside the AWS Management Console.
+
+10
+00:00:26,100 --> 00:00:28,100
+You can use Amplify to ship faster and
+
+11
+00:00:28,100 --> 00:00:30,700
+scale with little effort and cloud expertise.
+
+12
+00:00:32,080 --> 00:00:34,970
+AWS Amplify Features. Build.
+
+13
+00:00:35,130 --> 00:00:37,850
+You can use Amplify authentication to quickly set up
+
+14
+00:00:37,850 --> 00:00:41,350
+secure authentication flows with a fully managed user directory.
+
+15
+00:00:41,810 --> 00:00:46,460
+The Amplify framework uses Amazon Cognito as the main authentication provider.
+
+16
+00:00:47,270 --> 00:00:48,890
+Amplify DataStore is an
+
+17
+00:00:48,890 --> 00:00:51,940
+on-device storage engine that automatically synchronizes data
+
+18
+00:00:51,940 --> 00:00:56,020
+between your mobile and web apps in your database in the AWS Cloud.
+
+19
+00:00:56,460 --> 00:00:59,480
+This helps you build real-time and offline apps faster.
+
+20
+00:01:00,100 --> 00:01:02,310
+Release, Scale, and Manage.
+
+21
+00:01:02,620 --> 00:01:05,980
+Amplify offers a fully managed service for deploying and hosting
+
+22
+00:01:05,980 --> 00:01:06,000
+full-stack web applications with built-in CI/CD
+Amplify offers a fully managed service for deploying and hosting
+
+23
+00:01:06,000 --> 00:01:08,740
+full-stack web applications with built-in CI/CD
+
+24
+00:01:08,740 --> 00:01:11,730
+workflows that accelerate your application release cycle.
+
+25
+00:01:12,640 --> 00:01:14,670
+The extensibility features of Amplify
+
+26
+00:01:14,670 --> 00:01:18,240
+give developers the flexibility to customize their AWS backend
+
+27
+00:01:18,260 --> 00:01:20,060
+and deployment capabilities.
+
+28
+00:01:22,550 --> 00:01:23,560
+Tools.
+
+29
+00:01:23,720 --> 00:01:26,520
+Amplify Studio generates automation templates when
+
+30
+00:01:26,520 --> 00:01:28,380
+you create backend resources.
+
+31
+00:01:28,800 --> 00:01:32,520
+These templates provide seamless integration with the Amplify CLI.
+
+32
+00:01:35,130 --> 00:01:36,910
+Amplify libraries are powered by
+
+33
+00:01:36,920 --> 00:01:39,720
+AWS services and can be used with new backends
+
+34
+00:01:39,740 --> 00:01:43,200
+created with the Amplify Command Line Interface, or CLI,
+
+35
+00:01:43,320 --> 00:01:44,420
+Amplify Studio,
+
+36
+00:01:44,530 --> 00:01:46,800
+or your existing AWS backend.
+
+37
+00:01:48,130 --> 00:01:48,900
+The Amplify CLI
+
+38
+00:01:49,260 --> 00:01:53,650
+is a toolchain to configure and maintain your backend from your local desktop.
+
+39
+00:01:55,120 --> 00:01:57,660
+Amplify UI Components is an open-source
+
+40
+00:01:57,880 --> 00:02:00,670
+toolkit that encapsulates cloud-connected workflows
+
+41
+00:02:00,680 --> 00:02:03,110
+inside of cross-framework UI components.
+
+42
+00:02:05,010 --> 00:02:07,370
+You can use Amplify hosting to host your frontend
+
+43
+00:02:07,370 --> 00:02:10,470
+web app, create or delete backend environments,
+
+44
+00:02:10,600 --> 00:02:13,280
+set up CI/CD on the frontend and backend.
+

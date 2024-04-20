@@ -1,0 +1,224 @@
+1
+00:00:00,100 --> 00:00:03,660
+Amazon Elastic Block Store (Amazon EBS) Features.
+
+2
+00:00:04,320 --> 00:00:06,020
+Here are the key features.
+
+3
+00:00:06,150 --> 00:00:08,370
+Amazon EBS Elastic Volumes.
+
+4
+00:00:08,990 --> 00:00:12,440
+Elastic Volumes allows you to dynamically increase capacity,
+
+5
+00:00:12,450 --> 00:00:17,230
+tune performance, and change volume types with no downtime or performance impact.
+
+6
+00:00:18,150 --> 00:00:21,880
+Simply create a volume with the capacity and performance needed today,
+
+7
+00:00:21,880 --> 00:00:25,800
+knowing you have the ability to modify your volume configuration in the future,
+
+8
+00:00:25,810 --> 00:00:27,810
+saving hours of planning cycles.
+
+9
+00:00:28,530 --> 00:00:31,710
+By using Amazon CloudWatch with AWS Lambda,
+
+10
+00:00:31,720 --> 00:00:35,490
+you can automate volume changes to meet the changing needs of your applications.
+
+11
+00:00:36,740 --> 00:00:38,990
+Amazon EBS-Optimized Instances.
+
+12
+00:00:39,580 --> 00:00:43,960
+You can launch certain EC2 instance types as EBS-optimized instances.
+
+13
+00:00:43,970 --> 00:00:46,260
+EBS-optimized instances
+
+14
+00:00:46,270 --> 00:00:51,580
+deliver dedicated throughput between Amazon EC2 and Amazon EBS with options
+
+15
+00:00:51,580 --> 00:00:56,340
+between 500-19,000 megabits per second, depending on the instance type used.
+
+16
+00:00:57,060 --> 00:01:01,480
+The dedicated throughput minimizes contention between Amazon EBS I/O
+
+17
+00:01:01,510 --> 00:01:03,650
+and other traffic from your EC2 instance,
+
+18
+00:01:03,670 --> 00:01:06,540
+providing the best performance for your EBS volumes.
+
+19
+00:01:08,000 --> 00:01:09,720
+Amazon EBS Snapshots.
+
+20
+00:01:10,300 --> 00:01:14,280
+You can back up the data on your Amazon EBS volumes to Amazon S3
+
+21
+00:01:14,290 --> 00:01:16,260
+by taking point-in-time snapshots
+
+22
+00:01:16,260 --> 00:01:20,520
+to enable disaster recovery. Snapshots are incremental backups,
+
+23
+00:01:20,530 --> 00:01:24,280
+which means that only the blocks on the device that have changed are saved.
+
+24
+00:01:24,290 --> 00:01:27,550
+You can create one or multiple new EBS volumes
+
+25
+00:01:27,560 --> 00:01:31,150
+based on a snapshot and resize Amazon EBS volumes.
+
+26
+00:01:32,190 --> 00:01:35,840
+The following are the key features for Amazon EBS Snapshots.
+
+27
+00:01:36,040 --> 00:01:37,250
+Direct read access.
+
+28
+00:01:37,280 --> 00:01:41,200
+You can use EBS direct API to read data off snapshots.
+
+29
+00:01:41,260 --> 00:01:45,560
+This makes it easy to track incremental changes between two EBS snapshots,
+
+30
+00:01:45,570 --> 00:01:49,200
+without needing to create the EBS volumes and EC2 instances.
+
+31
+00:01:49,950 --> 00:01:54,740
+You can create EBS snapshots from any block storage, regardless of where it resides,
+
+32
+00:01:54,750 --> 00:01:56,640
+including data on premises.
+
+33
+00:01:56,650 --> 00:02:01,360
+In addition, after a volume is created from EBS snapshots, your attached
+
+34
+00:02:01,370 --> 00:02:05,350
+instance can have immediate access to the Amazon EBS volume data.
+
+35
+00:02:05,360 --> 00:02:08,789
+If you enable fast snapshot restore, or FSR, capability,
+
+36
+00:02:08,840 --> 00:02:11,390
+EBS volumes restored from FSR-enabled
+
+37
+00:02:11,390 --> 00:02:14,160
+snapshots instantly receive their full performance.
+
+38
+00:02:14,830 --> 00:02:18,460
+EBS snapshots can also be shared across AWS accounts
+
+39
+00:02:18,500 --> 00:02:22,990
+and copied across AWS Regions, enabling geographical expansion.
+
+40
+00:02:23,000 --> 00:02:23,900
+In addition,
+
+41
+00:02:23,910 --> 00:02:28,360
+when you delete a snapshot, only the data unique to that snapshot is removed.
+
+42
+00:02:29,550 --> 00:02:32,330
+Data Lifecycle Manager, or DLM, for EBS snapshots
+
+43
+00:02:32,440 --> 00:02:36,460
+provides a simple, automated way to back up data stored on EBS volumes
+
+44
+00:02:36,470 --> 00:02:41,030
+by ensuring that EBS snapshots are created and deleted on a custom schedule.
+
+45
+00:02:41,680 --> 00:02:45,390
+Snapshots are cleaned up regularly to keep costs under control.
+
+46
+00:02:45,400 --> 00:02:49,520
+Simply tag your EBS volumes and start creating lifecycle policies
+
+47
+00:02:49,660 --> 00:02:51,780
+for creation and management of backups.
+
+48
+00:02:51,790 --> 00:02:55,600
+You can also use CloudWatch events to monitor your policies
+
+49
+00:02:55,600 --> 00:02:58,470
+and ensure that your backups are being created successfully.
+
+50
+00:02:59,280 --> 00:03:02,560
+With no additional fee, Amazon EBS Multi-Attach
+
+51
+00:03:02,710 --> 00:03:05,860
+enables you to attach a single provisioned IOPS SSD
+
+52
+00:03:05,870 --> 00:03:08,680
+io1 volume to up to 16 Nitro-based
+
+53
+00:03:08,680 --> 00:03:11,700
+EC2 instances within the same Availability Zone.
+
+54
+00:03:12,390 --> 00:03:16,800
+Each attached instance has full read-and-write permission to the shared volume.
+
+55
+00:03:16,810 --> 00:03:20,730
+Multi-Attach makes it easier to achieve higher application availability
+
+56
+00:03:20,740 --> 00:03:24,330
+for applications that manage storage consistency for multiple writers.
+

@@ -1,0 +1,13 @@
+1
+00:00:00,041 --> 00:00:01,626
+This is the plan section.
+
+2
+00:00:01,626 --> 00:00:04,629
+It provides
+an overview of the building tasks.
+
+3
+00:00:04,921 --> 00:00:07,924
+You will build one solution in two parts.
+

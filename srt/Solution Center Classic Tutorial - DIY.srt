@@ -1,0 +1,42 @@
+1
+00:00:00,083 --> 00:00:03,086
+Finally, this is the do it yourself
+section.
+
+2
+00:00:03,378 --> 00:00:06,715
+You must build part
+two of your solution, then validate it.
+
+3
+00:00:07,215 --> 00:00:09,926
+Read the hints on the left panel,
+then build part two
+
+4
+00:00:09,926 --> 00:00:13,930
+of your solution
+using the same AWS Console environment.
+
+5
+00:00:14,431 --> 00:00:19,644
+Use the validation field to confirm
+functionality. If your solution is correct,
+
+6
+00:00:19,769 --> 00:00:22,772
+you can choose exit
+to collect your rewards.
+
+7
+00:00:23,106 --> 00:00:24,899
+To replay the tutorials,
+
+8
+00:00:24,899 --> 00:00:27,902
+select the question mark icon at the top left.
+
+9
+00:00:28,570 --> 00:00:31,114
+That's it for now. Good luck building!
+

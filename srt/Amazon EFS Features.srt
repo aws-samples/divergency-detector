@@ -1,0 +1,192 @@
+1
+00:00:00,000 --> 00:00:04,866
+Amazon Elastic File System (Amazon EFS) Features.
+
+2
+00:00:04,866 --> 00:00:07,630
+Storage Classes and Lifecycle Management.
+
+3
+00:00:07,630 --> 00:00:10,520
+Amazon EFS offers two storage classes,
+
+4
+00:00:10,720 --> 00:00:15,240
+the standard storage class and the infrequent access storage class, or EFS IA.
+
+5
+00:00:15,860 --> 00:00:19,780
+The standard storage class is used to store frequently accessed files.
+
+6
+00:00:20,200 --> 00:00:23,760
+The infrequent access, or IA, is a lower-cost storage class
+
+7
+00:00:23,940 --> 00:00:26,830
+that's designed for storing files not accessed every day.
+
+8
+00:00:28,890 --> 00:00:31,020
+You can start using EFS IA
+
+9
+00:00:31,160 --> 00:00:34,880
+by simply enabling EFS Lifecycle Management for your file system.
+
+10
+00:00:35,330 --> 00:00:38,260
+When enabled, lifecycle management migrates files
+
+11
+00:00:38,400 --> 00:00:40,860
+that have not been accessed for a set period of time
+
+12
+00:00:41,000 --> 00:00:43,900
+to the infrequent access, or IA, storage class.
+
+13
+00:00:44,700 --> 00:00:47,960
+You can define the period of time by using a lifecycle policy.
+
+14
+00:00:48,800 --> 00:00:52,820
+Using the industry accepted estimate that 20% of data is actively used
+
+15
+00:00:53,000 --> 00:00:55,230
+and 80% is infrequently accessed,
+
+16
+00:00:55,230 --> 00:00:57,320
+you can store your files on EFS
+
+17
+00:00:57,420 --> 00:01:00,840
+at an effective price of $0.08 per gigabyte-month.
+
+18
+00:01:02,720 --> 00:01:03,920
+Performance modes.
+
+19
+00:01:04,300 --> 00:01:09,160
+Amazon EFS offers two performance modes, General Purpose and Max I/O.
+
+20
+00:01:09,660 --> 00:01:13,320
+General Purpose provides the lowest latency per file system operation
+
+21
+00:01:13,580 --> 00:01:16,780
+and can achieve this for random or sequential IO patterns.
+
+22
+00:01:17,300 --> 00:01:21,860
+Max IO can scale to higher levels of aggregate throughput and operations per second
+
+23
+00:01:21,860 --> 00:01:24,660
+and is ideal for highly parallelized applications
+
+24
+00:01:24,820 --> 00:01:27,940
+that can scale up to thousands of Amazon EC2 instances.
+
+25
+00:01:29,160 --> 00:01:30,280
+Throughput modes.
+
+26
+00:01:30,860 --> 00:01:35,430
+The throughput mode helps determine the overall throughput a file system can achieve.
+
+27
+00:01:35,430 --> 00:01:39,460
+Amazon EFS offers two throughput modes, bursting and provisioned.
+
+28
+00:01:40,000 --> 00:01:43,900
+With bursting throughput, the throughput scales with the size of the file system.
+
+29
+00:01:43,900 --> 00:01:48,440
+Dynamically bursting is needed to support the spiky nature of many file-based workloads.
+
+30
+00:01:49,200 --> 00:01:52,360
+Provisioned throughput is designed to support applications
+
+31
+00:01:52,480 --> 00:01:55,930
+that require higher dedicated throughput than the default bursting mode
+
+32
+00:01:55,930 --> 00:01:59,660
+and can be configured independently of the amount of data stored on the file system.
+
+33
+00:02:01,266 --> 00:02:02,530
+Encryption.
+
+34
+00:02:02,530 --> 00:02:05,940
+Amazon EFS offers encryption of data at rest and in transit,
+
+35
+00:02:06,080 --> 00:02:08,160
+providing a comprehensive encryption solution.
+
+36
+00:02:09,000 --> 00:02:12,620
+Data at rest is transparently encrypted using encryption keys
+
+37
+00:02:12,740 --> 00:02:15,330
+managed by the AWS Key Management Service,
+
+38
+00:02:15,330 --> 00:02:20,360
+AWS KMS, eliminating the need to build and maintain a key management infrastructure.
+
+39
+00:02:21,160 --> 00:02:26,020
+Encryption of data in transit uses industry-standard transport layer security, or TLS
+
+40
+00:02:26,200 --> 00:02:29,830
+to secure network traffic without having to modify your applications.
+
+41
+00:02:31,533 --> 00:02:34,260
+Containers and serverless file storage.
+
+42
+00:02:34,260 --> 00:02:39,540
+Amazon EFS is integrated with containers and serverless compute services from AWS
+
+43
+00:02:39,720 --> 00:02:42,330
+that require shared storage for latency-sensitive
+
+44
+00:02:42,333 --> 00:02:45,360
+and IOPS-heavy workloads at any scale.
+
+45
+00:02:45,360 --> 00:02:48,620
+In a single step, Amazon EFS provides applications
+
+46
+00:02:48,680 --> 00:02:51,830
+running on Amazon Elastic Container Service, or ECS,
+
+47
+00:02:51,833 --> 00:02:54,733
+Amazon Elastic Kubernetes Service, or EKS,
+
+48
+00:02:54,733 --> 00:03:00,666
+AWS Fargate, and AWS Lambda access to shared file systems for stateful workloads.
+

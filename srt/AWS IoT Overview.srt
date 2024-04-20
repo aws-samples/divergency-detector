@@ -1,0 +1,171 @@
+1
+00:00:00,000 --> 00:00:02,958
+AWS-IoT Overview
+
+2
+00:00:03,375 --> 00:00:12,000
+AWS IoT, or Internet of Things, provides
+the cloud services that connect IoT devices to other devices in AWS cloud services.
+
+3
+00:00:12,416 --> 00:00:19,833
+AWS IoT provides device software that can
+help integrate your IoT devices into AWS IoT-based solutions.
+
+4
+00:00:20,291 --> 00:00:26,958
+AWS IoT Core supports connections with IoT
+devices, wireless gateways, services, and apps.
+
+5
+00:00:27,300 --> 00:00:35,775
+Devices connect to AWS IoT Core so that
+they can send data to and receive data from AWS IoT services and other devices.
+
+6
+00:00:36,000 --> 00:00:44,656
+Apps and other services also connect to
+AWS IoT Core to control and manage IoT devices and process the data from your IoT solution.
+
+7
+00:00:44,800 --> 00:00:53,833
+AWS IoT Core supports different protocols such as MQTT, or Message Queuing and Telemetry
+Transport.
+
+8
+00:00:53,833 --> 00:00:57,833
+MQTT over WSS, or WebSockets Secure.
+
+9
+00:00:57,833 --> 00:01:04,500
+MQTT over HTTPS, or Hypertext Transfer
+Protocol Secure, LoRaWAN, or Long Range Wide Area Network.
+
+10
+00:01:05,200 --> 00:01:08,375
+AWS IoT Core Services
+
+11
+00:01:08,500 --> 00:01:11,375
+AWS IoT Core Messaging Services
+
+12
+00:01:11,583 --> 00:01:17,263
+The AWS IoT Core connectivity services
+provide secure communication with IoT devices
+
+13
+00:01:17,263 --> 00:01:21,663
+and manage the messages that pass between
+the devices in AWS IoT.
+
+14
+00:01:22,125 --> 00:01:27,666
+The Device Gateway enables devices to
+securely and efficiently communicate with AWS IoT.
+
+15
+00:01:27,750 --> 00:01:35,250
+The message broker provides a secure
+mechanism for devices and AWS IoT applications to publish and receive messages from each other.
+
+16
+00:01:35,708 --> 00:01:41,291
+AWS IoT Core for LoRaWAN, which is a
+low-power, wide-area networking protocol.
+
+17
+00:01:41,500 --> 00:01:46,583
+makes it possible to set up a private
+LoRaWAN network by connecting your LoRaWAN devices.
+
+18
+00:01:46,791 --> 00:01:51,751
+and gateways to AWS without the need to
+develop and operate a LoRaWAN network server.
+
+19
+00:01:52,311 --> 00:01:52,875
+LNS
+
+20
+00:01:53,208 --> 00:01:59,808
+The rules engine connects data from the
+message broker to other AWS IoT services for storage and additional processing.
+
+21
+00:02:00,291 --> 00:02:03,125
+AWS IoT Core Control Services
+
+22
+00:02:03,250 --> 00:02:09,749
+The AWS IoT Core control services provide
+device security, management, and registration features.
+
+23
+00:02:10,166 --> 00:02:21,458
+Using the Custom Authentication Service,
+you can define custom authorizes to provide authentication and authorization using different strategies, such as JSON Web Token Verification or OAuth Provider Callout.
+
+24
+00:02:21,916 --> 00:02:25,625
+Using the Device Provisioning Service, you
+can provision devices 
+
+25
+00:02:25,708 --> 00:02:27,625
+using a template that describes 
+
+26
+00:02:27,708 --> 00:02:32,083
+a Thing object, a Certificate, and one or
+more policies.
+
+27
+00:02:32,375 --> 00:02:37,708
+Using the group registry, you can manage
+several devices at once by categorizing them into groups.
+
+28
+00:02:37,750 --> 00:02:45,590
+Using the job service, you can define a
+set of remote operations that are sent to and run on one or more devices connected to AWS IoT.
+
+29
+00:02:45,791 --> 00:02:51,541
+Using the registry, you can organize the
+resources associated with each device in the AWS cloud.
+
+30
+00:02:51,916 --> 00:02:58,291
+Using the Security and Identity Service,
+you can provide shared responsibility for security in the AWS cloud.
+
+31
+00:02:58,583 --> 00:03:01,291
+AWS IoT Core Data Services
+
+32
+00:03:01,416 --> 00:03:10,016
+The AWS IoT Core data services help the
+IoT solutions provide a reliable application experience even with devices that are not always connected.
+
+33
+00:03:10,625 --> 00:03:16,000
+A device shadow is a JSON document used to
+store and retrieve current state information for a device.
+
+34
+00:03:16,291 --> 00:03:24,291
+The device shadow service maintains a
+device's state so that applications can communicate with the device, whether the device is online or not.
+
+35
+00:03:24,625 --> 00:03:27,375
+AWS IoT Core Support Services
+
+36
+00:03:27,541 --> 00:03:35,541
+Amazon Sidewalk integration for AWS IoT
+Core is a shared network that improves connectivity options to help devices work together better.
+

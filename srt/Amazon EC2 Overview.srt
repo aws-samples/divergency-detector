@@ -1,0 +1,220 @@
+1
+00:00:00,200 --> 00:00:02,569
+Amazon Elastic Compute Cloud Overview.
+
+2
+00:00:03,319 --> 00:00:06,050
+Amazon Elastic Compute Cloud, or EC2,
+
+3
+00:00:06,050 --> 00:00:07,600
+is a web service that provides
+
+4
+00:00:07,600 --> 00:00:10,840
+secure, resizable compute capacity in the cloud.
+
+5
+00:00:10,840 --> 00:00:11,920
+It eliminates your need
+
+6
+00:00:11,920 --> 00:00:13,470
+for up-front hardware investment,
+
+7
+00:00:13,479 --> 00:00:16,068
+so you can develop and deploy applications faster.
+
+8
+00:00:16,469 --> 00:00:21,350
+You can use Amazon EC2 to launch as many or as few virtual servers as you need.
+
+9
+00:00:21,770 --> 00:00:25,180
+Amazon EC2 enables you to scale up or down within minutes
+
+10
+00:00:25,180 --> 00:00:27,409
+to handle changes or spikes in requirements,
+
+11
+00:00:27,420 --> 00:00:29,569
+reducing your need to forecast traffic.
+
+12
+00:00:30,370 --> 00:00:33,520
+It provides you with complete control of your computing resources and
+
+13
+00:00:33,529 --> 00:00:37,759
+lets you run on Amazon's proven, reliable, and scalable computing environment.
+
+14
+00:00:38,490 --> 00:00:42,659
+Amazon EC2 is hosted in multiple locations worldwide comprised of
+
+15
+00:00:42,659 --> 00:00:46,360
+AWS Regions which consists of at least three Availability Zones.
+
+16
+00:00:46,659 --> 00:00:49,470
+This computing environment provides high availability
+
+17
+00:00:49,470 --> 00:00:51,389
+with service-level agreement, or SLA,
+
+18
+00:00:51,400 --> 00:00:56,860
+commitment of 99.99% availability for each Amazon EC2 region.
+
+19
+00:00:57,220 --> 00:01:00,619
+In addition, security at AWS is our top priority.
+
+20
+00:01:00,950 --> 00:01:03,130
+AWS is built to meet the requirements
+
+21
+00:01:03,139 --> 00:01:05,559
+of the most security-sensitive organizations.
+
+22
+00:01:06,769 --> 00:01:10,230
+First, let's go through some of the Amazon EC2 basics.
+
+23
+00:01:10,480 --> 00:01:11,660
+What is an instance?
+
+24
+00:01:11,919 --> 00:01:14,720
+An instance is a virtual server in the cloud.
+
+25
+00:01:14,720 --> 00:01:17,690
+Amazon EC2 provides a wide selection of instance
+
+26
+00:01:17,690 --> 00:01:19,639
+types to enable you to choose the CPU,
+
+27
+00:01:19,639 --> 00:01:22,910
+memory, storage, networking capacity,
+
+28
+00:01:22,910 --> 00:01:24,639
+and GPU for your applications.
+
+29
+00:01:24,830 --> 00:01:27,120
+Here are the instance type categories:
+
+30
+00:01:27,160 --> 00:01:28,599
+General-purpose instances
+
+31
+00:01:28,599 --> 00:01:33,500
+are instances that provide a balance of compute, memory, and networking resources.
+
+32
+00:01:33,970 --> 00:01:38,180
+Compute-optimized instances are optimized for compute-intensive workloads.
+
+33
+00:01:39,010 --> 00:01:40,970
+Memory-optimized instances.
+
+34
+00:01:41,150 --> 00:01:43,879
+These instances are for memory-intensive workloads
+
+35
+00:01:43,889 --> 00:01:46,139
+that process large datasets in memory.
+
+36
+00:01:47,019 --> 00:01:49,089
+Storage-optimized instances.
+
+37
+00:01:49,430 --> 00:01:52,470
+They are designed for workloads that require sequential read and
+
+38
+00:01:52,480 --> 00:01:55,510
+write access to very large datasets on local storage.
+
+39
+00:01:56,629 --> 00:01:58,720
+Accelerated computing instances.
+
+40
+00:01:58,949 --> 00:02:02,559
+These are GPU instances that use hardware accelerators.
+
+41
+00:02:03,129 --> 00:02:05,360
+HPC optimized instances.
+
+42
+00:02:05,569 --> 00:02:09,460
+These instances are optimized for high-performance computing workloads.
+
+43
+00:02:10,029 --> 00:02:13,410
+These instance types are optimized to fit different use cases.
+
+44
+00:02:13,720 --> 00:02:17,000
+Here is just one of the many examples for each instance type.
+
+45
+00:02:18,289 --> 00:02:18,970
+In addition,
+
+46
+00:02:18,979 --> 00:02:22,029
+each instance type includes one or more instance sizes,
+
+47
+00:02:22,029 --> 00:02:23,889
+allowing you to scale your resources
+
+48
+00:02:23,889 --> 00:02:25,940
+to the requirements of your target workload.
+
+49
+00:02:27,850 --> 00:02:31,509
+AMI stands for Amazon Machine Image.
+
+50
+00:02:31,880 --> 00:02:35,539
+An AMI provides the information required to launch an instance.
+
+51
+00:02:35,880 --> 00:02:37,360
+It is a template that contains
+
+52
+00:02:37,360 --> 00:02:40,160
+a software configuration such as an operating system,
+
+53
+00:02:40,160 --> 00:02:42,690
+applications, and an application server.
+
+54
+00:02:43,039 --> 00:02:46,289
+You must specify an AMI when you launch an instance.
+
+55
+00:02:46,800 --> 00:02:50,490
+You can launch a single instance or multiple instances from an AMI.
+

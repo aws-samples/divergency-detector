@@ -1,0 +1,264 @@
+1
+00:00:00,140 --> 00:00:02,640
+Amazon Route 53 Hosted Zones.
+
+2
+00:00:04,300 --> 00:00:06,270
+A Route 53 hosted zone
+
+3
+00:00:06,540 --> 00:00:08,109
+is a container for managing
+
+4
+00:00:08,420 --> 00:00:09,780
+Domain Name Service,
+
+5
+00:00:09,910 --> 00:00:11,200
+or DNS, records.
+
+6
+00:00:11,580 --> 00:00:13,480
+Those records hold information
+
+7
+00:00:13,840 --> 00:00:15,390
+about how you want to route
+
+8
+00:00:15,900 --> 00:00:17,760
+IP traffic for a specific domain
+
+9
+00:00:18,170 --> 00:00:19,200
+such as
+
+10
+00:00:19,550 --> 00:00:20,790
+example.com
+
+11
+00:00:20,930 --> 00:00:22,120
+and its subdomains,
+
+12
+00:00:22,380 --> 00:00:24,900
+www.example.com or
+
+13
+00:00:25,050 --> 00:00:26,670
+jobs.example.com.
+
+14
+00:00:27,390 --> 00:00:29,450
+There are two types of hosted zones,
+
+15
+00:00:29,710 --> 00:00:32,610
+public hosted zones and private hosted zones.
+
+16
+00:00:33,090 --> 00:00:34,850
+When you create a hosted zone,
+
+17
+00:00:35,170 --> 00:00:36,460
+it shares the name with the
+
+18
+00:00:36,710 --> 00:00:38,500
+domain you want to route traffic for.
+
+19
+00:00:40,400 --> 00:00:42,810
+Route 53 Public Hosted Zones.
+
+20
+00:00:43,210 --> 00:00:44,650
+A public hosted zone
+
+21
+00:00:44,980 --> 00:00:46,430
+holds the information
+
+22
+00:00:46,830 --> 00:00:50,150
+about how you want to route traffic external to AWS.
+
+23
+00:00:50,530 --> 00:00:53,310
+For an internet domain such as mycompany.com,
+
+24
+00:00:53,610 --> 00:00:55,710
+you then create DNS records
+
+25
+00:00:56,120 --> 00:00:57,970
+in the hosted zone to make a mapping
+
+26
+00:00:58,310 --> 00:00:59,700
+between a domain name
+
+27
+00:01:00,080 --> 00:01:02,370
+such as jobs.mycompany.com.
+
+28
+00:01:02,670 --> 00:01:06,030
+that route to external-facing AWS resources
+
+29
+00:01:06,040 --> 00:01:09,440
+like a CloudFront distribution or an EC2 instance
+
+30
+00:01:09,500 --> 00:01:12,390
+as well as route to on-premises servers.
+
+31
+00:01:13,980 --> 00:01:16,220
+When you create a public hosted zone,
+
+32
+00:01:16,760 --> 00:01:21,560
+Amazon Route 53 automatically creates a name server, or NS, record
+
+33
+00:01:21,930 --> 00:01:24,270
+and the start-of-authority, or SOA,
+
+34
+00:01:24,400 --> 00:01:25,510
+record for the zone.
+
+35
+00:01:26,060 --> 00:01:28,990
+The NS record identifies the four name servers
+
+36
+00:01:29,300 --> 00:01:31,320
+that you provide to the registrar so that
+
+37
+00:01:31,610 --> 00:01:34,090
+DNS queries are resolved successfully.
+
+38
+00:01:35,460 --> 00:01:37,880
+Route 53 Private Hosted Zones.
+
+39
+00:01:38,340 --> 00:01:41,100
+A private hosted zone contains the details
+
+40
+00:01:41,300 --> 00:01:43,690
+about how you want Amazon Route 53
+
+41
+00:01:44,010 --> 00:01:46,530
+to respond to DNS queries for domains
+
+42
+00:01:46,830 --> 00:01:47,380
+or
+
+43
+00:01:47,480 --> 00:01:50,090
+subdomains within one or more VPCs
+
+44
+00:01:50,390 --> 00:01:53,030
+created by Amazon VPC service.
+
+45
+00:01:54,060 --> 00:01:56,680
+Using private hosted zones requires
+
+46
+00:01:56,920 --> 00:01:59,570
+that you can figure Amazon VPC settings
+
+47
+00:01:59,880 --> 00:02:01,210
+and set the properties
+
+48
+00:02:01,500 --> 00:02:03,360
+enableDnsHostnames
+
+49
+00:02:03,670 --> 00:02:06,370
+and enableDnsSupport to true.
+
+50
+00:02:06,990 --> 00:02:09,660
+Private hosted zones only allow you to use
+
+51
+00:02:10,090 --> 00:02:11,850
+the following routing policies.
+
+52
+00:02:12,130 --> 00:02:13,180
+Simple routing,
+
+53
+00:02:13,580 --> 00:02:14,810
+failover routing,
+
+54
+00:02:15,030 --> 00:02:16,730
+multi-value answer routing,
+
+55
+00:02:16,910 --> 00:02:18,240
+or weighted routing.
+
+56
+00:02:19,910 --> 00:02:21,980
+By creating a private hosted and
+
+57
+00:02:22,190 --> 00:02:24,320
+public hosted zone with the same name,
+
+58
+00:02:24,760 --> 00:02:27,700
+you can create what is known as a split-view DNS.
+
+59
+00:02:27,950 --> 00:02:31,560
+Split-view DNS allows routing of DNS queries
+
+60
+00:02:31,860 --> 00:02:34,240
+to internal and external resources
+
+61
+00:02:34,550 --> 00:02:36,270
+depending on the request origin.
+
+62
+00:02:36,610 --> 00:02:40,300
+From a VPC, queries will go to the private hosted zone,
+
+63
+00:02:40,920 --> 00:02:43,930
+and the answer will route back to an internal-facing resource.
+
+64
+00:02:44,330 --> 00:02:47,130
+Internet queries will go to the public hosted zone,
+
+65
+00:02:47,500 --> 00:02:49,040
+and the response will route
+
+66
+00:02:49,490 --> 00:02:51,400
+to an external-facing resource.
+

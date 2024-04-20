@@ -1,0 +1,188 @@
+1
+00:00:00,120 --> 00:00:01,590
+Unsupervised Learning.
+
+2
+00:00:02,790 --> 00:00:04,460
+Unlike supervised learning,
+
+3
+00:00:04,620 --> 00:00:08,100
+unsupervised learning algorithms train on unlabeled data.
+
+4
+00:00:09,010 --> 00:00:11,060
+The training model learns from data without
+
+5
+00:00:11,060 --> 00:00:13,720
+any guidance or known outputs and labels.
+
+6
+00:00:14,680 --> 00:00:16,950
+It scans through the input data, trying
+
+7
+00:00:16,950 --> 00:00:19,880
+to group them together according to their similarities,
+
+8
+00:00:19,980 --> 00:00:21,020
+such as colors,
+
+9
+00:00:21,140 --> 00:00:23,330
+sizes, shapes, and others.
+
+10
+00:00:23,650 --> 00:00:25,690
+There is no right and wrong answers.
+
+11
+00:00:26,420 --> 00:00:28,700
+The objective is to analyze the data to
+
+12
+00:00:28,700 --> 00:00:31,540
+find hidden patterns and groupings within the data.
+
+13
+00:00:33,180 --> 00:00:34,390
+As the training data
+
+14
+00:00:34,490 --> 00:00:36,030
+for unsupervised learning
+
+15
+00:00:36,160 --> 00:00:37,640
+does not require labeling,
+
+16
+00:00:38,070 --> 00:00:39,290
+setup is easy.
+
+17
+00:00:40,060 --> 00:00:42,470
+It saves a data scientist from having to
+
+18
+00:00:42,470 --> 00:00:45,220
+label everything, which can be a challenging task.
+
+19
+00:00:45,980 --> 00:00:50,400
+No data labeling also means no preconceived ideas and no bias.
+
+20
+00:00:51,210 --> 00:00:54,220
+However, the limitation of this method is that
+
+21
+00:00:54,260 --> 00:00:56,060
+it cannot give precise predictions.
+
+22
+00:00:57,430 --> 00:01:00,290
+Here are some problem types or use cases
+
+23
+00:01:00,410 --> 00:01:02,680
+that can be addressed by unsupervised learning.
+
+24
+00:01:03,670 --> 00:01:05,040
+Dimension reduction.
+
+25
+00:01:05,850 --> 00:01:09,150
+Dimension reduction is used to determine the most
+
+26
+00:01:09,150 --> 00:01:12,480
+relevant features to use for model construction.
+
+27
+00:01:13,400 --> 00:01:15,460
+It is the process of reducing the dimension
+
+28
+00:01:15,460 --> 00:01:18,130
+of your feature set such that it still retains
+
+29
+00:01:18,250 --> 00:01:20,920
+the most significant properties of the original data.
+
+30
+00:01:21,780 --> 00:01:23,460
+This helps in data compression
+
+31
+00:01:23,610 --> 00:01:24,770
+and feature selection.
+
+32
+00:01:25,800 --> 00:01:27,380
+Cluster analysis.
+
+33
+00:01:27,570 --> 00:01:29,520
+Cluster analysis
+
+34
+00:01:29,620 --> 00:01:31,860
+is used to classify objects into groups
+
+35
+00:01:31,970 --> 00:01:33,050
+called clusters.
+
+36
+00:01:33,790 --> 00:01:36,830
+It attempts to find discrete groupings within data
+
+37
+00:01:37,170 --> 00:01:40,680
+where members of a group are as similar as possible to one another,
+
+38
+00:01:41,110 --> 00:01:44,150
+and as different as possible from members of other groups.
+
+39
+00:01:44,960 --> 00:01:47,720
+Cluster analysis is used in applications
+
+40
+00:01:47,790 --> 00:01:50,680
+such as market research and image processing.
+
+41
+00:01:52,320 --> 00:01:53,670
+Anomaly detection.
+
+42
+00:01:54,490 --> 00:01:55,790
+Anomaly detection
+
+43
+00:01:55,900 --> 00:01:59,670
+is the identification of outliers or observations in a dataset
+
+44
+00:01:59,670 --> 00:02:02,550
+which raise suspicions, because they differ significantly
+
+45
+00:02:02,550 --> 00:02:03,870
+from the rest of the data.
+
+46
+00:02:04,680 --> 00:02:08,419
+The identification of anomalous items can be used, for example,
+
+47
+00:02:08,530 --> 00:02:10,770
+to detect bank fraud and medical errors.
+

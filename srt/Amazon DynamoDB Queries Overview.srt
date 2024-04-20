@@ -1,0 +1,176 @@
+1
+00:00:00,000 --> 00:00:03,140
+Amazon DynamoDB Queries - Overview.
+
+2
+00:00:04,290 --> 00:00:07,080
+You can query any Amazon DynamoDB table
+
+3
+00:00:07,100 --> 00:00:11,060
+or secondary index and find items based on primary key values.
+
+4
+00:00:11,640 --> 00:00:13,130
+For the query operation,
+
+5
+00:00:13,140 --> 00:00:15,920
+you must provide the name of the partition key attribute
+
+6
+00:00:16,040 --> 00:00:17,850
+and a single value for that attribute.
+
+7
+00:00:18,980 --> 00:00:22,340
+Query returns all items with that partition key value.
+
+8
+00:00:22,900 --> 00:00:25,420
+Optionally, you can provide a sort key attribute
+
+9
+00:00:25,440 --> 00:00:29,110
+and use a comparison operator condition to refine the search results.
+
+10
+00:00:30,710 --> 00:00:33,780
+Let's start by looking at a DynamoDB query example
+
+11
+00:00:33,840 --> 00:00:37,780
+using the AWS Command Line Interface, or AWS CLI.
+
+12
+00:00:38,240 --> 00:00:42,690
+The DynamoDB query CLI command is used to query the "Music" table.
+
+13
+00:00:42,700 --> 00:00:47,240
+If you want to specify search criteria, you can use a key condition expression.
+
+14
+00:00:47,250 --> 00:00:50,310
+The expression contains a string that determines the items
+
+15
+00:00:50,310 --> 00:00:52,130
+to be read from the table or index.
+
+16
+00:00:52,850 --> 00:00:55,020
+You must specify the partition key name
+
+17
+00:00:55,160 --> 00:00:55,820
+the "Artist".
+
+18
+00:00:56,480 --> 00:01:00,300
+Optionally, you can provide a second condition for the sort key if present,
+
+19
+00:01:00,400 --> 00:01:05,040
+in this case, the song title, and use the following supported comparison operators.
+
+20
+00:01:05,780 --> 00:01:09,880
+A single query operation can retrieve a maximum of one megabyte of data.
+
+21
+00:01:09,890 --> 00:01:13,300
+Query results are always sorted by the sort key value.
+
+22
+00:01:13,760 --> 00:01:16,540
+By default, the sort order is ascending.
+
+23
+00:01:16,700 --> 00:01:20,780
+To reverse the order, set the scan index forward parameter to false.
+
+24
+00:01:22,530 --> 00:01:24,740
+If you need to further refine the query results,
+
+25
+00:01:24,750 --> 00:01:26,870
+after applying the key condition expression,
+
+26
+00:01:26,880 --> 00:01:29,180
+you can optionally provide a filter expression.
+
+27
+00:01:30,880 --> 00:01:34,710
+A filter expression cannot contain partition key or sort key attributes.
+
+28
+00:01:35,440 --> 00:01:38,440
+The expression determines which items within the query results
+
+29
+00:01:38,460 --> 00:01:39,900
+should be returned to you.
+
+30
+00:01:39,910 --> 00:01:42,030
+All of the other results are discarded.
+
+31
+00:01:42,840 --> 00:01:46,080
+It does not consume any additional read capacity units, or RCUs.
+
+32
+00:01:46,930 --> 00:01:50,150
+The syntax and comparison operators for a filter expression
+
+33
+00:01:50,160 --> 00:01:52,510
+are identical to that of a condition expression.
+
+34
+00:01:54,450 --> 00:01:56,850
+If you need to compare an attribute with a value,
+
+35
+00:01:56,860 --> 00:02:00,170
+define an expression attribute value as a placeholder.
+
+36
+00:02:00,180 --> 00:02:04,170
+They are used as substitutes for the actual values that you want to compare.
+
+37
+00:02:04,840 --> 00:02:05,900
+In this example,
+
+38
+00:02:05,960 --> 00:02:07,840
+we are substituting searched Artist
+
+39
+00:02:08,000 --> 00:02:09,920
+with a string value of Artist 2,
+
+40
+00:02:10,000 --> 00:02:13,300
+search Song Title with a string value of Song B,
+
+41
+00:02:13,340 --> 00:02:16,420
+and the search Year with a number-type value of 2018.
+
+42
+00:02:17,530 --> 00:02:19,970
+With these expressions and substituted values,
+
+43
+00:02:19,990 --> 00:02:21,720
+you can find the item with Artist 2,
+
+44
+00:02:21,860 --> 00:02:24,790
+Song Title Song B that is released after 2018.
+

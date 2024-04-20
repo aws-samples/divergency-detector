@@ -1,0 +1,54 @@
+1
+00:00:00,000 --> 00:00:01,791
+Generative AI Overview
+
+2
+00:00:02,708 --> 00:00:08,208
+Generative artificial intelligence, or
+generative AI, is a form of artificial intelligence
+
+3
+00:00:08,750 --> 00:00:16,750
+that has the ability to create various
+types of content including conversations, stories, images, videos, and music.
+
+4
+00:00:17,750 --> 00:00:36,375
+Generative AI relies on large machine
+learning models, known as foundation models, or Large Language Models (LLM), which are pretrained on extensive datasets. Foundation models have billions of parameters and have experienced significant growth in size in recent years, with the largest models now exceeding 500 billion parameters.
+
+5
+00:00:37,500 --> 00:00:54,125
+Foundation models, such as GPT3.5, BLOOM,
+and Stable Diffusion, are versatile and can perform a wide range of tasks across different domains. They can write blog posts, generate images, solve math problems, engage in dialogues, and answer questions based on documents.
+
+6
+00:00:55,208 --> 00:00:58,916
+Amazon provides several offerings in the
+field of generative AI.
+
+7
+00:00:59,625 --> 00:01:14,083
+Amazon Bedrock. Amazon Bedrock, a fully
+managed service, streamlines generative AI, by providing an accessible API for foundation models from AI21 Labs, Anthropic, Stability AI, and Amazon.
+
+8
+00:01:14,333 --> 00:01:23,791
+Using Amazon Bedrock, developers can 
+efficiently build and scale generative AI-based applications, which opens the technology to a wider range of users.
+
+9
+00:01:24,750 --> 00:01:52,625
+Machine learning hub. Amazon SageMaker,
+and Amazon SageMaker JumpStart, are valuable tools for customers seeking flexibility in machine learning model building. SageMaker JumpStart serves as a machine learning hub, offering a wide range of, open source, foundation models for exploration and deployment, including OpenLLaMA, RedPajama, Mosiac MPT-7B, FLAN-T5/UL2, GPT-J-6B/Neox-20B, and Bloom/BloomZ.
+
+10
+00:01:53,666 --> 00:02:08,416
+Amazon CodeWhisperer. Amazon
+CodeWhisperer uses a foundation model, to enhance, developer productivity by generating real-time code suggestions, based on natural language comments and prior code, in an integrated development environment, or IDE.
+
+11
+00:02:09,583 --> 00:02:27,291
+Optimal ML Infrastructure. AWS offers
+machine learning infrastructure that prioritizes cost-efficiency and performance. AWS Trainium and AWS Inferentia chips were specifically developed to work with AI models providing the lowest cost options for machine learning tasks.
+

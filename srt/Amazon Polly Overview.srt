@@ -1,0 +1,308 @@
+1
+00:00:00,000 --> 00:00:02,760
+Welcome to an Overview of Amazon Polly.
+
+2
+00:00:03,250 --> 00:00:04,280
+Amazon Polly
+
+3
+00:00:04,390 --> 00:00:07,230
+is a service that converts text into lifelike speech,
+
+4
+00:00:07,990 --> 00:00:10,760
+allowing you to create applications that talk and
+
+5
+00:00:10,760 --> 00:00:13,790
+build entirely new categories of speech-enabled products.
+
+6
+00:00:14,880 --> 00:00:18,960
+Polly's text-to-speech service uses advanced deep-learning technologies
+
+7
+00:00:19,060 --> 00:00:21,360
+to synthesize natural sounding human speech.
+
+8
+00:00:21,750 --> 00:00:25,200
+With dozens of lifelike voices across a broad set of languages,
+
+9
+00:00:25,260 --> 00:00:29,090
+you can build speech-enabled applications that work in many different countries.
+
+10
+00:00:29,650 --> 00:00:32,680
+Amazon Polly offers neural text-to-speech voices
+
+11
+00:00:32,840 --> 00:00:35,410
+that deliver advanced improvements in speech quality
+
+12
+00:00:35,550 --> 00:00:37,200
+through machine-learning technology.
+
+13
+00:00:37,640 --> 00:00:42,260
+Polly's neural TTS technology also supports a newscaster speaking style
+
+14
+00:00:42,410 --> 00:00:44,850
+that is tailored to news narration use cases.
+
+15
+00:00:45,570 --> 00:00:48,360
+And finally, with Amazon Polly Brand Voice,
+
+16
+00:00:48,450 --> 00:00:51,150
+you can create a custom voice for your organization.
+
+17
+00:00:51,600 --> 00:00:54,640
+Amazon Polly Brand Voice is a custom engagement
+
+18
+00:00:54,650 --> 00:00:56,770
+where you will work with the Amazon Polly team
+
+19
+00:00:56,900 --> 00:00:58,690
+to build an NTTS voice
+
+20
+00:00:58,830 --> 00:01:01,140
+for the exclusive use of your organization.
+
+21
+00:01:03,830 --> 00:01:06,580
+Let's review some of the benefits of Amazon Polly.
+
+22
+00:01:07,610 --> 00:01:09,530
+Store and Redistribute Speech.
+
+23
+00:01:10,210 --> 00:01:11,250
+Amazon Polly
+
+24
+00:01:11,390 --> 00:01:16,020
+allows for unlimited replays of generated speech without any additional fees.
+
+25
+00:01:16,890 --> 00:01:21,330
+You can create speech files in standard formats like MP3 and OGG
+
+26
+00:01:21,950 --> 00:01:23,340
+and serve them from the cloud
+
+27
+00:01:23,780 --> 00:01:24,630
+or locally
+
+28
+00:01:24,760 --> 00:01:26,990
+with apps or devices for offline playback.
+
+29
+00:01:27,820 --> 00:01:29,160
+Real-Time Streaming.
+
+30
+00:01:30,210 --> 00:01:31,500
+With Amazon Polly,
+
+31
+00:01:31,640 --> 00:01:34,830
+you can stream information through your application in near real-time.
+
+32
+00:01:35,230 --> 00:01:37,850
+You can also choose from various sampling rates
+
+33
+00:01:37,960 --> 00:01:41,070
+to optimize bandwidth and audio quality for your application.
+
+34
+00:01:41,520 --> 00:01:44,490
+Amazon Polly supports MP3, Vorbis,
+
+35
+00:01:44,640 --> 00:01:47,010
+and raw PCM audio stream formats.
+
+36
+00:01:47,950 --> 00:01:49,290
+Customized Output.
+
+37
+00:01:50,630 --> 00:01:54,900
+Amazon Polly supports Speech Synthesis Markup Language,  or SSML,
+
+38
+00:01:55,010 --> 00:01:55,940
+the W3C standard
+
+39
+00:01:55,940 --> 00:02:00,070
+XML-based markup language for speech-synthesis applications,
+
+40
+00:02:00,260 --> 00:02:04,740
+and it supports common SSML tags used for phrasing, emphasis,
+
+41
+00:02:04,840 --> 00:02:05,780
+and intonation.
+
+42
+00:02:06,220 --> 00:02:09,740
+Custom Amazon SSML tags provide unique options,
+
+43
+00:02:09,840 --> 00:02:12,690
+such as the ability to control the pitch, volume,
+
+44
+00:02:12,860 --> 00:02:14,800
+and rate of synthesized speech.
+
+45
+00:02:15,490 --> 00:02:17,090
+Simple-to-Use API.
+
+46
+00:02:17,570 --> 00:02:20,250
+Amazon Polly provides an API that enables you
+
+47
+00:02:20,250 --> 00:02:23,300
+to quickly integrate speech synthesis into your application.
+
+48
+00:02:23,730 --> 00:02:28,040
+You simply send the text you want converted into speech to the Amazon Polly API,
+
+49
+00:02:28,210 --> 00:02:31,900
+and Amazon Polly immediately returns the audio stream to your application,
+
+50
+00:02:32,120 --> 00:02:35,280
+so your application can begin streaming it directly to an audience
+
+51
+00:02:35,600 --> 00:02:37,950
+or store it in a standard audio-file format.
+
+52
+00:02:38,920 --> 00:02:42,220
+Let's review some key features of Amazon Polly.
+
+53
+00:02:42,900 --> 00:02:44,440
+Speech Synchronization.
+
+54
+00:02:44,890 --> 00:02:48,740
+Amazon Polly makes it easy to request an additional stream of metadata
+
+55
+00:02:48,880 --> 00:02:52,520
+that provides information about when particular sentences, words,
+
+56
+00:02:52,650 --> 00:02:54,150
+and sounds are being pronounced.
+
+57
+00:02:54,510 --> 00:02:56,220
+Using this metadata stream
+
+58
+00:02:56,330 --> 00:02:58,930
+alongside the synthesized speech audio stream,
+
+59
+00:02:59,060 --> 00:03:02,430
+you can build your applications with an enhanced visual experience
+
+60
+00:03:02,570 --> 00:03:07,110
+such as speech-synchronized facial animation or karaoke-style word highlighting.
+
+61
+00:03:09,400 --> 00:03:10,950
+Custom Lexicons.
+
+62
+00:03:11,280 --> 00:03:14,870
+With Amazon Polly's custom lexicons or vocabularies,
+
+63
+00:03:14,940 --> 00:03:17,700
+you can modify the pronunciation of particular words,
+
+64
+00:03:17,810 --> 00:03:22,520
+such as company names, acronyms, and neologisms like ROTFL,
+
+65
+00:03:22,590 --> 00:03:24,910
+which means "roll on the floor laughing."
+
+66
+00:03:25,350 --> 00:03:27,480
+To customize these pronunciations,
+
+67
+00:03:27,510 --> 00:03:30,840
+you simply upload an XML file with lexical entries.
+
+68
+00:03:32,170 --> 00:03:33,890
+Speech-Synthesis Options.
+
+69
+00:03:34,310 --> 00:03:37,280
+Amazon Polly can be accessed via the Polly API,
+
+70
+00:03:37,440 --> 00:03:39,260
+AWS Management Console,
+
+71
+00:03:39,380 --> 00:03:41,640
+and the AWS Command Line Interface.
+
+72
+00:03:42,070 --> 00:03:45,440
+You have full control over all the capabilities of Amazon Polly,
+
+73
+00:03:45,570 --> 00:03:47,680
+whether you use the service through the console,
+
+74
+00:03:47,840 --> 00:03:48,770
+the API,
+
+75
+00:03:48,900 --> 00:03:49,930
+or the CLI.
+
+76
+00:03:50,570 --> 00:03:53,980
+Amazon Polly also supports the Amazon SDK,
+
+77
+00:03:53,990 --> 00:03:57,650
+including all AWS SDK programming languages.
+

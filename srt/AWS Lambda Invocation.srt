@@ -1,0 +1,280 @@
+1
+00:00:00,480 --> 00:00:02,880
+AWS Lambda Invocation.
+
+2
+00:00:04,870 --> 00:00:09,170
+You can invoke Lambda functions directly with the Lambda console, the Lambda API,
+
+3
+00:00:09,310 --> 00:00:10,930
+the AWS SDK,
+
+4
+00:00:11,130 --> 00:00:14,020
+the AWS CLI, and AWS toolkits.
+
+5
+00:00:14,890 --> 00:00:19,050
+You can also configure other AWS services to invoke your function.
+
+6
+00:00:20,040 --> 00:00:20,910
+For example,
+
+7
+00:00:20,910 --> 00:00:25,410
+you can configure Amazon S3 to invoke your function when an object is created.
+
+8
+00:00:26,000 --> 00:00:29,340
+Each service varies in the method it uses to invoke your function,
+
+9
+00:00:29,350 --> 00:00:32,170
+the structure of the event, and how you configure it.
+
+10
+00:00:33,120 --> 00:00:38,010
+In addition, AWS Lambda can be configured to read events from a queue or a stream,
+
+11
+00:00:38,030 --> 00:00:42,860
+such as Amazon Simple Queue Service, Amazon DynamoDB, and Amazon Kinesis.
+
+12
+00:00:43,680 --> 00:00:45,350
+This is poll-based invocation.
+
+13
+00:00:46,200 --> 00:00:47,550
+AWS Lambda polls
+
+14
+00:00:47,550 --> 00:00:51,660
+these services, reads data, creates an event, and invokes your function.
+
+15
+00:00:53,830 --> 00:00:57,940
+To process items from a stream or queue, you can create an event source mapping.
+
+16
+00:00:58,700 --> 00:01:01,880
+Event source mapping is a resource in Lambda that reads the items
+
+17
+00:01:01,990 --> 00:01:03,920
+and sends them to your function in batches.
+
+18
+00:01:06,110 --> 00:01:07,720
+When you invoke a Lambda function,
+
+19
+00:01:07,960 --> 00:01:10,810
+you can choose to invoke it synchronously or asynchronously.
+
+20
+00:01:11,470 --> 00:01:13,240
+Here is the comparison between them.
+
+21
+00:01:13,930 --> 00:01:15,150
+Synchronous invocation.
+
+22
+00:01:15,850 --> 00:01:19,030
+This is a request-and-wait-for-a-response model.
+
+23
+00:01:19,570 --> 00:01:21,450
+When you invoke a function synchronously,
+
+24
+00:01:21,700 --> 00:01:24,270
+Lambda runs the function and waits for a response.
+
+25
+00:01:25,030 --> 00:01:26,870
+When the function execution ends,
+
+26
+00:01:26,880 --> 00:01:30,880
+Lambda returns the response from the function's code with additional data,
+
+27
+00:01:30,900 --> 00:01:33,370
+such as the version of the function that was executed.
+
+28
+00:01:34,950 --> 00:01:38,820
+Here are some examples of the services that invoke Lambda function synchronously.
+
+29
+00:01:39,520 --> 00:01:43,840
+This includes services such as Amazon API Gateway, Amazon Alexa, and others,
+
+30
+00:01:43,840 --> 00:01:44,720
+as shown here.
+
+31
+00:01:47,010 --> 00:01:51,160
+On the other hand, asynchronous invocation is an event and queue model,
+
+32
+00:01:51,200 --> 00:01:52,880
+and there is no waiting for a response.
+
+33
+00:01:53,420 --> 00:01:55,580
+When you invoke a function asynchronously,
+
+34
+00:01:55,660 --> 00:01:57,530
+Lambda sends the event to a queue.
+
+35
+00:01:58,280 --> 00:01:59,950
+When the event is added to the queue,
+
+36
+00:01:59,960 --> 00:02:02,600
+Lambda returns a success response immediately
+
+37
+00:02:02,610 --> 00:02:04,690
+with no additional data information.
+
+38
+00:02:06,870 --> 00:02:11,380
+Note that it is possible for the function to receive the same event from Lambda multiple times
+
+39
+00:02:11,920 --> 00:02:14,280
+because the queue itself is eventually consistent.
+
+40
+00:02:15,660 --> 00:02:19,340
+If the function doesn't have enough concurrency available to process all events,
+
+41
+00:02:19,350 --> 00:02:20,990
+additional ones are throttled.
+
+42
+00:02:22,590 --> 00:02:27,230
+Therefore, ensure that your function code gracefully handles duplicate events
+
+43
+00:02:27,230 --> 00:02:30,500
+and that you have enough concurrency available to handle all invocations.
+
+44
+00:02:32,140 --> 00:02:33,920
+Here are some examples of the services
+
+45
+00:02:33,920 --> 00:02:36,470
+that invoke Lambda functions asynchronously.
+
+46
+00:02:36,540 --> 00:02:40,560
+This includes services such as Amazon Simple Storage Service, or S3,
+
+47
+00:02:40,580 --> 00:02:43,400
+Amazon Simple Notification Service, or SNS,
+
+48
+00:02:43,420 --> 00:02:44,770
+and others, as shown here.
+
+49
+00:02:48,130 --> 00:02:51,350
+To invoke a function synchronously with the AWS CLI,
+
+50
+00:02:51,500 --> 00:02:52,800
+use the invoke command.
+
+51
+00:02:53,700 --> 00:02:54,890
+The payload is a string
+
+52
+00:02:55,070 --> 00:02:57,130
+that contains an event in JSON format,
+
+53
+00:02:57,940 --> 00:03:01,220
+response.json is the response file from the function.
+
+54
+00:03:01,900 --> 00:03:04,160
+If the function returns an object or an error,
+
+55
+00:03:04,250 --> 00:03:07,390
+the response is the object or error in JSON format.
+
+56
+00:03:08,070 --> 00:03:11,540
+The response information includes the function version that was executed
+
+57
+00:03:11,720 --> 00:03:13,860
+and the status code returned by Lambda.
+
+58
+00:03:14,520 --> 00:03:18,040
+If Lambda was able to run the function, the status code is 200,
+
+59
+00:03:18,120 --> 00:03:20,050
+even if the function returned an error.
+
+60
+00:03:20,690 --> 00:03:23,760
+If the function exits without error, the response is null.
+
+61
+00:03:25,980 --> 00:03:27,980
+If Lambda isn't able to run the function,
+
+62
+00:03:28,180 --> 00:03:30,120
+the error is displayed in the output.
+
+63
+00:03:31,010 --> 00:03:34,830
+To get logs for an invocation from the command line, use the log type option.
+
+64
+00:03:35,780 --> 00:03:38,960
+You can use the base64 utility to decode the logs.
+
+65
+00:03:39,900 --> 00:03:41,970
+To invoke a function asynchronously,
+
+66
+00:03:42,350 --> 00:03:44,660
+set the invocation type parameter to event.
+
+67
+00:03:45,720 --> 00:03:49,840
+The output file, response.json, doesn't contain any information
+
+68
+00:03:49,850 --> 00:03:52,080
+but is still created when you run this command.
+
+69
+00:03:53,200 --> 00:03:55,740
+If Lambda is not able to add the event to the queue,
+
+70
+00:03:55,740 --> 00:03:57,790
+the error message appears in the command output.
+

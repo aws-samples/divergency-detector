@@ -1,0 +1,188 @@
+1
+00:00:00,140 --> 00:00:02,360
+AWS CloudFormation Overview.
+
+2
+00:00:03,330 --> 00:00:06,680
+AWS CloudFormation allows you to use programming languages
+
+3
+00:00:06,700 --> 00:00:10,840
+or a simple text file as templates to model and provision AWS
+
+4
+00:00:10,840 --> 00:00:14,190
+and third-party application resources in your cloud environment.
+
+5
+00:00:14,750 --> 00:00:19,220
+An AWS CloudFormation template is a simple text file in JSON or
+
+6
+00:00:19,220 --> 00:00:23,540
+YAML format that describes your AWS resources and their properties.
+
+7
+00:00:24,240 --> 00:00:26,980
+AWS CloudFormation uses these templates as
+
+8
+00:00:26,980 --> 00:00:29,040
+blueprints for building all the resources needed
+
+9
+00:00:29,040 --> 00:00:31,110
+for your applications in an automated and
+
+10
+00:00:31,110 --> 00:00:33,900
+secure manner, across all regions and accounts.
+
+11
+00:00:35,050 --> 00:00:37,810
+The collection of AWS resources you want to deploy
+
+12
+00:00:37,810 --> 00:00:40,270
+together as a group is called a stack.
+
+13
+00:00:41,070 --> 00:00:43,340
+You can update your CloudFormation stack
+
+14
+00:00:43,340 --> 00:00:46,140
+at any time by uploading a modified template.
+
+15
+00:00:47,930 --> 00:00:50,570
+You can also check your template into version control,
+
+16
+00:00:51,120 --> 00:00:52,810
+so you can keep track of all changes
+
+17
+00:00:52,810 --> 00:00:55,760
+made to your infrastructure and application stack
+
+18
+00:00:55,770 --> 00:00:57,800
+the same way you do with software code.
+
+19
+00:00:58,680 --> 00:01:01,650
+Provisioning infrastructure is as simple as creating
+
+20
+00:01:01,650 --> 00:01:04,099
+and uploading a template to CloudFormation.
+
+21
+00:01:04,110 --> 00:01:07,020
+This makes replicating your infrastructure very simple.
+
+22
+00:01:10,030 --> 00:01:13,350
+You can easily and quickly spin up a replica of your production stack
+
+23
+00:01:13,360 --> 00:01:17,950
+for development and testing with a few clicks in the AWS Management Console.
+
+24
+00:01:19,080 --> 00:01:22,750
+You can tear down and rebuild the replication stack whenever you want.
+
+25
+00:01:24,450 --> 00:01:25,770
+Here are the key benefits.
+
+26
+00:01:26,450 --> 00:01:27,470
+Model it all.
+
+27
+00:01:28,240 --> 00:01:32,220
+AWS CloudFormation allows you to model your entire infrastructure and
+
+28
+00:01:32,220 --> 00:01:36,630
+application resources with either a text file or programming languages.
+
+29
+00:01:37,790 --> 00:01:40,860
+The AWS CloudFormation registry and CLI make it
+
+30
+00:01:40,860 --> 00:01:44,460
+easy to manage third-party resources with CloudFormation.
+
+31
+00:01:45,280 --> 00:01:47,770
+AWS CloudFormation helps you to standardize
+
+32
+00:01:47,780 --> 00:01:50,880
+infrastructure components used across your organization,
+
+33
+00:01:50,890 --> 00:01:54,030
+enabling configuration compliance and faster troubleshooting.
+
+34
+00:01:55,930 --> 00:01:57,250
+Automate and deploy.
+
+35
+00:01:57,870 --> 00:01:59,350
+AWS CloudFormation
+
+36
+00:01:59,350 --> 00:02:02,740
+provisions your application resources in a safe, repeatable manner,
+
+37
+00:02:02,770 --> 00:02:06,520
+allowing you to build and rebuild your infrastructure and applications
+
+38
+00:02:06,560 --> 00:02:10,160
+without having to perform manual actions or write custom scripts.
+
+39
+00:02:10,990 --> 00:02:13,440
+CloudFormation takes care of determining the right
+
+40
+00:02:13,440 --> 00:02:15,710
+operations to perform when managing your stack,
+
+41
+00:02:15,720 --> 00:02:18,180
+orchestrating them in the most efficient way, and
+
+42
+00:02:18,180 --> 00:02:21,340
+rolls back changes automatically if errors are detected.
+
+43
+00:02:22,940 --> 00:02:26,400
+It's just code. Codifying your infrastructure allows
+
+44
+00:02:26,400 --> 00:02:28,730
+you to treat your infrastructure as just code.
+
+45
+00:02:29,370 --> 00:02:31,120
+You can author it with any code editor,
+
+46
+00:02:31,130 --> 00:02:33,790
+check it into a version control system, and review
+
+47
+00:02:33,790 --> 00:02:36,920
+the files with team members before deploying into production.
+

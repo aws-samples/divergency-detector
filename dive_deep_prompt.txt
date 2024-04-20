@@ -1,0 +1,19 @@
+Here is a statement:
+
+<statement>
+{{text}}
+</statement>
+
+Classify the statement as true, false or ambiguous;
+Write the answer in JSON format using the following example:
+<example>
+{
+  "statement": "The statement text",
+  "classification": "true|false|ambiguous",
+  "justification": "The justification for the classification"
+}
+</example>
+
+Write only the JSON content and nothing else.
+
+Assistant:

@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:02,333
+Amazon API Gateway Overview
+
+2
+00:00:03,625 --> 00:00:12,541
+Amazon API Gateway is a fully managed
+service that developers can use to publish, maintain, monitor, secure, and operate APIs at any scale.
+
+3
+00:00:12,916 --> 00:00:19,958
+API Gateway is a pay-as-you-go service
+that removes the heavy lifting involved in securely and reliably running APIs at scale.
+
+4
+00:00:20,416 --> 00:00:27,583
+APIs act as the front door for
+applications to access data, business logic, or functionality from your backend services.
+
+5
+00:00:27,708 --> 00:00:35,625
+Using API Gateway, you can create RESTful
+APIs and WebSocket APIs that enable real-time, two-way communication applications.
+
+6
+00:00:36,333 --> 00:00:37,416
+Key Features
+
+7
+00:00:38,333 --> 00:00:41,666
+Support for RESTful APIs and WebSocket
+APIs
+
+8
+00:00:42,125 --> 00:00:50,791
+With API Gateway, you can create RESTful
+APIs by using either HTTP APIs or REpresentational State Transfer, or REST APIs.
+
+9
+00:00:51,083 --> 00:00:56,916
+HTTP APIs are the best way to build APIs
+that do not require API management features.
+
+10
+00:00:57,250 --> 00:01:01,250
+They are optimized for serverless
+workloads and HTTP backends.
+
+11
+00:01:01,625 --> 00:01:07,791
+REST APIs are used for workloads that
+require API proxy functionality and API management features.
+
+12
+00:01:08,125 --> 00:01:15,166
+WebSocket APIs are used to build
+real-time, two-way communication applications, such as chat apps and streaming dashboards.
+
+13
+00:01:16,375 --> 00:01:17,500
+Resiliency
+
+14
+00:01:18,083 --> 00:01:25,333
+You can use API Gateway to set throttling
+rules based on the number of requests per second for each HTTP method in your APIs.
+
+15
+00:01:25,625 --> 00:01:37,583
+This helps you manage traffic to your
+backend systems. API Gateway handles any level of traffic received by an API, so you are free to focus on your business logic and services rather than maintaining infrastructure.
+
+16
+00:01:38,375 --> 00:01:40,208
+AWS authorization
+
+17
+00:01:40,791 --> 00:01:50,208
+To authorize and verify API requests to
+AWS services, API Gateway can help you leverage signature version 4 for REST APIs and WebSocket APIs.
+
+18
+00:01:50,500 --> 00:02:02,000
+Using signature version 4 authentication,
+you can use AWS Identity and Access Management (IAM) and access policies to authorize access to your APIs and all your other AWS resources.
+
+19
+00:02:02,750 --> 00:02:03,666
+Benefits
+
+20
+00:02:04,750 --> 00:02:06,458
+Performance at any scale
+
+21
+00:02:06,833 --> 00:02:16,583
+Provide end users with the lowest possible
+latency for API requests and responses by taking advantage of the AWS global network of edge locations using Amazon CloudFront.
+
+22
+00:02:17,666 --> 00:02:19,208
+Streamlined monitoring
+
+23
+00:02:19,500 --> 00:02:31,083
+Monitor performance metrics and
+information on API calls, data latency, and error rates from the API Gateway dashboard, which allows you to visually monitor calls to your services using Amazon CloudWatch.
+
+24
+00:02:32,666 --> 00:02:34,541
+Efficient API development
+
+25
+00:02:34,833 --> 00:02:41,791
+Run multiple versions of the same API
+simultaneously, allowing you to quickly iterate, test, and release new versions.
+
+26
+00:02:42,125 --> 00:02:47,625
+Applications can continue to call previous
+API versions even after the latest versions are published.
+
+27
+00:02:48,250 --> 00:02:55,416
+API Gateway also helps you manage multiple
+release stages for each API version, such as alpha, beta, and production.
+

@@ -1,0 +1,149 @@
+1
+00:00:00,291 --> 00:00:03,250
+Difference between SQL and NoSQL
+databases.
+
+2
+00:00:04,000 --> 00:00:07,958
+There are a few key differences between
+SQL and NoSQLdatabases.
+
+3
+00:00:08,124 --> 00:00:09,500
+Optimal workloads.
+
+4
+00:00:09,625 --> 00:00:17,541
+Relational databases are designed for
+transactional and strongly consistent online transaction processing, OLTP, applications.
+
+5
+00:00:17,708 --> 00:00:21,583
+They are also good for online analytical
+processing, OLAP.
+
+6
+00:00:21,833 --> 00:00:32,458
+On the other hand, NoSQL, key value,
+document, graph, and in memory databases are designed for OLTP for a number of data access patterns that include low latency applications.
+
+7
+00:00:32,749 --> 00:00:37,375
+NoSQL search databases are designed
+for analytics over semi-structured data
+
+8
+00:00:38,375 --> 00:00:39,333
+Data model.
+
+9
+00:00:39,541 --> 00:00:44,333
+The relational model normalizes data into
+tables that are composed of rows and columns.
+
+10
+00:00:44,541 --> 00:00:51,791
+A schema strictly defines the tables,
+rows, columns, indexes, relationships between tables and other database elements.
+
+11
+00:00:52,000 --> 00:00:56,541
+The database enforces the referential
+integrity and relationships between tables.
+
+12
+00:00:56,833 --> 00:01:03,916
+NoSQL databases provide a variety of
+data models that includes key value, document, graph, in memory, and search.
+
+13
+00:01:04,291 --> 00:01:08,458
+Or you can design custom data models based
+on your specific query patterns,
+
+14
+00:01:09,083 --> 00:01:10,375
+ACID properties.
+
+15
+00:01:10,750 --> 00:01:16,125
+Relational databases provide atomicity,
+consistency, isolation, and durability.
+
+16
+00:01:16,666 --> 00:01:20,791
+Atomicity requires a transaction to
+execute completely or not at all.
+
+17
+00:01:21,250 --> 00:01:27,125
+Consistency requires that when a
+transaction has been committed, the data must conform to the database schema.
+
+18
+00:01:27,541 --> 00:01:31,958
+Isolation requires that concurrent
+transactions execute separately from each other.
+
+19
+00:01:32,416 --> 00:01:38,791
+Durability requires the ability to recover
+from an unexpected system failure or power outage to the last known state.
+
+20
+00:01:39,250 --> 00:01:46,125
+DynamoDB transactions provide
+developers ACID across one or more tables within a single AWS account and region.
+
+21
+00:01:46,333 --> 00:01:54,750
+NoSQL databases are an excellent
+choice for high throughput, low latency use cases that need to scale horizontally beyond the limitations of a single instance.
+
+22
+00:01:55,541 --> 00:01:56,541
+Performance.
+
+23
+00:01:56,791 --> 00:02:05,500
+Performance is generally dependent on the
+disk subsystem, and optimization of queries, indexes, and table structure is often required to achieve peak performance.
+
+24
+00:02:06,000 --> 00:02:13,000
+However, performance is also a function of
+the underlying hardware cluster size, network latency, and the calling application.
+
+25
+00:02:14,458 --> 00:02:15,291
+Scale.
+
+26
+00:02:15,666 --> 00:02:23,500
+Relational databases typically scale up by
+increasing the compute capabilities of the hardware or scale out by adding replicas for read-only workloads.
+
+27
+00:02:24,000 --> 00:02:32,041
+NoSQL databases typically are
+partitioned because key value access patterns are able to scale out by using distributed architecture to increase throughput.
+
+28
+00:02:33,416 --> 00:02:34,541
+APIs
+
+29
+00:02:35,208 --> 00:02:40,833
+Requests to store and retrieve data are
+communicated using queries that conform to a structured query language.
+
+30
+00:02:41,416 --> 00:02:47,250
+SQL object-based APIs allow app developers
+to easily store and retrieve in memory data structures.
+
+31
+00:02:47,916 --> 00:02:56,416
+Partition keys let apps look up key value
+pairs, column sets, or semi-structured documents that contain serialized application objects and attributes.
+

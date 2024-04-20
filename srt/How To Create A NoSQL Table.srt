@@ -1,0 +1,151 @@
+1
+00:00:00,250 --> 00:00:04,000
+Create and query a no sequel table with
+Amazon DynamoDB.
+
+2
+00:00:04,666 --> 00:00:10,041
+Before we talk about creating tables,
+let's go through a few basic terms about DynamoDB tables.
+
+3
+00:00:10,208 --> 00:00:13,083
+A table is a collection of data which we
+call items.
+
+4
+00:00:13,166 --> 00:00:16,541
+Each item has some characteristics, which
+we call attributes.
+
+5
+00:00:16,625 --> 00:00:20,458
+Each item in the table has a unique
+identifier, or primary key.
+
+6
+00:00:20,625 --> 00:00:25,625
+DynamoDB supports two different kinds of
+primary keys, partition key and sort key.
+
+7
+00:00:26,208 --> 00:00:33,208
+The partition key is mandatory. DynamoDB
+uses the partition key's value as input to an internal hash function.
+
+8
+00:00:33,375 --> 00:00:40,250
+The output from the hash function
+determines the partition, which is physical storage internal to DynamoDB in which the item will be stored.
+
+9
+00:00:40,416 --> 00:00:44,083
+The partition key enables partitions for
+scalability purposes.
+
+10
+00:00:44,416 --> 00:00:48,625
+The sort key is optional and provides
+additional flexibility for querying data.
+
+11
+00:00:49,875 --> 00:00:54,458
+Now let's look at how you can create a
+simple table with Amazon DynamoDB service.
+
+12
+00:00:55,125 --> 00:00:57,750
+We will use a music library in this
+example.
+
+13
+00:00:58,375 --> 00:01:01,958
+To create a DynamoDB table, first enter
+the table name.
+
+14
+00:01:02,083 --> 00:01:03,666
+In this case, "music."
+
+15
+00:01:04,916 --> 00:01:07,000
+Next, enter a partition key.
+
+16
+00:01:07,125 --> 00:01:08,833
+In this example, artist.
+
+17
+00:01:10,083 --> 00:01:14,625
+Since each artist may write many songs,
+you can enable easy sorting with a sort key.
+
+18
+00:01:14,833 --> 00:01:17,958
+In this example, use "song title" as the
+sort key.
+
+19
+00:01:19,000 --> 00:01:20,791
+Next enable auto scaling.
+
+20
+00:01:21,416 --> 00:01:26,125
+Finally, create the table. The music table
+is created and ready to use.
+
+21
+00:01:27,083 --> 00:01:30,666
+You can add data to the table by creating
+a data record called item.
+
+22
+00:01:30,833 --> 00:01:34,625
+In this example, enter the artist's name
+and song title for each item.
+
+23
+00:01:37,083 --> 00:01:40,291
+There are two ways of searching data,
+query or scan.
+
+24
+00:01:40,500 --> 00:01:46,000
+In a query operation, you must specify a
+partition key value. Sort key is optional.
+
+25
+00:01:46,166 --> 00:01:51,291
+For example, you can search by artist, and
+also narrow down the search results by song title.
+
+26
+00:01:51,458 --> 00:01:55,250
+On the other hand, a scan operation always
+scans the entire table.
+
+27
+00:01:55,500 --> 00:01:59,791
+By default, it returns all of the data
+attributes for every item in the table.
+
+28
+00:02:00,000 --> 00:02:05,458
+If an optional filter expression is
+provided, it then filters out values to provide the results you want
+
+29
+00:02:06,333 --> 00:02:12,375
+To delete an existing item from a table,
+you must specify the primary key value to delete one item at a time.
+
+30
+00:02:13,500 --> 00:02:19,000
+For applications that need to read or
+write multiple items, DynamoDB provides batch operations.
+
+31
+00:02:19,083 --> 00:02:27,166
+In addition, DynamoDB performs the
+individual read or write operations in parallel. Your applications benefit from this parallelism.
+

@@ -1,0 +1,117 @@
+1
+00:00:00,500 --> 00:00:03,458
+An introduction to Amazon SageMaker
+Canvas.
+
+2
+00:00:04,666 --> 00:00:05,958
+Service Overview.
+
+3
+00:00:06,416 --> 00:00:12,750
+Amazon SageMaker Canvas, is a managed
+service that provides a no-code, machine learning, or ML environment.
+
+4
+00:00:13,333 --> 00:00:19,125
+SageMaker Canvas, expands access to the
+the entire ML workflow, including data preparation
+
+5
+00:00:19,500 --> 00:00:21,166
+model building and training
+
+6
+00:00:21,458 --> 00:00:25,041
+generating predictions, and even deploying your models to production.
+
+7
+00:00:26,000 --> 00:00:38,291
+With SageMaker Canvas, you can access ready-to-use, pre-trained models, or create custom models, to extract information from thousands of documents, images, and lines of text, and generate predictions within minutes.
+
+8
+00:00:39,333 --> 00:00:40,416
+Key features.
+
+9
+00:00:40,875 --> 00:00:43,291
+Browse, import, and join data
+
+10
+00:00:43,791 --> 00:00:48,375
+Using the SageMaker Canvas visual interface, you can browse and import your data.
+
+11
+00:00:48,625 --> 00:01:01,125
+SageMaker canvas supports the import of tabular data, such as CSV, and Parquet.
+Import images with JPEG, PNG, and TIFF extensions; as well as document data, such as PDF files.
+
+12
+00:01:01,708 --> 00:01:13,625
+SageMaker Canvas, can also discover, AWS data sources that your account has access to, including Amazon S3, Amazon RDS, Amazon Redshift, and the AWS Glue Data Catalog.
+
+13
+00:01:14,250 --> 00:01:19,833
+Or import third-party data from vendors, such as Salesforce, Snowflake, and 40 plus others.
+
+14
+00:01:21,125 --> 00:01:23,583
+Data analysis with visualizations.
+
+15
+00:01:24,000 --> 00:01:31,250
+SageMaker Canvas, offers built-in exploratory data analysis, so you can prepare, explore, and analyze your data.
+
+16
+00:01:31,833 --> 00:01:37,791
+SageMaker canvas, makes it easy to impute missing values, and replace outliers with custom values.
+
+17
+00:01:38,083 --> 00:01:49,583
+SageMaker Canvas, offers a selection of over 300 prebuilt, PySpark-based data transformations, so you can manipulate your data, and scale your data preparation workflow, without writing a single line of code.
+
+18
+00:01:50,458 --> 00:01:52,000
+Create custom models.
+
+19
+00:01:52,333 --> 00:02:01,500
+Using Amazon SageMaker Canvas, you can create custom models for classification, regression, forecasting, or image recognition, that are trained using your own data.
+
+20
+00:02:01,791 --> 00:02:11,041
+SageMaker canvas, also provides access to
+ready-to-use foundation models, or FMs, for content generation, text extraction, and text summarization.
+
+21
+00:02:12,083 --> 00:02:14,500
+SageMaker canvas, use-cases.
+
+22
+00:02:14,833 --> 00:02:16,875
+Generate or summarize content.
+
+23
+00:02:17,166 --> 00:02:27,833
+Use Amazon SageMaker canvas, to create personalized, engaging, and high-quality sales and marketing content, such as social media posts, product descriptions, and email campaigns.
+
+24
+00:02:28,166 --> 00:02:37,833
+Or, produce concise summaries of articles, blog posts, and meeting minutes, to identify the most important data, highlight key takeaways, and more quickly distill information.
+
+25
+00:02:39,166 --> 00:02:40,708
+Predict customer churn.
+
+26
+00:02:41,250 --> 00:02:55,291
+You can use SageMaker Canvas, to ingest product consumption data, and purchase history records, to create a model of your customers churn patterns. Then use the model to predict unhappy customers and take actions to convert them into happy and satisfied customers.
+
+27
+00:02:56,208 --> 00:02:58,041
+Plan inventory efficiently.
+
+28
+00:02:58,416 --> 00:03:14,958
+With Sagemaker canvas, you can combine historical sales and demand data with other important data, such as web traffic, pricing, and even temperature, when ice cream happens to be your product. Then create a machine learning based, time series forecast, that can vary with adjustments in price or temperature.
+

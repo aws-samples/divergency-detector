@@ -1,0 +1,148 @@
+1
+00:00:00,100 --> 00:00:04,630
+Amazon Elastic Block Store (Amazon EBS) Volume Types.
+
+2
+00:00:04,630 --> 00:00:07,080
+Let's compare the different EBS volume types.
+
+3
+00:00:07,780 --> 00:00:11,240
+The general-purpose SSD volumes gp3 and gp2
+
+4
+00:00:11,400 --> 00:00:13,960
+are designed to offer single-digit millisecond latency.
+
+5
+00:00:14,660 --> 00:00:19,600
+gp2 is designed to deliver a consistent baseline performance of 3 IOPS per gigabytes
+
+6
+00:00:19,820 --> 00:00:21,660
+and can burst up to 3000 IOPS.
+
+7
+00:00:22,030 --> 00:00:25,380
+It also provides a maximum of 16,000 IOPS per volume
+
+8
+00:00:25,640 --> 00:00:29,380
+and up to 250 megabytes per second of maximum throughput per volume.
+
+9
+00:00:30,300 --> 00:00:33,980
+gp3 enables you to provision performance independent of storage.
+
+10
+00:00:34,260 --> 00:00:37,300
+It delivers a baseline performance of 3000 IOPS
+
+11
+00:00:37,440 --> 00:00:39,620
+and can scale up to 16,000 IOPS,
+
+12
+00:00:40,100 --> 00:00:42,640
+and throughput up to 1000 megabytes per second,
+
+13
+00:00:42,800 --> 00:00:45,160
+which is four times more throughput than gp2.
+
+14
+00:00:45,930 --> 00:00:50,900
+gp3 and gp2 have the same volume size of one gigabyte to 16 terabytes.
+
+15
+00:00:51,700 --> 00:00:56,360
+Next, let's look at the provisioned IOPS SSD volumes io2 and io1.
+
+16
+00:00:56,633 --> 00:01:00,530
+They are designed to deliver up to a maximum of 64,000 IOPS,
+
+17
+00:01:00,530 --> 00:01:05,460
+four times more than gp3 and 1000 megabytes per second of throughput per volume,
+
+18
+00:01:05,640 --> 00:01:07,640
+along with single-digit millisecond latency.
+
+19
+00:01:08,430 --> 00:01:12,120
+They have the same volume size of four gigabytes to 16 terabytes.
+
+20
+00:01:12,730 --> 00:01:18,620
+However, io2 is designed to provide 100 times more durability of 99.999%
+
+21
+00:01:18,860 --> 00:01:21,560
+compared to that of io1 and all other volume types.
+
+22
+00:01:22,000 --> 00:01:24,240
+Customers that need submillisecond latency
+
+23
+00:01:24,460 --> 00:01:28,060
+or need to go beyond the current single-volume peak performance and throughput
+
+24
+00:01:28,066 --> 00:01:33,399
+can use io2 Block Express which is designed to deliver four times higher IOPS, throughput,
+
+25
+00:01:33,400 --> 00:01:37,440
+and capacity than io2 volumes along with a high durability as io2.
+
+26
+00:01:38,400 --> 00:01:41,540
+Now let's look at the throughput-optimized HDD volumes.
+
+27
+00:01:42,030 --> 00:01:46,080
+st1 can burst up to 250 megabytes per second per terabyte
+
+28
+00:01:46,260 --> 00:01:49,660
+with a baseline throughput of 40 megabytes per second per terabyte.
+
+29
+00:01:49,666 --> 00:01:56,366
+It offers a maximum throughput of 500 megabytes per second and up to 500 IOPS per volume.
+
+30
+00:01:56,366 --> 00:02:00,499
+Similar to st1, cold HDD sc1 provides a burst model.
+
+31
+00:02:00,500 --> 00:02:03,860
+These volumes can burst up to 80 megabytes per second per terabyte
+
+32
+00:02:04,040 --> 00:02:07,230
+with a baseline throughput of 12 megabytes per second per terabyte,
+
+33
+00:02:07,230 --> 00:02:10,920
+and a maximum throughput of 250 megabytes per second for volume.
+
+34
+00:02:11,660 --> 00:02:15,580
+The maximum IOPS per volume for sc1 is 250 IOPS.
+
+35
+00:02:16,100 --> 00:02:21,560
+Both sc1 and st1 have the same volume size of 500 gigabytes to 16 terabytes.
+
+36
+00:02:22,030 --> 00:02:25,840
+As you can see, Amazon EBS provides all these different volume types
+
+37
+00:02:26,000 --> 00:02:30,060
+so that you can tailor your storage, performance, and cost to the needs of your applications.
+

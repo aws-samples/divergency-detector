@@ -1,0 +1,248 @@
+1
+00:00:00,000 --> 00:00:03,060
+Amazon DynamoDB Queries - Features.
+
+2
+00:00:04,460 --> 00:00:06,660
+Limiting the number of items in the results set.
+
+3
+00:00:07,280 --> 00:00:09,640
+You can limit the number of items in the results set
+
+4
+00:00:09,640 --> 00:00:11,340
+by setting the limit parameter
+
+5
+00:00:11,340 --> 00:00:13,780
+to the maximum number of items that you want.
+
+6
+00:00:14,320 --> 00:00:15,340
+For example,
+
+7
+00:00:15,410 --> 00:00:17,420
+suppose that you query a table with a limit
+
+8
+00:00:17,420 --> 00:00:20,070
+value of four and without a filter expression.
+
+9
+00:00:20,220 --> 00:00:21,680
+The query result contains
+
+10
+00:00:21,810 --> 00:00:23,580
+the first four items from the table
+
+11
+00:00:23,680 --> 00:00:26,350
+that match the key condition expression from the request.
+
+12
+00:00:26,890 --> 00:00:30,900
+Now suppose that you had a filter expression to the query. In this case,
+
+13
+00:00:30,910 --> 00:00:35,000
+DynamoDB applies the filter expression to the four items that were returned,
+
+14
+00:00:35,010 --> 00:00:36,960
+discarding those that do not match.
+
+15
+00:00:36,970 --> 00:00:39,900
+The final query result contains four items or fewer
+
+16
+00:00:39,910 --> 00:00:42,270
+depending on the number of items that were filtered.
+
+17
+00:00:43,430 --> 00:00:45,040
+Counting the items and the results.
+
+18
+00:00:45,820 --> 00:00:50,230
+The query response contains the following elements, "ScannedCount" and "Count."
+
+19
+00:00:50,870 --> 00:00:53,140
+"ScannedCount" is the number of matching items
+
+20
+00:00:53,160 --> 00:00:56,410
+to the key condition expression before the filter expression,
+
+21
+00:00:56,420 --> 00:00:57,940
+if present, was applied.
+
+22
+00:00:58,510 --> 00:01:01,450
+"Count" is the number of items in the response result.
+
+23
+00:01:01,460 --> 00:01:03,560
+If you used a filter in the request,
+
+24
+00:01:03,590 --> 00:01:07,260
+then "Count" is the number of items returned after the filter was applied.
+
+25
+00:01:08,280 --> 00:01:11,700
+If the size of the query results set is larger than one megabyte,
+
+26
+00:01:11,700 --> 00:01:15,320
+"ScannedCount" and "Count" represent only a partial count of the total items.
+
+27
+00:01:15,430 --> 00:01:19,400
+You need to perform multiple query operations to retrieve all the results.
+
+28
+00:01:20,860 --> 00:01:23,110
+Capacity units consumed by query.
+
+29
+00:01:23,660 --> 00:01:25,080
+If you query a table,
+
+30
+00:01:25,120 --> 00:01:27,780
+DynamoDB consumes read capacity units
+
+31
+00:01:27,800 --> 00:01:30,070
+from the table's provisioned read capacity.
+
+32
+00:01:30,710 --> 00:01:33,660
+If you query a global secondary index, or GSI,
+
+33
+00:01:33,680 --> 00:01:36,340
+DynamoDB consumes read capacity units
+
+34
+00:01:36,380 --> 00:01:38,750
+from the index's provisioned read capacity.
+
+35
+00:01:39,310 --> 00:01:41,970
+In the case of a local secondary index, or LSI,
+
+36
+00:01:41,980 --> 00:01:44,560
+DynamoDB consumes read capacity units
+
+37
+00:01:44,620 --> 00:01:47,130
+from the base table's provisioned read capacity.
+
+38
+00:01:47,920 --> 00:01:52,880
+DynamoDB calculates the number of read capacity units consumed based on item size,
+
+39
+00:01:52,900 --> 00:01:55,750
+not on the amount of data that is returned to an application.
+
+40
+00:01:57,560 --> 00:01:59,420
+Read consistency for query.
+
+41
+00:02:00,000 --> 00:02:04,050
+A query operation performs eventually consistent reads by default.
+
+42
+00:02:04,580 --> 00:02:08,300
+This means that the query results might not reflect latest changes
+
+43
+00:02:08,310 --> 00:02:11,930
+due to recently completed put item or update item operations.
+
+44
+00:02:12,890 --> 00:02:15,250
+If you require strongly consistent reads,
+
+45
+00:02:15,380 --> 00:02:18,790
+set the ConsistentRead parameter to true in the query request.
+
+46
+00:02:19,800 --> 00:02:21,500
+Paginating query results.
+
+47
+00:02:21,620 --> 00:02:23,150
+With pagination,
+
+48
+00:02:23,170 --> 00:02:25,850
+the query results are divided into pages of data
+
+49
+00:02:25,860 --> 00:02:28,100
+that are one megabyte in size or less.
+
+50
+00:02:28,630 --> 00:02:33,710
+An application can process the first page of results, then the second page, and so on.
+
+51
+00:02:33,720 --> 00:02:36,020
+To determine whether there are more results,
+
+52
+00:02:36,060 --> 00:02:37,940
+you need to query with the debug mode
+
+53
+00:02:37,960 --> 00:02:40,480
+in order to examine the low-level query result,
+
+54
+00:02:40,540 --> 00:02:43,660
+and check if the result contains the LastEvaluatedKey element.
+
+55
+00:02:44,510 --> 00:02:45,560
+In this example,
+
+56
+00:02:45,620 --> 00:02:50,080
+the query also limits the number of items per page using the page-size parameter.
+
+57
+00:02:50,730 --> 00:02:54,390
+The query result contains information in the LastEvaluatedKey.
+
+58
+00:02:54,400 --> 00:02:58,220
+This indicates that there are more results data available for the operation.
+
+59
+00:02:59,010 --> 00:03:01,140
+To retrieve the next page of information,
+
+60
+00:03:01,180 --> 00:03:05,960
+you will need to set the ExclusiveStartKey value to the LastEvaluatedKey value,
+
+61
+00:03:06,120 --> 00:03:10,670
+and query again until the absence of the LastEvaluatedKey in the query result.
+
+62
+00:03:11,200 --> 00:03:15,530
+When there is no LastEvaluatedKey, you have retrieved the final page of results.
+

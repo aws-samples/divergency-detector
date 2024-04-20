@@ -1,0 +1,144 @@
+1
+00:00:00,410 --> 00:00:02,260
+TensorFlow Framework Overview,
+
+2
+00:00:04,100 --> 00:00:06,870
+TensorFlow framework on Amazon SageMaker.
+
+3
+00:00:07,490 --> 00:00:10,660
+TensorFlow is an open-source machine learning
+
+4
+00:00:10,820 --> 00:00:12,930
+and artificial intelligence framework.
+
+5
+00:00:13,500 --> 00:00:14,660
+With TensorFlow,
+
+6
+00:00:14,770 --> 00:00:16,210
+you can use custom code
+
+7
+00:00:16,340 --> 00:00:18,070
+along with Amazon SageMaker
+
+8
+00:00:18,460 --> 00:00:20,810
+to train and deploy a machine-learning model.
+
+9
+00:00:21,830 --> 00:00:27,240
+The SageMaker Python SDK, along with the open-source TensorFlow containers,
+
+10
+00:00:27,250 --> 00:00:30,060
+makes it easy to write TensorFlow taining scripts.
+
+11
+00:00:31,510 --> 00:00:33,000
+TensorFlow 2
+
+12
+00:00:33,100 --> 00:00:35,940
+focuses on simplicity and ease of use
+
+13
+00:00:36,070 --> 00:00:40,130
+with updated features like eager execution,
+
+14
+00:00:40,300 --> 00:00:42,430
+intuitive high-level APIs,
+
+15
+00:00:42,920 --> 00:00:45,810
+and flexible model building on any platform.
+
+16
+00:00:47,910 --> 00:00:49,960
+TensorFlow Framework Benefits.
+
+17
+00:00:51,020 --> 00:00:52,270
+Easy Model Building.
+
+18
+00:00:52,900 --> 00:00:55,990
+TensorFlow offers multiple levels of abstraction
+
+19
+00:00:56,130 --> 00:00:57,310
+for their APIs.
+
+20
+00:00:58,040 --> 00:00:59,820
+Using the Keras API,
+
+21
+00:00:59,860 --> 00:01:03,610
+quickly build and train ML models to get started with machine learning.
+
+22
+00:01:04,400 --> 00:01:06,510
+The distributed strategy API
+
+23
+00:01:06,680 --> 00:01:09,820
+lets you distribute larger training jobs across multiple
+
+24
+00:01:09,820 --> 00:01:13,340
+hardware configurations with minimal or no code changes.
+
+25
+00:01:15,200 --> 00:01:17,370
+Robust ML Production Anywhere.
+
+26
+00:01:17,720 --> 00:01:19,330
+Whether it's on servers,
+
+27
+00:01:19,430 --> 00:01:21,400
+edge devices, or the cloud,
+
+28
+00:01:21,540 --> 00:01:24,430
+TensorFlow lets you train and deploy your models anywhere,
+
+29
+00:01:24,550 --> 00:01:27,050
+no matter what language your platform uses.
+
+30
+00:01:28,370 --> 00:01:30,760
+Powerful Experimentation for Research.
+
+31
+00:01:31,530 --> 00:01:33,030
+Build and train
+
+32
+00:01:33,150 --> 00:01:37,580
+state-of-art ML models without sacrificing speed or performance.
+
+33
+00:01:38,630 --> 00:01:41,350
+TensorFlow also supports an ecosystem
+
+34
+00:01:41,500 --> 00:01:45,160
+of powerful add-on libraries and models to experiment with.
+
+35
+00:01:45,920 --> 00:01:47,620
+This includes ragged tensors,
+
+36
+00:01:47,750 --> 00:01:51,340
+TensorFlow probability, Tensor2Tensor, BERT and Mixture of Experts.
+

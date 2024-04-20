@@ -1,0 +1,252 @@
+1
+00:00:00,000 --> 00:00:02,580
+Welcome to the overview of Amazon Lex.
+
+2
+00:00:02,800 --> 00:00:06,640
+Amazon Lex is a fully managed artificial intelligence, or AI,
+
+3
+00:00:06,640 --> 00:00:09,780
+service with advanced natural language models to design,
+
+4
+00:00:09,880 --> 00:00:10,440
+build,
+
+5
+00:00:10,560 --> 00:00:11,110
+test,
+
+6
+00:00:11,270 --> 00:00:14,150
+and deploy conversational interfaces and applications.
+
+7
+00:00:15,070 --> 00:00:16,230
+Amazon Lex is an
+
+8
+00:00:16,230 --> 00:00:20,550
+AWS service for building chatbots for applications using voice and text.
+
+9
+00:00:20,920 --> 00:00:24,480
+With Amazon Lex, no deep-learning expertise is necessary.
+
+10
+00:00:24,620 --> 00:00:25,520
+To create a bot,
+
+11
+00:00:25,690 --> 00:00:28,120
+you just specify the basic conversation flow.
+
+12
+00:00:28,340 --> 00:00:31,030
+Amazon Lex manages the dialogue and dynamically
+
+13
+00:00:31,030 --> 00:00:33,250
+adjusts the responses in the conversation.
+
+14
+00:00:33,510 --> 00:00:35,920
+Amazon Lex also provides integration with
+
+15
+00:00:35,920 --> 00:00:37,080
+AWS Lambda,
+
+16
+00:00:37,250 --> 00:00:39,890
+AWS Mobile Hub, Amazon CloudWatch,
+
+17
+00:00:40,000 --> 00:00:42,970
+Amazon Cognito, and Amazon DynamoDB.
+
+18
+00:00:43,300 --> 00:00:47,220
+Let's review key features of Amazon Lex. Standard Features.
+
+19
+00:00:47,460 --> 00:00:48,290
+Security.
+
+20
+00:00:48,470 --> 00:00:49,690
+Amazon Lex uses
+
+21
+00:00:49,690 --> 00:00:52,250
+AWS IAM for access and management,
+
+22
+00:00:52,390 --> 00:00:54,360
+encrypts data at rest using internal
+
+23
+00:00:54,470 --> 00:00:59,200
+AWS KMS keys, and encrypts data in transit using HTTPS.
+
+24
+00:00:59,500 --> 00:01:00,340
+Monitoring.
+
+25
+00:01:00,540 --> 00:01:05,040
+With Amazon CloudWatch, you can get metrics for Amazon Lex operations, and with
+
+26
+00:01:05,040 --> 00:01:06,550
+AWS CloudTrail,
+
+27
+00:01:06,680 --> 00:01:08,500
+you can monitor API calls.
+
+28
+00:01:08,910 --> 00:01:10,540
+Natural conversations.
+
+29
+00:01:10,840 --> 00:01:12,810
+Amazon Lex provides high-quality
+
+30
+00:01:12,970 --> 00:01:15,810
+speech recognition and natural language understanding.
+
+31
+00:01:16,050 --> 00:01:19,770
+Amazon Lex uses the same proven technology that powers Alexa.
+
+32
+00:01:19,970 --> 00:01:22,730
+Amazon Lex supports context management natively
+
+33
+00:01:22,880 --> 00:01:26,430
+so you can manage the context directly without the need for custom code.
+
+34
+00:01:26,630 --> 00:01:30,590
+The Amazon Lex speech recognition engine has been trained on telephony audio
+
+35
+00:01:30,740 --> 00:01:32,190
+eight-kilohertz sampling rate,
+
+36
+00:01:32,200 --> 00:01:34,807
+providing increased speech recognition accuracy.
+
+37
+00:01:35,007 --> 00:01:39,137
+Amazon Lex bots also include the ability for multi-turn conversations.
+
+38
+00:01:39,147 --> 00:01:40,427
+Build a productivity.
+
+39
+00:01:40,627 --> 00:01:44,647
+Amazon Lex allows you one-click deployment to multiple platforms and
+
+40
+00:01:44,817 --> 00:01:47,867
+has in-built powerful lifecycle management capabilities.
+
+41
+00:01:48,087 --> 00:01:51,357
+The Lex V2-enhanced console makes it easier to build,
+
+42
+00:01:51,457 --> 00:01:54,107
+deploy, and manage conversational experiences.
+
+43
+00:01:54,317 --> 00:01:56,477
+With streaming conversation APIs,
+
+44
+00:01:56,597 --> 00:01:59,820
+you can manage conversation flow directly as you configure the bot.
+
+45
+00:01:59,860 --> 00:02:02,110
+AWS service integrations.
+
+46
+00:02:02,274 --> 00:02:04,524
+You can search intent using Amazon Kendra to
+
+47
+00:02:04,524 --> 00:02:08,610
+find the most accurate answers from unstructured documents and FAQs.
+
+48
+00:02:08,614 --> 00:02:12,934
+You can use Amazon Polly to convert text input and respond in lifelike speech.
+
+49
+00:02:13,094 --> 00:02:15,690
+Amazon Lex natively supports integration with
+
+50
+00:02:15,690 --> 00:02:18,294
+AWS Lambda for additional business logic.
+
+51
+00:02:18,494 --> 00:02:20,454
+Contact center integrations.
+
+52
+00:02:20,674 --> 00:02:23,910
+Amazon Lex is natively integrated with Amazon Connect,
+
+53
+00:02:23,910 --> 00:02:26,691
+AWS's omnichannel cloud contact center.
+
+54
+00:02:26,931 --> 00:02:29,971
+Amazon Lex can be deployed in Genesys Cloud CX,
+
+55
+00:02:30,101 --> 00:02:31,911
+a cloud contact center solution,
+
+56
+00:02:32,061 --> 00:02:34,900
+any session initiation protocol, or SIP, using contact
+
+57
+00:02:34,900 --> 00:02:37,300
+centers with Amazon Chime SDK, and
+
+58
+00:02:37,300 --> 00:02:40,790
+AWS Contact Center Intelligence, or CCI,
+
+59
+00:02:40,791 --> 00:02:42,741
+partners who support Amazon Lex.
+
+60
+00:02:42,921 --> 00:02:43,871
+Compliance.
+
+61
+00:02:44,061 --> 00:02:46,611
+Amazon Lex is a HIPAA-eligible service,
+
+62
+00:02:46,801 --> 00:02:47,620
+It is SOC,
+
+63
+00:02:47,620 --> 00:02:49,611
+PCI, and ISO compliant.
+

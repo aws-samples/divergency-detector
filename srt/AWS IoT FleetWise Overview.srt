@@ -1,0 +1,106 @@
+1
+00:00:00,000 --> 00:00:02,666
+AWS IoT FleetWise Overview
+
+2
+00:00:03,625 --> 00:00:11,125
+AWS IoT FleetWise is used to collect,
+organize, and store vehicle data in a standardized way for analysis in the cloud.
+
+3
+00:00:11,833 --> 00:00:17,708
+After the data is in the cloud, you can
+use it for applications that analyze vehicle fleet health and resources.
+
+4
+00:00:18,583 --> 00:00:25,041
+This analysis can help you more quickly
+identify potential maintenance issues or make in-vehicle infotainment systems smarter.
+
+5
+00:00:26,000 --> 00:00:32,374
+You can also feed the data into machine
+learning models that improve autonomous driving and advanced driver assistance systems.
+
+6
+00:00:34,250 --> 00:00:35,333
+Key Features
+
+7
+00:00:36,666 --> 00:00:37,583
+Edge Agent
+
+8
+00:00:38,041 --> 00:00:43,958
+The Edge Agent for AWS IoT FleetWise
+facilitates communication between a vehicle and the cloud.
+
+9
+00:00:44,375 --> 00:00:56,875
+You can develop your Edge Agent by using
+the Edge Agent Reference Implementation for AWS IoT Fleetwise, a fully functional piece of embedded software designed for vehicle data collection that can run on most embedded Linux-based platforms.
+
+10
+00:00:58,416 --> 00:01:00,041
+Global signal catalog
+
+11
+00:01:00,875 --> 00:01:08,291
+AWS IoT FleetWise provides a centralized
+repository of standardized vehicle sensors and signals for your vehicle models.
+
+12
+00:01:08,666 --> 00:01:12,583
+You can save time by reusing signals when
+creating new vehicle models.
+
+13
+00:01:14,166 --> 00:01:15,875
+Rules-based data collection
+
+14
+00:01:16,541 --> 00:01:23,291
+To transfer only the data signals that you
+want to the cloud, AWS IoT FleetWise can apply rules that you define.
+
+15
+00:01:23,625 --> 00:01:33,458
+To start, you can define vehicle
+attributes and the sensors associated with a vehicle’s make, model, and trim (such as engine temperature, vehicle speed, and parking assist system).
+
+16
+00:01:34,583 --> 00:01:42,666
+You can then define rules and events for
+when to transfer the sensor data based on parameters, such as changes to temperature or speed for a certain vehicle type.
+
+17
+00:01:44,291 --> 00:01:45,375
+Use cases
+
+18
+00:01:46,375 --> 00:01:48,375
+Maintain EV battery health
+
+19
+00:01:49,000 --> 00:01:53,541
+Monitor EV battery health and charge
+levels and improve range estimates for drivers.
+
+20
+00:01:54,750 --> 00:01:56,791
+Enhance the in-cabin experience
+
+21
+00:01:57,375 --> 00:02:03,625
+Use data from in-vehicle infotainment
+systems to make services, audiovisual content, and features more relevant.
+
+22
+00:02:04,958 --> 00:02:06,791
+Improve fleet operations
+
+23
+00:02:07,250 --> 00:02:13,208
+Use insights from commercial fleet data to
+analyze driver safety, vehicle uptime, and maintenance schedules.
+

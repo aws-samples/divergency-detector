@@ -1,0 +1,184 @@
+1
+00:00:00,440 --> 00:00:02,930
+AWS Lambda Error Handling.
+
+2
+00:00:04,560 --> 00:00:07,470
+When you invoke a function, two types of error can occur.
+
+3
+00:00:08,090 --> 00:00:10,490
+Invocation errors occur when the invocation request
+
+4
+00:00:10,490 --> 00:00:13,070
+is rejected before your function receives it.
+
+5
+00:00:13,720 --> 00:00:16,100
+Function errors occur when your function's code
+
+6
+00:00:16,450 --> 00:00:18,100
+or runtime returns an error.
+
+7
+00:00:18,730 --> 00:00:21,560
+The error handling strategy and retry behavior varies
+
+8
+00:00:21,630 --> 00:00:24,050
+depending on how you invoke your Lambda function.
+
+9
+00:00:25,020 --> 00:00:29,260
+When you invoke a function directly, you determine the error handling strategy.
+
+10
+00:00:29,270 --> 00:00:31,520
+When you invoke a function indirectly,
+
+11
+00:00:31,700 --> 00:00:35,630
+the error handling behavior varies based on the types of invocations,
+
+12
+00:00:36,660 --> 00:00:37,750
+including synchronous,
+
+13
+00:00:38,100 --> 00:00:38,840
+poll-based,
+
+14
+00:00:39,180 --> 00:00:40,730
+and asynchronous invocations.
+
+15
+00:00:41,420 --> 00:00:44,600
+First, let's look at the error handling for synchronous invocation.
+
+16
+00:00:46,010 --> 00:00:48,040
+When the function response returns an error,
+
+17
+00:00:48,160 --> 00:00:50,200
+there is no error behavior for Lambda,
+
+18
+00:00:50,850 --> 00:00:54,470
+the service where the client is responsible for the error-handling strategy
+
+19
+00:00:54,640 --> 00:00:58,160
+such as checking the error, determining if you should retry the invoke.
+
+20
+00:00:59,160 --> 00:01:01,490
+Error handling for poll-based invocation.
+
+21
+00:01:02,860 --> 00:01:08,550
+Poll-based invocation uses event source mapping to read events from a stream or a queue.
+
+22
+00:01:08,560 --> 00:01:09,490
+In this model,
+
+23
+00:01:09,500 --> 00:01:14,360
+the retry behavior is based on data expiration in the data source for streams.
+
+24
+00:01:14,370 --> 00:01:16,200
+If your function returns an error,
+
+25
+00:01:16,250 --> 00:01:19,200
+the entire batch is reprocessed until the function
+
+26
+00:01:19,200 --> 00:01:21,720
+succeeds or the items in the batch expire.
+
+27
+00:01:22,270 --> 00:01:25,250
+For queues, you determine the length of time between retries,
+
+28
+00:01:25,450 --> 00:01:27,330
+the destination for failed events,
+
+29
+00:01:27,500 --> 00:01:30,030
+the conditions under which Amazon SQS moves
+
+30
+00:01:30,030 --> 00:01:31,730
+failed event messages to the dead-letter
+
+31
+00:01:31,730 --> 00:01:36,730
+queue by configuring the visibility timeout, and redrive policy on the source queue.
+
+32
+00:01:38,710 --> 00:01:40,920
+Error handling for asynchronous invocation.
+
+33
+00:01:44,120 --> 00:01:48,200
+If the function returns an error, AWS Lambda attempts to retry twice
+
+34
+00:01:48,330 --> 00:01:50,240
+for a total of three invocations.
+
+35
+00:01:50,840 --> 00:01:53,190
+There is a one-minute wait between the first two attempts
+
+36
+00:01:53,350 --> 00:01:55,640
+and two minutes between the second and third attempts.
+
+37
+00:01:56,470 --> 00:02:00,280
+If all three attempts fail, Lambda sends the failed event to a dead-letter queue, or DLQ,
+
+38
+00:02:00,400 --> 00:02:01,330
+if it's configured.
+
+39
+00:02:02,110 --> 00:02:05,690
+You can configure your function with a dead-letter queue to send these events
+
+40
+00:02:05,690 --> 00:02:07,380
+to Simple Queue Service, or SQS,
+
+41
+00:02:07,380 --> 00:02:10,970
+or Simple Notification Service, or SNS, for further processing.
+
+42
+00:02:12,180 --> 00:02:13,920
+The SQS queue holds failed events
+
+43
+00:02:14,050 --> 00:02:15,470
+until they're retrieved.
+
+44
+00:02:16,290 --> 00:02:20,630
+For SNS, a topic relays failed events to one or more destinations.
+
+45
+00:02:20,640 --> 00:02:23,890
+You can configure a topic to send events to an email address,
+
+46
+00:02:23,900 --> 00:02:26,910
+a Lambda function, or an HTTP endpoint.
+

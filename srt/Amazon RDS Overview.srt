@@ -1,0 +1,228 @@
+1
+00:00:00,000 --> 00:00:02,210
+Amazon Relational Database Service
+
+2
+00:00:02,360 --> 00:00:04,200
+(Amazon RDS) Overview.
+
+3
+00:00:05,060 --> 00:00:08,710
+Amazon RDS is a managed relational database service.
+
+4
+00:00:08,860 --> 00:00:11,390
+Amazon RDS makes it easy to set up,
+
+5
+00:00:11,400 --> 00:00:14,540
+operate, and scale a relational database in the cloud.
+
+6
+00:00:14,560 --> 00:00:18,050
+It provides cost-efficient and resizable capacity while
+
+7
+00:00:18,050 --> 00:00:20,480
+automating time-consuming administration tasks
+
+8
+00:00:20,500 --> 00:00:22,040
+such as hardware provisioning,
+
+9
+00:00:22,050 --> 00:00:24,640
+database setup, patching, and backups.
+
+10
+00:00:25,340 --> 00:00:27,970
+It frees you to focus on your applications.
+
+11
+00:00:27,980 --> 00:00:32,330
+Amazon RDS provides you with six familiar database engines to choose from,
+
+12
+00:00:32,340 --> 00:00:34,040
+including Amazon Aurora,
+
+13
+00:00:34,050 --> 00:00:40,220
+PostgreSQL, MySQL, MariaDB, Oracle Database, and SQL Server.
+
+14
+00:00:40,870 --> 00:00:44,020
+You can use the AWS Database Migration Service to
+
+15
+00:00:44,020 --> 00:00:48,540
+easily migrate or replicate your existing databases to Amazon RDS.
+
+16
+00:00:49,950 --> 00:00:51,330
+Here are the key benefits.
+
+17
+00:00:51,920 --> 00:00:53,340
+Easy to administer.
+
+18
+00:00:53,390 --> 00:00:55,400
+Amazon RDS makes it easy
+
+19
+00:00:55,440 --> 00:00:57,710
+to go from project conception to deployment.
+
+20
+00:00:57,720 --> 00:01:00,600
+You can use the Amazon RDS Management Console,
+
+21
+00:01:00,670 --> 00:01:04,840
+the AWS RDS Command Line Interface, or simple API calls to
+
+22
+00:01:04,840 --> 00:01:08,870
+access the capabilities of a production-ready relational database in minutes.
+
+23
+00:01:09,420 --> 00:01:12,040
+You do not need to worry about infrastructure provisioning,
+
+24
+00:01:12,050 --> 00:01:14,920
+installing, and maintaining database software.
+
+25
+00:01:14,980 --> 00:01:16,430
+Highly scalable.
+
+26
+00:01:16,440 --> 00:01:18,580
+You can vertically scale your databases,
+
+27
+00:01:18,580 --> 00:01:20,640
+compute, memory, and storage resources
+
+28
+00:01:20,800 --> 00:01:23,730
+with only a few mouse clicks or an API call,
+
+29
+00:01:23,740 --> 00:01:25,660
+often with no downtime.
+
+30
+00:01:25,670 --> 00:01:28,470
+Many Amazon RDS engine types allow you to
+
+31
+00:01:28,470 --> 00:01:31,340
+launch one or more read replicas to offload
+
+32
+00:01:31,340 --> 00:01:33,770
+read traffic from your primary database instance.
+
+33
+00:01:35,130 --> 00:01:39,020
+Amazon RDS runs on the same
+
+34
+00:01:39,020 --> 00:01:42,870
+highly reliable infrastructure used by other Amazon web services.
+
+35
+00:01:42,880 --> 00:01:45,680
+When you provision a Multi-AZ DB instance,
+
+36
+00:01:45,700 --> 00:01:48,810
+Amazon RDS synchronously replicates the data to a
+
+37
+00:01:48,810 --> 00:01:51,310
+standby instance in a different Availability Zone, or AZ.
+
+38
+00:01:52,660 --> 00:01:55,460
+Amazon RDS also has many other features
+
+39
+00:01:55,590 --> 00:01:58,650
+that enhance reliability for critical production databases,
+
+40
+00:01:58,780 --> 00:02:00,280
+including automated backups,
+
+41
+00:02:00,410 --> 00:02:01,670
+database snapshots,
+
+42
+00:02:01,830 --> 00:02:03,390
+and automatic host replacement.
+
+43
+00:02:05,200 --> 00:02:10,570
+Fast. A DB instance is an isolated database environment running in the cloud.
+
+44
+00:02:10,580 --> 00:02:14,390
+You can provision new RDS instances only in a few minutes.
+
+45
+00:02:14,520 --> 00:02:17,020
+Amazon RDS supports the most demanding
+
+46
+00:02:17,020 --> 00:02:19,670
+database applications with fast performance.
+
+47
+00:02:19,690 --> 00:02:23,280
+You can choose between two SSD-backed storage options.
+
+48
+00:02:23,290 --> 00:02:24,200
+In addition,
+
+49
+00:02:24,210 --> 00:02:27,120
+Amazon Aurora provides performance on par
+
+50
+00:02:27,200 --> 00:02:29,780
+with commercial databases at one-tenth the cost.
+
+51
+00:02:31,360 --> 00:02:32,460
+Secure.
+
+52
+00:02:32,620 --> 00:02:36,900
+Amazon RDS makes it easy to control network access to your database.
+
+53
+00:02:36,920 --> 00:02:40,140
+It lets you isolate your database instances by running
+
+54
+00:02:40,140 --> 00:02:43,010
+them on Amazon VPC and connect to your existing
+
+55
+00:02:43,010 --> 00:02:47,110
+IT infrastructure through an industry-standard encrypted IPsec VPN.
+
+56
+00:02:47,810 --> 00:02:50,630
+Many Amazon RDS engine types also offer
+
+57
+00:02:50,630 --> 00:02:52,970
+encryption at rest and encryption in transit.
+

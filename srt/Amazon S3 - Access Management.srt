@@ -1,0 +1,280 @@
+1
+00:00:00,000 --> 00:00:04,180
+Amazon Simple Storage Service (Amazon S3) Access Management.
+
+2
+00:00:04,870 --> 00:00:05,760
+By default,
+
+3
+00:00:05,770 --> 00:00:10,140
+all Amazon S3 resources, such as buckets and objects, are private.
+
+4
+00:00:10,600 --> 00:00:11,940
+Only the resource owner,
+
+5
+00:00:11,960 --> 00:00:15,390
+an AWS account that created it, can access the resource.
+
+6
+00:00:16,149 --> 00:00:18,370
+The resource owner can optionally grant access
+
+7
+00:00:18,370 --> 00:00:21,210
+permissions to others by writing an access policy.
+
+8
+00:00:21,740 --> 00:00:25,060
+Amazon S3 offers access policy options that can be
+
+9
+00:00:25,060 --> 00:00:29,120
+broadly categorized as resource-based policies and user policies.
+
+10
+00:00:29,160 --> 00:00:32,980
+Resource-based policies are access policies that you attach
+
+11
+00:00:32,980 --> 00:00:35,560
+to your resources such as buckets and objects.
+
+12
+00:00:35,640 --> 00:00:38,610
+Bucket policies and access control lists, or ACLs,
+
+13
+00:00:38,620 --> 00:00:41,320
+are resource-based policies.
+
+14
+00:00:41,330 --> 00:00:44,650
+You can also authenticate certain types of data access using
+
+15
+00:00:44,650 --> 00:00:48,170
+query-string authentication to grant temporary access to others
+
+16
+00:00:48,180 --> 00:00:49,770
+with time-limited URLs.
+
+17
+00:00:50,860 --> 00:00:54,520
+User policies are access policies that you attach to users.
+
+18
+00:00:55,670 --> 00:00:59,360
+Access can be granted to users using AWS IAM policies.
+
+19
+00:01:00,430 --> 00:01:02,790
+You may choose to use resource-based policies,
+
+20
+00:01:02,800 --> 00:01:06,400
+user policies, or some combination of these to manage permissions
+
+21
+00:01:06,460 --> 00:01:08,120
+to your Amazon S3 resources.
+
+22
+00:01:08,940 --> 00:01:12,280
+Access Control List is a legacy access control mechanism.
+
+23
+00:01:12,590 --> 00:01:13,760
+As a general rule,
+
+24
+00:01:13,770 --> 00:01:19,080
+AWS recommends using S3 bucket policies or IAM policies for access control.
+
+25
+00:01:19,680 --> 00:01:21,930
+When Amazon S3 receives a request,
+
+26
+00:01:21,980 --> 00:01:24,690
+it must evaluate all the access policies to
+
+27
+00:01:24,690 --> 00:01:27,470
+determine whether to authorize or deny the request.
+
+28
+00:01:28,540 --> 00:01:32,500
+First, let's look at resource-based policies.
+
+29
+00:01:32,620 --> 00:01:33,990
+Access control lists.
+
+30
+00:01:34,030 --> 00:01:36,820
+Each bucket and object has an access control list,
+
+31
+00:01:36,960 --> 00:01:38,980
+an ACL associated with it.
+
+32
+00:01:39,280 --> 00:01:43,260
+Access control lists use Amazon S3-specific XML schema.
+
+33
+00:01:43,330 --> 00:01:46,280
+It defines which AWS accounts or groups
+
+34
+00:01:46,420 --> 00:01:48,780
+are granted access and the type of access they have.
+
+35
+00:01:48,880 --> 00:01:53,850
+When you create a bucket or an object, Amazon S3 creates a default ACL
+
+36
+00:01:53,950 --> 00:01:57,160
+that grants the resource owner full control over the resource.
+
+37
+00:01:57,420 --> 00:01:59,710
+You can use access control lists to grant
+
+38
+00:01:59,710 --> 00:02:02,480
+basic read/write permissions to other AWS accounts.
+
+39
+00:02:02,720 --> 00:02:08,160
+A Bucket policy, written in JSON, is attached to an S3 bucket.
+
+40
+00:02:08,169 --> 00:02:12,380
+It provides access permissions to the S3 bucket and all objects in it.
+
+41
+00:02:12,390 --> 00:02:15,570
+Here is an example of an S3 bucket policy.
+
+42
+00:02:15,580 --> 00:02:18,850
+This S3 bucket policy allows the principal,
+
+43
+00:02:18,860 --> 00:02:20,930
+the root account, and the IAM user Alice
+
+44
+00:02:20,930 --> 00:02:23,940
+under that account to perform any S3 operation.
+
+45
+00:02:23,970 --> 00:02:27,840
+The wildcard asterisk character after the S3 in the action statement
+
+46
+00:02:28,160 --> 00:02:30,780
+indicates that all S3 operations are allowed.
+
+47
+00:02:31,160 --> 00:02:33,930
+Particularly, you can perform S3 operations
+
+48
+00:02:33,930 --> 00:02:36,170
+only on specific resources as shown in
+
+49
+00:02:36,170 --> 00:02:37,060
+the resource statement.
+
+50
+00:02:37,160 --> 00:02:40,260
+In this case, only the S3 bucket with name
+
+51
+00:02:40,260 --> 00:02:42,740
+my_bucket and all objects in it are allowed.
+
+52
+00:02:43,140 --> 00:02:45,990
+As you can see, you can use the slash and asterisk
+
+53
+00:02:45,990 --> 00:02:48,950
+after the bucket name to indicate all objects in the bucket.
+
+54
+00:02:49,010 --> 00:02:54,500
+User policies control who has access to your Amazon S3 resources
+
+55
+00:02:54,760 --> 00:02:56,040
+and is written in JSON.
+
+56
+00:02:56,150 --> 00:03:00,360
+You can use AWS Identity and Access Management, or AWS IAM,
+
+57
+00:03:00,360 --> 00:03:03,660
+to create users, groups, and roles in your account
+
+58
+00:03:03,670 --> 00:03:08,400
+and attach access policies to grant them access to Amazon S3.
+
+59
+00:03:08,450 --> 00:03:10,600
+Let's look at an IAM policy example.
+
+60
+00:03:10,700 --> 00:03:12,400
+Unlike bucket policies,
+
+61
+00:03:12,410 --> 00:03:14,800
+IAM policy does not require a principal
+
+62
+00:03:14,800 --> 00:03:17,070
+element because the principal is, by default,
+
+63
+00:03:17,100 --> 00:03:20,370
+the entity that the IAM policy is attached to.
+
+64
+00:03:20,400 --> 00:03:24,220
+The first part of the policy specifies bucket-level permissions.
+
+65
+00:03:24,230 --> 00:03:27,030
+It allows the ListBucket action so that applications
+
+66
+00:03:27,030 --> 00:03:28,950
+can list all objects in the test bucket.
+
+67
+00:03:29,120 --> 00:03:32,970
+The second part specifies object-level permissions.
+
+68
+00:03:32,980 --> 00:03:34,470
+It allows PutObject,
+
+69
+00:03:34,480 --> 00:03:38,340
+GetObject, and DeleteObject actions so that applications can write,
+
+70
+00:03:38,350 --> 00:03:41,230
+read, and delete any objects in the test bucket.
+

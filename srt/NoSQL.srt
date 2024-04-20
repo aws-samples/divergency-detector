@@ -1,0 +1,266 @@
+1
+00:00:00,083 --> 00:00:02,083
+NoSQL database overview.
+
+2
+00:00:03,000 --> 00:00:04,291
+What is NoSQL?
+
+3
+00:00:04,625 --> 00:00:07,875
+NoSQL databases are non relational
+databases.
+
+4
+00:00:08,208 --> 00:00:13,541
+They do not require a fixed predefined
+schema and do not have structured tables with rows and columns.
+
+5
+00:00:13,833 --> 00:00:18,458
+NoSQL databases are purpose built and
+optimized for many modern applications.
+
+6
+00:00:18,833 --> 00:00:29,291
+They are a great fit for mobile, web, and
+gaming applications that require large data volume, low latency, high performance, and flexible data models to provide great user experiences.
+
+7
+00:00:30,291 --> 00:00:35,166
+Here is an example of modeling the schema
+for a simple book database in a relational database.
+
+8
+00:00:35,458 --> 00:00:41,166
+A book record is stored in separate tables
+and relationships are defined by primary and foreign key constraints.
+
+9
+00:00:41,458 --> 00:00:45,125
+The book's table has columns for ISBN book
+title and edition number.
+
+10
+00:00:45,458 --> 00:00:52,750
+The author's table has columns for author
+ID and author name, and the author ISBN table has columns for author ID and ISBN.
+
+11
+00:00:53,000 --> 00:01:02,375
+The relational model is designed to enable
+the database to enforce data integrity normalize to reduce the redundancy and generally optimized for storage in a NoSQL database.
+
+12
+00:01:02,666 --> 00:01:05,875
+A book record can be stored as JSON
+document for each book.
+
+13
+00:01:06,208 --> 00:01:12,375
+The item ISBN book title edition number,
+author name and author ID are stored as attributes in a single document.
+
+14
+00:01:12,750 --> 00:01:17,333
+In this model data is optimized for
+intuitive development and horizontal scalability.
+
+15
+00:01:19,000 --> 00:01:21,458
+Why should you use a NoSQL database?
+
+16
+00:01:21,791 --> 00:01:22,916
+Flexibility.
+
+17
+00:01:23,291 --> 00:01:26,791
+Flexible schemas enable faster and more
+iterative development.
+
+18
+00:01:27,083 --> 00:01:28,250
+Scalability.
+
+19
+00:01:28,583 --> 00:01:36,833
+NoSQL databases are generally designed
+to scale out by using distributed clusters of hardware instead of scaling up by adding expensive and robust servers.
+
+20
+00:01:39,000 --> 00:01:40,125
+High performance.
+
+21
+00:01:40,583 --> 00:01:48,375
+NoSQL databases are distributed and
+designed for massive parallel high performance data processing across multiple processing nodes and servers.
+
+22
+00:01:48,750 --> 00:01:54,166
+This enables higher performance than
+trying to accomplish similar functionality with relational databases.
+
+23
+00:01:54,500 --> 00:01:55,625
+Highly functional.
+
+24
+00:01:56,000 --> 00:02:02,833
+NoSQL databases provide highly
+functional API's and data types that are purpose built for each of their respective data models.
+
+25
+00:02:03,125 --> 00:02:06,291
+NoSQL databases use a variety of data
+models.
+
+26
+00:02:06,500 --> 00:02:07,458
+Key value.
+
+27
+00:02:07,666 --> 00:02:11,666
+A key value database uses a simple key
+value method to store data.
+
+28
+00:02:12,041 --> 00:02:17,666
+The key serves as a unique identifier that
+is highly partitionable and allows horizontal scaling at scale.
+
+29
+00:02:17,958 --> 00:02:22,416
+Use cases include gaming, advertising,
+technology, and IOT.
+
+30
+00:02:22,708 --> 00:02:25,791
+Amazon DynamoDB is a key value database.
+
+31
+00:02:26,875 --> 00:02:27,708
+Document.
+
+32
+00:02:27,875 --> 00:02:32,333
+A document database is designed to store
+and query data as a JSON-like document.
+
+33
+00:02:32,500 --> 00:02:38,250
+This makes it easier for developers as
+they are using the same document model format as their application code.
+
+34
+00:02:38,500 --> 00:02:46,250
+Typical use cases include catalogs, user
+profiles, and content management systems where each document is unique and evolves over time.
+
+35
+00:02:46,583 --> 00:02:52,541
+Amazon DocumentDB with MongoDB
+compatibility and MongoDB are popular document databases.
+
+36
+00:02:54,000 --> 00:02:54,750
+Graph.
+
+37
+00:02:55,041 --> 00:02:58,791
+Graph databases are purpose built to store
+and navigate relationships.
+
+38
+00:02:59,250 --> 00:03:01,000
+Nodes store data entities.
+
+39
+00:03:01,375 --> 00:03:03,916
+Edges store relationships between
+entities.
+
+40
+00:03:04,125 --> 00:03:07,250
+An edge always has a start node and node
+type and direction.
+
+41
+00:03:07,583 --> 00:03:12,291
+An edge can describe parent child
+relationships, actions, ownership and the like.
+
+42
+00:03:12,666 --> 00:03:18,375
+Typical use cases include social
+networking recommendation engines, fraud detection and knowledge graphs.
+
+43
+00:03:18,750 --> 00:03:22,166
+Amazon Neptune is a fully managed graph
+database service.
+
+44
+00:03:22,541 --> 00:03:26,000
+Popular graph databases include Neo4J
+and Giraph
+
+45
+00:03:27,291 --> 00:03:28,208
+In memory.
+
+46
+00:03:28,666 --> 00:03:36,125
+An in-memory database relies primarily on
+memory for data storage, in contrast to databases that store data on disk or SSDs.
+
+47
+00:03:36,458 --> 00:03:41,041
+They are designed to attain minimal
+response time by eliminating the need to access disks.
+
+48
+00:03:41,208 --> 00:03:47,750
+In-memory databases are ideal for
+applications such as gaming leaderboards, session stores and real time analytics.
+
+49
+00:03:47,916 --> 00:03:53,791
+These applications require microsecond
+response times and can have large spikes in traffic coming at any time.
+
+50
+00:03:54,083 --> 00:03:57,208
+Amazon ElastiCache offers MemCached and
+Redis.
+
+51
+00:03:57,583 --> 00:04:03,708
+Amazon DynamoDB Accelerator (DAX) makes
+DynamoDB reads an order of magnitude faster.
+
+52
+00:04:05,083 --> 00:04:05,875
+Search.
+
+53
+00:04:06,041 --> 00:04:09,833
+A search engine database is dedicated to
+the search of content data.
+
+54
+00:04:10,041 --> 00:04:16,749
+Search engine databases use indexes to
+categorize the similar characteristics among data and facilitate search capability.
+
+55
+00:04:16,916 --> 00:04:20,874
+Typical use cases are text search,
+logging, and analysis.
+
+56
+00:04:21,166 --> 00:04:26,708
+Amazon Elasticsearch Service is a
+powerful high performance search engine for full text search use cases.
+

@@ -1,0 +1,112 @@
+1
+00:00:00,000 --> 00:00:04,770
+Amazon Elastic File System (Amazon EFS) Data Transfer and Backup.
+
+2
+00:00:06,010 --> 00:00:11,110
+Moving your Amazon EFS file data can be managed simply with AWS DataSync.
+
+3
+00:00:11,800 --> 00:00:15,580
+AWS DataSync is a managed data transfer service that
+
+4
+00:00:15,580 --> 00:00:20,360
+simplifies, automates, and accelerates copying data between NFS file shares,
+
+5
+00:00:20,400 --> 00:00:24,430
+EFS file systems, S3 buckets, and on-premises storage.
+
+6
+00:00:25,260 --> 00:00:28,630
+AWS DataSync can transfer your file data and also
+
+7
+00:00:28,630 --> 00:00:33,170
+file system metadata such as ownership, timestamps, and access permissions.
+
+8
+00:00:35,210 --> 00:00:40,790
+AWS DataSync uses a software agent to connect to your EFS file systems.
+
+9
+00:00:40,800 --> 00:00:43,440
+It automates scaling and validating transfers.
+
+10
+00:00:43,450 --> 00:00:44,950
+So you don't have to write scripts,
+
+11
+00:00:44,960 --> 00:00:47,930
+modify your applications, or manage infrastructure.
+
+12
+00:00:48,450 --> 00:00:53,300
+You can transfer active datasets over AWS Direct Connect or the internet
+
+13
+00:00:53,310 --> 00:00:56,180
+at speeds up to 10 times faster than open-source tools.
+
+14
+00:00:56,700 --> 00:00:59,350
+You can use the service for one-time data migrations,
+
+15
+00:00:59,360 --> 00:01:02,480
+ongoing workflows with periodic synchronization, and
+
+16
+00:01:02,480 --> 00:01:04,800
+replication for data protection and recovery.
+
+17
+00:01:06,850 --> 00:01:10,220
+AWS Backup is a fully managed backup service
+
+18
+00:01:10,370 --> 00:01:12,240
+that makes it easy to centrally manage and
+
+19
+00:01:12,260 --> 00:01:15,170
+automate backups of your Amazon EFS file systems,
+
+20
+00:01:15,175 --> 00:01:17,890
+removing the need for costly custom solutions.
+
+21
+00:01:18,890 --> 00:01:22,440
+AWS Backup goes beyond backing up Amazon EFS
+
+22
+00:01:22,540 --> 00:01:26,770
+and centralizes the backup of data across other AWS services in the cloud
+
+23
+00:01:26,880 --> 00:01:28,190
+as well as on premises.
+
+24
+00:01:29,300 --> 00:01:31,290
+You do not need to perform backup tasks
+
+25
+00:01:31,290 --> 00:01:32,300
+service by service,
+
+26
+00:01:32,310 --> 00:01:36,190
+create custom scripts and manual processes for the backup activities.
+
+27
+00:01:36,830 --> 00:01:41,760
+Using AWS Backup, you can centrally configure and audit AWS resources,
+
+28
+00:01:41,770 --> 00:01:46,520
+automate backup scheduling, set retention policies, and monitor backup activity.
+

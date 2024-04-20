@@ -1,0 +1,284 @@
+1
+00:00:00,000 --> 00:00:05,000
+Welcome to a brief lesson on AWS VPN services.
+
+2
+00:00:05,000 --> 00:00:07,980
+AWS VPN is comprised of two
+
+3
+00:00:08,200 --> 00:00:12,420
+highly available, fully managed, and elastic VPN services:
+
+4
+00:00:12,800 --> 00:00:17,800
+they are AWS Client VPN and AWS Site-to-Site VPN.
+
+5
+00:00:18,400 --> 00:00:23,760
+AWS Client VPN is a fully managed remote-access VPN solution
+
+6
+00:00:23,920 --> 00:00:28,680
+used by your remote workforce to securely access resources within both AWS
+
+7
+00:00:28,860 --> 00:00:30,280
+and your on-premises network.
+
+8
+00:00:30,600 --> 00:00:35,190
+It is fully elastic and automatically scales up or down based on demand.
+
+9
+00:00:35,200 --> 00:00:39,300
+So there is no need to manage VPN hardware or software.
+
+10
+00:00:39,300 --> 00:00:43,240
+AWS Site-to-Site VPN is a fully managed service
+
+11
+00:00:43,320 --> 00:00:47,160
+that creates a secure connection between your data center or branch office
+
+12
+00:00:47,333 --> 00:00:50,950
+and your AWS resources using IPsec tunnels.
+
+13
+00:00:51,566 --> 00:00:53,560
+When using Site-to-Site VPN,
+
+14
+00:00:53,560 --> 00:00:58,320
+you can connect to both your Amazon VPC as well as AWS Transit Gateway
+
+15
+00:00:58,480 --> 00:01:02,360
+and also two tunnels for connection are used for increased redundancy.
+
+16
+00:01:02,830 --> 00:01:07,240
+Use the accelerated Site-to-Site VPN option to provide better performance
+
+17
+00:01:07,480 --> 00:01:10,090
+by working with AWS Global Accelerator
+
+18
+00:01:10,100 --> 00:01:14,300
+to intelligently route your traffic when using globally distributed applications.
+
+19
+00:01:14,830 --> 00:01:19,160
+Now, let's take a look at the AWS Site-to-Site VPN features.
+
+20
+00:01:20,120 --> 00:01:22,060
+Let's start with high availability.
+
+21
+00:01:22,460 --> 00:01:26,260
+The AWS Site-to-Site VPN delivers high availability
+
+22
+00:01:26,280 --> 00:01:29,340
+by using two tunnels across multiple Availability Zones
+
+23
+00:01:29,460 --> 00:01:31,360
+within the AWS Global Network.
+
+24
+00:01:31,930 --> 00:01:34,620
+You can stream primary traffic through the first tunnel
+
+25
+00:01:34,740 --> 00:01:37,190
+and use the second tunnel for redundancy.
+
+26
+00:01:37,200 --> 00:01:40,440
+If one tunnel goes down, traffic continues to flow.
+
+27
+00:01:40,960 --> 00:01:43,040
+Next is secure connectivity.
+
+28
+00:01:43,400 --> 00:01:47,040
+AWS Site-to-Site VPN uses OpenVPN
+
+29
+00:01:47,260 --> 00:01:50,100
+which utilizes a TLS-encrypted control channel
+
+30
+00:01:50,280 --> 00:01:52,480
+to negotiate the data channel parameters.
+
+31
+00:01:52,960 --> 00:01:55,040
+The data channel is SSL-based
+
+32
+00:01:55,180 --> 00:01:57,760
+but adds additional safeguards such as
+
+33
+00:01:57,980 --> 00:02:00,860
+hash-based message authentication code, or HMAC,
+
+34
+00:02:01,560 --> 00:02:04,940
+hashing, and X.509 certificates.
+
+35
+00:02:05,560 --> 00:02:08,420
+Robust monitoring about your Site-to-Site VPN
+
+36
+00:02:08,560 --> 00:02:12,000
+is available with CloudWatch to provide you with greater visibility
+
+37
+00:02:12,060 --> 00:02:14,360
+with robust metrics and custom metrics.
+
+38
+00:02:14,730 --> 00:02:17,800
+With CloudWatch, you can send your own custom metrics
+
+39
+00:02:17,860 --> 00:02:20,950
+and add data points in any order and at any rate you choose.
+
+40
+00:02:21,500 --> 00:02:25,020
+From there, you can retrieve statistics about those data points
+
+41
+00:02:25,180 --> 00:02:27,420
+as an ordered set of time-series data.
+
+42
+00:02:27,900 --> 00:02:31,780
+AWS Site-to-Site VPN offers customizable tunnel options
+
+43
+00:02:31,920 --> 00:02:35,200
+including inside-tunnel IP address, pre-shared key,
+
+44
+00:02:35,420 --> 00:02:40,020
+and Border Gateway Protocol Autonomous System Number, or BGP ASN.
+
+45
+00:02:40,560 --> 00:02:43,980
+In this way you can set up multiple secure VPN tunnels
+
+46
+00:02:44,020 --> 00:02:47,890
+to increase the bandwidth for your applications or for resiliency.
+
+47
+00:02:47,900 --> 00:02:50,780
+You can also set up Equal-Cost Multi-Path routing
+
+48
+00:02:50,940 --> 00:02:54,580
+or ECMP, using AWS Transit Gateway.
+
+49
+00:02:55,330 --> 00:02:59,460
+Now, let's review the AWS Client VPN features.
+
+50
+00:02:59,830 --> 00:03:02,520
+AWS Client VPN is fully managed
+
+51
+00:03:02,720 --> 00:03:04,940
+so it automatically takes care of deployment,
+
+52
+00:03:05,140 --> 00:03:07,660
+capacity provisioning, and service updates.
+
+53
+00:03:08,130 --> 00:03:11,800
+This allows you to monitor all connections from a single console.
+
+54
+00:03:12,820 --> 00:03:15,980
+For authentication, AWS Client VPN
+
+55
+00:03:16,060 --> 00:03:19,180
+will use either Active Directory or certificates.
+
+56
+00:03:19,660 --> 00:03:23,080
+Client VPN integrates with AWS Directory Services
+
+57
+00:03:23,260 --> 00:03:26,060
+which connects to your existing on-premises Active Directory.
+
+58
+00:03:26,160 --> 00:03:28,440
+So it does not require you to replicate data
+
+59
+00:03:28,520 --> 00:03:31,230
+from your existing Active Directory to the cloud.
+
+60
+00:03:31,230 --> 00:03:34,260
+Certificate-based authentication with Client VPN
+
+61
+00:03:34,360 --> 00:03:36,920
+integrates with AWS Certificate Manager
+
+62
+00:03:37,020 --> 00:03:40,400
+to easily provision, manage, and deploy certificates.
+
+63
+00:03:40,930 --> 00:03:45,240
+For authorization, AWS Client VPN is network-based
+
+64
+00:03:45,500 --> 00:03:47,680
+so you can define access control rules
+
+65
+00:03:47,820 --> 00:03:51,760
+that limit access to specific networks based on Active Directory groups.
+
+66
+00:03:52,430 --> 00:03:56,020
+For connection management, use Amazon CloudWatch Logs to monitor,
+
+67
+00:03:56,280 --> 00:03:58,260
+store, and access your log files
+
+68
+00:03:58,300 --> 00:04:01,020
+from AWS Client VPN connection logs.
+
+69
+00:04:01,430 --> 00:04:05,060
+You can then retrieve the associated log data from CloudWatch Logs
+
+70
+00:04:05,320 --> 00:04:07,880
+to monitor, conduct forensics analysis,
+
+71
+00:04:08,120 --> 00:04:10,580
+and terminate specific connections.
+

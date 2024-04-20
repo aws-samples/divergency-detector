@@ -1,0 +1,172 @@
+1
+00:00:00,000 --> 00:00:01,440
+Amazon QuickSight
+
+2
+00:00:01,440 --> 00:00:02,708
+Introduction
+
+3
+00:00:03,041 --> 00:00:11,708
+Amazon QuickSight is a cloud-scale
+business intelligence service that you can use to deliver easy-to-understand insights to the people who you work with, wherever they are.
+
+4
+00:00:12,125 --> 00:00:17,885
+In a single data dashboard, QuickSight can
+include data from AWS, third-party sources,
+
+5
+00:00:17,885 --> 00:00:24,445
+big data sources, spreadsheets,
+software-as-a-service sources, business-to-business sources, and more.
+
+6
+00:00:24,916 --> 00:00:31,416
+A dashboard is the published version of an
+analysis that you can share with other users of QuickSight for reporting purposes.
+
+7
+00:00:31,416 --> 00:00:38,916
+A data analysis is the basic workspace for
+creating data visualizations, which are graphical representations of your data.
+
+8
+00:00:38,916 --> 00:00:44,156
+QuickSight uses a superfast parallel
+in-memory calculation engine, called SPICE.
+
+9
+00:00:44,156 --> 00:00:51,156
+The storage and processing capacity
+available in SPICE speeds up the analytical queries that you run against your imported data.
+
+10
+00:00:51,156 --> 00:00:58,196
+By using SPICE, you save time because you
+don't need to retrieve the data every time you change an analysis, or update a visual.
+
+11
+00:00:59,083 --> 00:01:01,743
+Amazon QuickSight Key Features
+
+12
+00:01:01,743 --> 00:01:05,443
+Use QuickSight Q to provide business
+intelligence for everyone.
+
+13
+00:01:05,443 --> 00:01:09,383
+With QuickSight Q, you can ask
+conversational questions of your data,
+
+14
+00:01:09,383 --> 00:01:13,443
+and use Q's machine learning-powered
+engine to receive relevant visualizations
+
+15
+00:01:13,443 --> 00:01:17,683
+without the time-consuming data
+preparation from authors and admins.
+
+16
+00:01:17,683 --> 00:01:21,623
+Use machine learning insights to perform
+advanced analytics.
+
+17
+00:01:21,623 --> 00:01:26,523
+You can use AWS expertise in machine
+learning to discover hidden insights from your data,
+
+18
+00:01:26,583 --> 00:01:29,383
+perform accurate forecasting and what-if
+analysis,
+
+19
+00:01:29,383 --> 00:01:33,823
+or add easy-to-understand natural language
+narratives to dashboards.
+
+20
+00:01:33,823 --> 00:01:37,563
+Embed analytics to differentiate your
+applications.
+
+21
+00:01:37,563 --> 00:01:40,823
+You can embed interactive visualizations
+and dashboards,
+
+22
+00:01:40,823 --> 00:01:42,863
+sophisticated dashboard authoring,
+
+23
+00:01:42,863 --> 00:01:46,223
+or natural language query capabilities in
+your applications,
+
+24
+00:01:46,223 --> 00:01:50,583
+which can differentiate user experience
+and unlock new monetization opportunities.
+
+25
+00:01:51,458 --> 00:01:53,858
+Amazon QuickSight Benefits
+
+26
+00:01:53,858 --> 00:01:56,558
+Build Customizable Dashboards
+
+27
+00:01:56,558 --> 00:02:01,458
+With QuickSight, you can build
+pixel-perfect dashboards that are use-case specific.
+
+28
+00:02:01,458 --> 00:02:10,458
+You can also deliver personalized email
+reports and alerts for end-users and provide on-the-go access through iOS and Android on the QuickSight mobile app.
+
+29
+00:02:10,458 --> 00:02:13,558
+Native AWS Service Integration
+
+30
+00:02:13,558 --> 00:02:23,558
+QuickSight integrates natively with other
+AWS services, such as Amazon Redshift, Snowflake, Exasol, Amazon Relational Database Service, and many others.
+
+31
+00:02:23,558 --> 00:02:32,558
+You can use AWS Identity and Access
+Management to grant QuickSight permissions for Amazon S3 and Amazon Athena with fine-grained access control.
+
+32
+00:02:32,558 --> 00:02:40,558
+QuickSight can also integrate with Amazon
+SageMaker to create sophisticated machine learning models without the need for complex data pipelines.
+
+33
+00:02:40,558 --> 00:02:43,558
+Serverless Pay-by-Usage Design
+
+34
+00:02:43,558 --> 00:02:50,558
+QuickSight is completely serverless and
+will automatically scale to hundreds of thousands of users with built-in high availability.
+
+35
+00:02:50,558 --> 00:02:53,558
+With QuickSight, you only pay for what you
+use,
+
+36
+00:02:53,558 --> 00:02:59,333
+which means no more over-provisioning for
+peak usage or requirements for thousands of end-user licenses.
+

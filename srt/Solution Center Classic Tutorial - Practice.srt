@@ -1,0 +1,43 @@
+1
+00:00:00,041 --> 00:00:02,293
+This is the practice section.
+
+2
+00:00:02,293 --> 00:00:04,921
+Use it
+to build the first part of the solution
+
+3
+00:00:04,921 --> 00:00:10,301
+using the AWS Console and image
+based instructions. To begin building,
+
+4
+00:00:10,468 --> 00:00:16,141
+allow browser popups, then launch the AWS
+Console in a separate browser tab.
+
+5
+00:00:16,683 --> 00:00:19,686
+Follow the steps to complete part
+one of the solution,
+
+6
+00:00:19,894 --> 00:00:22,897
+then move to the do it yourself section.
+
+7
+00:00:23,356 --> 00:00:27,944
+One more important
+note. The AWS Console environment
+
+8
+00:00:27,944 --> 00:00:31,614
+starts up and shuts down
+automatically with a temporary account.
+
+9
+00:00:32,157 --> 00:00:36,286
+You should never use your personal AWS
+account in the solution center.
+

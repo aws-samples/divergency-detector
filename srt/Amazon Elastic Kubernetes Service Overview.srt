@@ -1,0 +1,229 @@
+1
+00:00:00,120 --> 00:00:02,860
+Amazon Elastic Kubernetes Service.
+
+2
+00:00:03,030 --> 00:00:05,010
+Amazon EKS Overview.
+
+3
+00:00:05,690 --> 00:00:09,810
+Amazon EKS is a managed Kubernetes service that makes it
+
+4
+00:00:09,810 --> 00:00:13,820
+easy for you to run Kubernetes on AWS and on premises.
+
+5
+00:00:14,610 --> 00:00:17,460
+Kubernetes consists of two major components,
+
+6
+00:00:17,880 --> 00:00:19,420
+a cluster of worker nodes
+
+7
+00:00:19,560 --> 00:00:22,990
+running your containers and the control plane, managing when and where
+
+8
+00:00:23,140 --> 00:00:25,030
+containers are started on your cluster
+
+9
+00:00:25,150 --> 00:00:26,690
+while monitoring their status.
+
+10
+00:00:27,520 --> 00:00:30,970
+With EKS, you do not need to install, operate,
+
+11
+00:00:31,110 --> 00:00:34,740
+and maintain your own Kubernetes control plane or worker nodes.
+
+12
+00:00:35,860 --> 00:00:37,910
+Amazon EKS automatically
+
+13
+00:00:38,070 --> 00:00:40,380
+manages the availability and scalability
+
+14
+00:00:40,520 --> 00:00:42,720
+of the Kubernetes control-plane nodes
+
+15
+00:00:42,850 --> 00:00:44,890
+responsible for scheduling containers,
+
+16
+00:00:45,030 --> 00:00:46,860
+managing application availability,
+
+17
+00:00:47,030 --> 00:00:48,390
+and storing cluster data.
+
+18
+00:00:50,690 --> 00:00:54,480
+Amazon EKS lets you run your Kubernetes applications
+
+19
+00:00:54,490 --> 00:00:57,950
+on both Amazon EC2 and AWS Fargate.
+
+20
+00:00:58,650 --> 00:01:01,950
+When you need to run containerized applications requiring
+
+21
+00:01:01,950 --> 00:01:04,739
+particularly low-latency on-premises systems,
+
+22
+00:01:04,800 --> 00:01:06,860
+you can use Amazon EKS
+
+23
+00:01:06,880 --> 00:01:08,490
+on AWS Outposts.
+
+24
+00:01:09,160 --> 00:01:11,210
+With Amazon EKS Anywhere,
+
+25
+00:01:11,230 --> 00:01:13,420
+you can also easily create and operate
+
+26
+00:01:13,480 --> 00:01:16,690
+Kubernetes clusters on your own on-premises infrastructure.
+
+27
+00:01:17,740 --> 00:01:19,380
+Here are the key benefits.
+
+28
+00:01:20,260 --> 00:01:21,690
+Production workloads.
+
+29
+00:01:22,400 --> 00:01:23,700
+Amazon EKS
+
+30
+00:01:23,840 --> 00:01:25,480
+is designed with AWS
+
+31
+00:01:25,500 --> 00:01:28,160
+best practices for security, scalability,
+
+32
+00:01:28,310 --> 00:01:29,520
+and fault tolerance.
+
+33
+00:01:30,450 --> 00:01:31,830
+It is highly scalable
+
+34
+00:01:31,970 --> 00:01:34,580
+and built to meet the demands of production workloads.
+
+35
+00:01:35,400 --> 00:01:39,620
+Amazon EKS ensures a more secure Kubernetes environment
+
+36
+00:01:39,630 --> 00:01:43,620
+with security patches automatically applied to your cluster's control plane.
+
+37
+00:01:44,970 --> 00:01:46,440
+Kubernetes-conformant.
+
+38
+00:01:47,070 --> 00:01:50,230
+Amazon EKS runs upstream Kubernetes
+
+39
+00:01:50,340 --> 00:01:53,290
+and is certified Kubernetes-conformant, so you
+
+40
+00:01:53,290 --> 00:01:55,960
+can use all the existing plug-ins and tooling from
+
+41
+00:01:55,960 --> 00:02:00,980
+the Kubernetes community. Applications running on Amazon EKS are fully
+
+42
+00:02:00,980 --> 00:02:05,470
+compatible with applications running on any standard Kubernetes environment.
+
+43
+00:02:05,520 --> 00:02:09,180
+This means that you can easily migrate any standard Kubernetes
+
+44
+00:02:09,180 --> 00:02:13,220
+application to Amazon EKS without refactoring your code.
+
+45
+00:02:14,500 --> 00:02:15,100
+Seamless
+
+46
+00:02:15,100 --> 00:02:15,110
+AWS integration.
+Seamless
+
+47
+00:02:15,110 --> 00:02:16,560
+AWS integration.
+
+48
+00:02:17,440 --> 00:02:21,500
+Amazon EKS is integrated with many AWS services
+
+49
+00:02:21,500 --> 00:02:25,210
+to provide scalability and security for your applications.
+
+50
+00:02:25,800 --> 00:02:27,980
+These integrated services include:
+
+51
+00:02:28,110 --> 00:02:31,110
+Elastic Load Balancing for load distribution,
+
+52
+00:02:31,270 --> 00:02:36,880
+AWS Identity and Access Management, or AWS IAM, for authentication.
+
+53
+00:02:37,080 --> 00:02:38,240
+Amazon ECR
+
+54
+00:02:38,240 --> 00:02:39,640
+for container registry,
+
+55
+00:02:39,920 --> 00:02:41,800
+Amazon Virtual Private Cloud, or
+
+56
+00:02:41,840 --> 00:02:44,120
+Amazon VPC, for isolation,
+
+57
+00:02:44,290 --> 00:02:46,560
+and AWS CloudTrail for logging.
+

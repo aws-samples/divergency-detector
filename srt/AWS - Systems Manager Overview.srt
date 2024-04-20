@@ -1,0 +1,240 @@
+1
+00:00:00,720 --> 00:00:03,370
+AWS Systems Manager - Overview.
+
+2
+00:00:06,000 --> 00:00:12,680
+AWS Systems Manager is a collection of features that help you manage your IT infrastructure
+
+3
+00:00:12,720 --> 00:00:16,640
+running in the AWS Cloud or on-premises data centers.
+
+4
+00:00:16,700 --> 00:00:22,560
+AWS Systems Manager simplifies the management of your applications and IT inventory.
+
+5
+00:00:23,640 --> 00:00:25,340
+AWS Systems Manager
+
+6
+00:00:25,500 --> 00:00:30,500
+thereby helps reduce the time it takes to detect and resolve operational problems.
+
+7
+00:00:32,159 --> 00:00:33,100
+In summary,
+
+8
+00:00:33,200 --> 00:00:35,850
+AWS Systems Manager helps you manage your
+
+9
+00:00:35,860 --> 00:00:38,240
+AWS resources securely
+
+10
+00:00:38,370 --> 00:00:39,270
+and at scale.
+
+11
+00:00:42,120 --> 00:00:44,840
+AWS Systems Manager - Features.
+
+12
+00:00:45,750 --> 00:00:52,800
+AWS Systems Manager is the operations hub for your AWS applications and IT resources.
+
+13
+00:00:53,420 --> 00:00:57,500
+AWS Systems Manager functionality is broken up into four
+
+14
+00:00:57,540 --> 00:01:01,810
+core feature groups that help you implement operations management best practices.
+
+15
+00:01:03,510 --> 00:01:05,129
+Operations Management.
+
+16
+00:01:05,880 --> 00:01:08,870
+AWS Systems Manager OpsCenter provides
+
+17
+00:01:08,870 --> 00:01:11,970
+a central location where operations engineers
+
+18
+00:01:12,090 --> 00:01:16,230
+and IT professionals can view, investigate,
+
+19
+00:01:16,230 --> 00:01:21,030
+and resolve operational issues affecting AWS resources.
+
+20
+00:01:22,540 --> 00:01:23,910
+Change Management.
+
+21
+00:01:24,350 --> 00:01:26,270
+Use Systems Manager Documents
+
+22
+00:01:26,370 --> 00:01:27,450
+to automate common
+
+23
+00:01:27,610 --> 00:01:29,090
+and repetitive maintenance
+
+24
+00:01:29,230 --> 00:01:30,620
+and deployment tasks.
+
+25
+00:01:31,690 --> 00:01:37,550
+You can use automation to reset passwords on servers, apply OS patches,
+
+26
+00:01:37,920 --> 00:01:40,140
+and remediate compliance issues.
+
+27
+00:01:42,020 --> 00:01:43,630
+Application Management.
+
+28
+00:01:44,280 --> 00:01:46,710
+With Systems Manager Application Manager,
+
+29
+00:01:46,780 --> 00:01:50,220
+you can define your application components based on automated
+
+30
+00:01:50,230 --> 00:01:54,250
+import of service metadata from AWS services such as
+
+31
+00:01:54,840 --> 00:01:57,140
+AWS CloudFormation stacks,
+
+32
+00:01:57,780 --> 00:02:00,090
+Amazon Elastic Container Service,
+
+33
+00:02:01,010 --> 00:02:03,470
+Amazon Elastic Kubernetes Service,
+
+34
+00:02:04,300 --> 00:02:06,050
+and AWS Launch Wizard.
+
+35
+00:02:06,780 --> 00:02:10,729
+Then view operations management data in the context of the application
+
+36
+00:02:10,860 --> 00:02:12,990
+and perform change management tasks.
+
+37
+00:02:15,160 --> 00:02:16,190
+Node Management.
+
+38
+00:02:16,840 --> 00:02:19,800
+AWS Systems Manager Fleet Manager
+
+39
+00:02:20,040 --> 00:02:24,700
+streamlines the management process for servers running in the cloud or on premises.
+
+40
+00:02:25,310 --> 00:02:30,140
+Fleet Manager's remote management capabilities allow you to troubleshoot
+
+41
+00:02:30,320 --> 00:02:33,020
+and configure your server fleet at scale,
+
+42
+00:02:33,190 --> 00:02:35,230
+thereby saving you time and money.
+
+43
+00:02:37,180 --> 00:02:40,080
+AWS Systems Manager - Use Cases.
+
+44
+00:02:41,030 --> 00:02:42,980
+Centralized Operations Data.
+
+45
+00:02:43,600 --> 00:02:46,420
+Aggregate operational data, or ops data,
+
+46
+00:02:47,030 --> 00:02:50,360
+and view it in a single console to gain actionable insights
+
+47
+00:02:50,500 --> 00:02:53,370
+across AWS services such as
+
+48
+00:02:53,830 --> 00:02:55,500
+Amazon CloudWatch,
+
+49
+00:02:55,630 --> 00:02:57,380
+AWS CloudTrail,
+
+50
+00:02:57,630 --> 00:03:01,460
+AWS Config as well as third-party tools.
+
+51
+00:03:03,010 --> 00:03:08,280
+Implement Best Practices. Automate proactive processes at scale,
+
+52
+00:03:08,280 --> 00:03:10,830
+such as patching and maintenance,
+
+53
+00:03:10,870 --> 00:03:14,460
+or reactive processes to quickly diagnose and
+
+54
+00:03:14,460 --> 00:03:17,680
+remediate operational issues before they affect users.
+
+55
+00:03:18,750 --> 00:03:21,040
+Remediate Security Issues.
+
+56
+00:03:21,050 --> 00:03:26,250
+Enhance your security and compliance profile and analyze security incidents
+
+57
+00:03:26,250 --> 00:03:29,400
+after the fact to prevent a future reoccurrence.
+
+58
+00:03:31,010 --> 00:03:32,660
+Auto-Resolve Issues.
+
+59
+00:03:33,440 --> 00:03:39,990
+Automatically resolve application issues by using ops data to easily manage applications
+
+60
+00:03:40,190 --> 00:03:45,140
+and identify issues quickly across associated AWS resource groups.
+

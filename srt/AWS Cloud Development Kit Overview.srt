@@ -1,0 +1,240 @@
+1
+00:00:00,000 --> 00:00:02,730
+AWS Cloud Development Kit Overview.
+
+2
+00:00:03,430 --> 00:00:06,770
+Provisioning cloud applications can be a challenging process
+
+3
+00:00:06,810 --> 00:00:09,120
+that requires you to perform manual actions,
+
+4
+00:00:09,140 --> 00:00:13,690
+write custom scripts, maintain templates, or learn domain-specific languages.
+
+5
+00:00:14,470 --> 00:00:18,200
+The AWS Cloud Development Kit, or AWS CDK,
+
+6
+00:00:18,240 --> 00:00:20,760
+is an open-source software development framework
+
+7
+00:00:20,820 --> 00:00:22,850
+to model and provision your cloud application
+
+8
+00:00:22,850 --> 00:00:25,690
+resources using familiar programming languages.
+
+9
+00:00:26,380 --> 00:00:29,040
+AWS CDK provides you with high-level
+
+10
+00:00:29,040 --> 00:00:32,520
+components that preconfigure cloud resources with proven defaults,
+
+11
+00:00:32,530 --> 00:00:36,010
+so you can build cloud applications without needing to be an expert.
+
+12
+00:00:36,680 --> 00:00:38,850
+It provisions your resources in a safe,
+
+13
+00:00:38,860 --> 00:00:41,960
+repeatable manner through AWS CloudFormation.
+
+14
+00:00:43,290 --> 00:00:47,090
+Here are some of the concepts behind the AWS CDK.
+
+15
+00:00:47,100 --> 00:00:53,280
+The AWS CDK supports TypeScript, JavaScript, Python, Java,
+
+16
+00:00:53,860 --> 00:00:55,420
+and C# over .NET.
+
+17
+00:00:55,960 --> 00:00:59,020
+Developers can use one of the supported programming languages
+
+18
+00:00:59,030 --> 00:01:02,920
+to define reusable cloud components known as constructs.
+
+19
+00:01:02,930 --> 00:01:06,880
+A construct represents a cloud component and encapsulates everything
+
+20
+00:01:06,890 --> 00:01:10,150
+AWS Cloud Formation needs to create the component.
+
+21
+00:01:10,160 --> 00:01:13,000
+It encodes configuration detail, Boilerplate,
+
+22
+00:01:13,000 --> 00:01:15,430
+and Glue logic for using one or multiple
+
+23
+00:01:15,430 --> 00:01:16,830
+AWS services.
+
+24
+00:01:17,630 --> 00:01:18,400
+Additionally,
+
+25
+00:01:18,410 --> 00:01:21,960
+constructs are adjustable and composable. You can easily change
+
+26
+00:01:21,960 --> 00:01:25,070
+any of the parameters or encode your own custom construct.
+
+27
+00:01:25,620 --> 00:01:27,980
+A construct can represent a single resource
+
+28
+00:01:28,090 --> 00:01:30,840
+or multiple AWS CDK resources.
+
+29
+00:01:31,410 --> 00:01:35,640
+You compose the constructs together into stacks, forming a CDK application.
+
+30
+00:01:37,230 --> 00:01:40,570
+Now, let's look at the power of the AWS CDK
+
+31
+00:01:40,580 --> 00:01:45,650
+in this example. Here is some code in an AWS CDK project.
+
+32
+00:01:45,660 --> 00:01:46,770
+In this example,
+
+33
+00:01:46,780 --> 00:01:50,300
+a VPC construct is used to create a Virtual Private Cloud
+
+34
+00:01:50,300 --> 00:01:53,340
+and a cluster construct to create an ECS cluster.
+
+35
+00:01:53,350 --> 00:01:56,500
+A Fargate service running on an ECS cluster,
+
+36
+00:01:56,500 --> 00:02:00,360
+fronted by an Application Load Balancer, can just be created by this one
+
+37
+00:02:00,360 --> 00:02:03,060
+application load-balanced Fargate service construct.
+
+38
+00:02:03,800 --> 00:02:05,270
+In just a few lines of code,
+
+39
+00:02:05,410 --> 00:02:10,039
+this class produces an AWS CloudFormation template of more than 500 lines,
+
+40
+00:02:10,120 --> 00:02:14,240
+and deploying the AWS CDK app produces more than 50 resources.
+
+41
+00:02:16,040 --> 00:02:17,850
+In addition, here are more benefits.
+
+42
+00:02:18,420 --> 00:02:20,190
+Easier cloud onboarding.
+
+43
+00:02:20,200 --> 00:02:23,210
+AWS CDK accelerates your onboarding to
+
+44
+00:02:23,210 --> 00:02:26,020
+AWS because there are only a few new things to learn.
+
+45
+00:02:26,030 --> 00:02:28,910
+You can use your existing skills and tools to
+
+46
+00:02:28,910 --> 00:02:32,630
+build cloud infrastructure using the preconfigured cloud resources.
+
+47
+00:02:33,940 --> 00:02:37,710
+Customizable and shareable. With AWS CDK,
+
+48
+00:02:37,720 --> 00:02:40,000
+you can design your own reusable components
+
+49
+00:02:40,020 --> 00:02:43,930
+that meet your organization's security, compliance, and governance requirements.
+
+50
+00:02:44,560 --> 00:02:46,850
+Just like with any other software library,
+
+51
+00:02:46,860 --> 00:02:49,600
+you can easily share components around your organization,
+
+52
+00:02:49,610 --> 00:02:54,040
+enabling you to rapidly bootstrap new projects with best practices by default.
+
+53
+00:02:55,190 --> 00:02:56,940
+Faster development process.
+
+54
+00:02:56,950 --> 00:02:59,980
+You can use familiar features such as objects,
+
+55
+00:02:59,990 --> 00:03:03,360
+loops, and conditions to accelerate your development process.
+
+56
+00:03:03,370 --> 00:03:09,090
+You can also use AWS CDK with your integrated development environment, or IDE,
+
+57
+00:03:09,100 --> 00:03:13,130
+to take advantage of existing productivity tools and testing frameworks.
+
+58
+00:03:14,400 --> 00:03:16,700
+There is no context switching required.
+
+59
+00:03:16,710 --> 00:03:20,580
+You can use your existing IDE and the same programming language
+
+60
+00:03:20,580 --> 00:03:24,120
+to write your runtime code and define your AWS resources.
+

@@ -1,0 +1,261 @@
+1
+00:00:00,070 --> 00:00:01,120
+Serverless Computing.
+
+2
+00:00:03,250 --> 00:00:06,928
+Serverless removes the heavy lifting for you.
+
+3
+00:00:06,970 --> 00:00:11,320
+You can build and run applications and services without thinking about servers.
+
+4
+00:00:12,000 --> 00:00:15,460
+You can focus on building product which scale and that are reliable.
+
+5
+00:00:17,750 --> 00:00:20,020
+There are four key benefits of Serverless.
+
+6
+00:00:20,030 --> 00:00:23,440
+There is no more need to provision or maintain any servers.
+
+7
+00:00:23,450 --> 00:00:26,780
+You do not need to worry about scaling or capacity planning.
+
+8
+00:00:26,790 --> 00:00:29,680
+AWS automatically scales with your usage.
+
+9
+00:00:29,680 --> 00:00:30,730
+Pay for value.
+
+10
+00:00:30,730 --> 00:00:34,110
+You pay only for what you use and when you are using it.
+
+11
+00:00:34,120 --> 00:00:37,510
+Serverless provides built-in availability and fault tolerance.
+
+12
+00:00:38,780 --> 00:00:40,940
+AWS provides a broad set of managed
+
+13
+00:00:40,950 --> 00:00:43,540
+services to help you build serverless applications.
+
+14
+00:00:43,550 --> 00:00:46,060
+Here's an overview of these services.
+
+15
+00:00:46,060 --> 00:00:46,080
+Compute. AWS Lambda.
+Here's an overview of these services.
+
+16
+00:00:46,080 --> 00:00:48,440
+Compute. AWS Lambda.
+
+17
+00:00:48,450 --> 00:00:51,650
+It allows you to code without provisioning or managing servers.
+
+18
+00:00:52,170 --> 00:00:55,560
+Lambda@Edge also allows you to run Lambda functions
+
+19
+00:00:55,560 --> 00:00:59,930
+at AWS edge locations in response to Amazon CloudFront events.
+
+20
+00:00:59,940 --> 00:01:05,140
+AWS Fargate is a purpose-built serverless compute engine for containers.
+
+21
+00:01:05,150 --> 00:01:08,990
+It scales and manages the infrastructure required to run your containers.
+
+22
+00:01:10,490 --> 00:01:13,430
+Storage. Amazon Simple Storage Service.
+
+23
+00:01:13,440 --> 00:01:18,340
+Amazon S3 provides secure, durable, highly scalable object storage.
+
+24
+00:01:19,120 --> 00:01:20,910
+Amazon Elastic File System.
+
+25
+00:01:20,920 --> 00:01:25,630
+Amazon EFS provides simple, scalable elastic file storage.
+
+26
+00:01:26,440 --> 00:01:28,470
+It is built to elastically scale on demand,
+
+27
+00:01:28,650 --> 00:01:31,870
+growing and shrinking automatically as you add and remove files.
+
+28
+00:01:34,440 --> 00:01:35,370
+Datastores.
+
+29
+00:01:36,110 --> 00:01:41,340
+Amazon DynamoDB is a fast and flexible NoSQL database service for
+
+30
+00:01:41,340 --> 00:01:43,260
+all applications that need consistent
+
+31
+00:01:43,440 --> 00:01:46,130
+single-digit millisecond latency at any scale.
+
+32
+00:01:47,030 --> 00:01:50,930
+Amazon Aurora Serverless is an on-demand autoscaling configuration
+
+33
+00:01:50,930 --> 00:01:54,380
+for Amazon Aurora, MySQL, and PostgreSQL-compatible ,
+
+34
+00:01:54,460 --> 00:01:57,640
+where the database will automatically start up, shut down,
+
+35
+00:01:57,640 --> 00:02:00,790
+and scale capacity up or down based on your application's needs.
+
+36
+00:02:02,180 --> 00:02:03,440
+API proxy.
+
+37
+00:02:04,200 --> 00:02:07,550
+Amazon API Gateway is a fully managed service
+
+38
+00:02:07,550 --> 00:02:09,509
+that makes it easy for developers to create,
+
+39
+00:02:09,520 --> 00:02:13,320
+publish, maintain, monitor, and secure APIs at any scale.
+
+40
+00:02:14,730 --> 00:02:16,540
+Application integration.
+
+41
+00:02:16,550 --> 00:02:21,590
+Amazon SNS is a fully managed publish and subscribe messaging service.
+
+42
+00:02:21,620 --> 00:02:25,800
+Amazon SQS is a fully managed message queuing service.
+
+43
+00:02:26,360 --> 00:02:31,660
+AWS AppSync simplifies application development by letting you create a flexible
+
+44
+00:02:31,680 --> 00:02:34,800
+GraphQL API to securely access, manipulate,
+
+45
+00:02:34,880 --> 00:02:37,580
+and combine data from one or more data sources.
+
+46
+00:02:38,280 --> 00:02:42,750
+Amazon EventBridge is a serverless event bus service that makes it easy to access
+
+47
+00:02:42,750 --> 00:02:45,180
+application data from a variety of sources
+
+48
+00:02:45,240 --> 00:02:47,500
+and send it into your AWS environment.
+
+49
+00:02:47,500 --> 00:02:48,620
+Analytics.
+
+50
+00:02:48,620 --> 00:02:52,930
+Amazon Kinesis is a platform for streaming data on AWS.
+
+51
+00:02:52,970 --> 00:02:57,040
+Amazon Athena is an interactive query service that makes it easy
+
+52
+00:02:57,100 --> 00:02:59,400
+to analyze data in Amazon S3
+
+53
+00:02:59,410 --> 00:03:00,900
+using standard SQL.
+
+54
+00:03:00,920 --> 00:03:04,050
+Orchestration. AWS Step Functions
+
+55
+00:03:04,050 --> 00:03:08,070
+lets you coordinate multiple AWS services into serverless workflows,
+
+56
+00:03:08,080 --> 00:03:10,520
+so you can build and update apps quickly.
+
+57
+00:03:12,040 --> 00:03:13,060
+Developer tooling.
+
+58
+00:03:13,380 --> 00:03:17,380
+AWS and its partner ecosystem offer tools for continuous integration
+
+59
+00:03:17,540 --> 00:03:21,920
+and delivery, testing, deployments, monitoring and diagnostics SDKs,
+
+60
+00:03:22,050 --> 00:03:25,930
+frameworks, and integrated development environment, or IDE, plug-ins.
+
+61
+00:03:27,280 --> 00:03:30,390
+AWS provides a set of fully managed services
+
+62
+00:03:30,620 --> 00:03:33,120
+that you can use to build and run serverless applications.
+
+63
+00:03:33,180 --> 00:03:35,540
+Using AWS and its serverless platform,
+
+64
+00:03:35,550 --> 00:03:37,580
+it enables you to build modern applications
+
+65
+00:03:37,640 --> 00:03:40,660
+with increased agility and lower total cost of ownership.
+

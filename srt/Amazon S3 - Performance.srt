@@ -1,0 +1,200 @@
+1
+00:00:00,120 --> 00:00:03,840
+Amazon Simple Storage Service (Amazon S3) Performance.
+
+2
+00:00:04,940 --> 00:00:07,700
+Amazon S3 is an object storage service
+
+3
+00:00:07,860 --> 00:00:09,840
+that offers industry-leading performance.
+
+4
+00:00:10,300 --> 00:00:14,490
+It supports parallel requests, which means you can scale your S3 performance
+
+5
+00:00:14,500 --> 00:00:16,450
+by the factor of your compute cluster
+
+6
+00:00:16,470 --> 00:00:19,220
+without making any customizations to your application.
+
+7
+00:00:19,970 --> 00:00:22,580
+S3 performance scales per prefix.
+
+8
+00:00:22,960 --> 00:00:24,340
+But what is a prefix?
+
+9
+00:00:24,720 --> 00:00:26,560
+Let me give you an example to explain.
+
+10
+00:00:26,970 --> 00:00:31,430
+Amazon S3 supports the folder concept as a means of grouping objects.
+
+11
+00:00:31,900 --> 00:00:33,720
+For example, if you have an object,
+
+12
+00:00:33,730 --> 00:00:35,800
+a photo called myphoto.jpg
+
+13
+00:00:36,120 --> 00:00:39,800
+stored in photos/myphoto.jpg in an S3 bucket,
+
+14
+00:00:40,220 --> 00:00:42,430
+the prefix in this case is photos/.
+
+15
+00:00:43,030 --> 00:00:45,660
+If you want to list all the objects in the photos folder,
+
+16
+00:00:45,670 --> 00:00:49,740
+you can send a list request which specifies the prefix photos/.
+
+17
+00:00:50,730 --> 00:00:55,420
+Amazon S3 performance supports at least 3,500 requests per second,
+
+18
+00:00:55,600 --> 00:00:58,640
+including put, copy, post, and delete requests
+
+19
+00:00:58,860 --> 00:01:01,270
+and 5,500 requests per second
+
+20
+00:01:01,440 --> 00:01:02,770
+for get or head requests.
+
+21
+00:01:02,820 --> 00:01:04,230
+For example,
+
+22
+00:01:04,250 --> 00:01:08,330
+if you create 10 prefixes in an Amazon S3 bucket to parallelize reads,
+
+23
+00:01:08,340 --> 00:01:10,160
+you could increase your read performance
+
+24
+00:01:10,340 --> 00:01:13,280
+by 10 times to 55,000 read requests per second.
+
+25
+00:01:14,190 --> 00:01:17,440
+There are no limits to the number of prefixes, so you can use
+
+26
+00:01:17,440 --> 00:01:21,480
+as many prefixes as you need in parallel to achieve the required throughput.
+
+27
+00:01:22,850 --> 00:01:25,180
+Now let's look at S3 consistency.
+
+28
+00:01:25,780 --> 00:01:29,360
+Amazon S3 delivers strong read-after-write consistency
+
+29
+00:01:29,460 --> 00:01:31,040
+automatically for all applications.
+
+30
+00:01:31,820 --> 00:01:34,340
+There is no impact to the performance or availability.
+
+31
+00:01:34,650 --> 00:01:38,700
+Strong consistency applies to all existing and new S3 objects,
+
+32
+00:01:38,920 --> 00:01:42,280
+works in all Regions, and is available to you at no additional cost.
+
+33
+00:01:42,980 --> 00:01:44,450
+With strong consistency,
+
+34
+00:01:44,460 --> 00:01:47,880
+S3 simplifies the migration of on-premises analytics
+
+35
+00:01:48,140 --> 00:01:50,690
+by removing the need to make changes to applications
+
+36
+00:01:51,040 --> 00:01:52,290
+and reduces costs
+
+37
+00:01:52,500 --> 00:01:56,340
+by removing the need for extra infrastructure to provide strong consistency.
+
+38
+00:01:57,560 --> 00:02:00,790
+All requests for S3 storage are strongly consistent,
+
+39
+00:02:01,300 --> 00:02:04,520
+including S3 get, put, and list requests
+
+40
+00:02:04,640 --> 00:02:07,380
+as well as operations that change object tags,
+
+41
+00:02:07,390 --> 00:02:10,630
+access control list, or ACLs, or metadata.
+
+42
+00:02:10,880 --> 00:02:14,060
+With strong consistency, what you write is what you will read.
+
+43
+00:02:14,560 --> 00:02:16,580
+After a successful write of a new object
+
+44
+00:02:16,720 --> 00:02:18,650
+or an overwrite of an existing object,
+
+45
+00:02:18,660 --> 00:02:21,420
+any subsequent read request immediately receives
+
+46
+00:02:21,420 --> 00:02:22,800
+the latest version of the object.
+
+47
+00:02:23,690 --> 00:02:26,460
+That means you can also immediately perform a listing of
+
+48
+00:02:26,480 --> 00:02:28,840
+the objects in a bucket with any changes reflected.
+
+49
+00:02:29,420 --> 00:02:32,760
+Because of this, strong consistency is great for data lakes,
+
+50
+00:02:32,770 --> 00:02:36,770
+which require access to the most recent data immediately after a write.
+

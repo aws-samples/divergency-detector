@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:02,708
+Amazon AppStream 2.0 Overview
+
+2
+00:00:03,625 --> 00:00:12,125
+Amazon AppStream 2.0 is a fully managed
+application streaming service that provides users with instant access to their desktop applications from anywhere.
+
+3
+00:00:12,750 --> 00:00:22,000
+AppStream 2.0 manages the AWS resources
+required to host and run your applications, scales automatically, and provides access to your users on demand.
+
+4
+00:00:22,583 --> 00:00:30,458
+With AppStream 2.0, you can quickly add
+your existing desktop applications to AWS and enable your users to instantly stream them.
+
+5
+00:00:31,083 --> 00:00:38,458
+Windows users can use either the AppStream
+2.0 client or an HTML5-capable web browser for application streaming.
+
+6
+00:00:39,250 --> 00:00:40,333
+Key Benefits
+
+7
+00:00:41,250 --> 00:00:43,291
+Streamline SaaS administration
+
+8
+00:00:43,916 --> 00:00:48,916
+With Amazon AppStream 2.0, applications
+are streamed to your users' web browser.
+
+9
+00:00:49,500 --> 00:00:56,875
+Install your desktop applications on
+AppStream 2.0 as you would on any computer. Then start streaming them to your users.
+
+10
+00:00:57,708 --> 00:00:59,583
+Scale without infrastructure
+
+11
+00:01:00,208 --> 00:01:06,666
+As you stream applications to users, auto
+scaling allows AppStream 2.0 to quickly adapt to usage patterns.
+
+12
+00:01:07,291 --> 00:01:13,666
+You can scale your applications to users
+across the globe without obtaining, deploying, and managing any infrastructure.
+
+13
+00:01:14,458 --> 00:01:15,916
+Reduce time to market
+
+14
+00:01:16,625 --> 00:01:22,666
+AppStream 2.0 can accelerate the SaaS
+transformation for your Windows or Linux desktop applications.
+
+15
+00:01:23,208 --> 00:01:33,458
+With AppStream 2.0, you can deliver
+applications from AWS to an HTML5 browser without rewriting or refactoring your applications, which can help shorten your time to market.
+
+16
+00:01:34,291 --> 00:01:35,375
+Key Features
+
+17
+00:01:36,291 --> 00:01:37,416
+Image builders
+
+18
+00:01:38,041 --> 00:01:45,625
+Amazon AppStream 2.0 uses Amazon Elastic
+Compute Cloud, or Amazon EC2, instances to stream applications.
+
+19
+00:01:46,208 --> 00:01:52,500
+You launch EC2 instances from base images,
+called image builders, which AppStream 2.0 provides.
+
+20
+00:01:53,125 --> 00:02:03,375
+To create your own custom image, you
+connect to an image builder instance, install and configure your applications for streaming, and then create your image by creating a snapshot of the image builder instance.
+
+21
+00:02:04,208 --> 00:02:05,500
+Fleets and stacks
+
+22
+00:02:06,083 --> 00:02:12,416
+With AppStream 2.0, you create fleet
+instances and stacks as part of the process of streaming applications.
+
+23
+00:02:13,083 --> 00:02:17,166
+A fleet consists of streaming instances
+that run the image that you specify.
+
+24
+00:02:17,833 --> 00:02:23,416
+A stack consists of an associated fleet,
+user access policies, and storage configurations.
+
+25
+00:02:24,250 --> 00:02:25,791
+User authentication
+
+26
+00:02:26,458 --> 00:02:32,708
+AppStream 2.0 supports identity federation
+to AppStream 2.0 stacks through SAML 2.0.
+
+27
+00:02:33,375 --> 00:02:40,333
+Additionally, you can connect your
+AppStream 2.0 Windows fleets and image builders to domains in Microsoft Active Directory.
+
+28
+00:02:40,958 --> 00:02:49,458
+AppStream 2.0 user pools provide a
+streamlined way to manage access to applications for your users through a persistent portal for each AWS Region.
+

@@ -1,0 +1,348 @@
+1
+00:00:00,270 --> 00:00:02,190
+AWS CodeBuild Features
+
+2
+00:00:03,330 --> 00:00:04,650
+Here are the key features.
+
+3
+00:00:05,790 --> 00:00:07,000
+Build and test your code.
+
+4
+00:00:08,310 --> 00:00:11,780
+AWS CodeBuild runs your builds in preconfigured build
+
+5
+00:00:11,780 --> 00:00:16,140
+environments that contain the operating system, programming language runtime,
+
+6
+00:00:16,200 --> 00:00:18,080
+and build tools, such as Apache Maven,
+
+7
+00:00:18,180 --> 00:00:21,870
+Gradle, and npm required to complete the task.
+
+8
+00:00:23,050 --> 00:00:27,420
+You just specify your source code's location and select settings for your build,
+
+9
+00:00:27,430 --> 00:00:31,390
+such as the build environment to use and the build commands to run during a build.
+
+10
+00:00:32,500 --> 00:00:35,390
+AWS CodeBuild builds your code and stores
+
+11
+00:00:35,390 --> 00:00:37,810
+the artifacts into an Amazon S3 bucket,
+
+12
+00:00:37,820 --> 00:00:42,100
+or you can use a build command to upload them to an artifact repository.
+
+13
+00:00:42,950 --> 00:00:48,280
+You can create, manage, and initiate build projects using AWS CodePipeline,
+
+14
+00:00:48,430 --> 00:00:51,570
+the AWS Management Console, AWS CLIs,
+
+15
+00:00:51,740 --> 00:00:52,970
+or SDKs.
+
+16
+00:00:54,940 --> 00:00:56,620
+Preconfigured build environments.
+
+17
+00:00:57,580 --> 00:01:01,300
+AWS CodeBuild provides build environments for Java,
+
+18
+00:01:01,310 --> 00:01:06,580
+Python, Node.js, Ruby, Go, Android, .NET Core for Linux,
+
+19
+00:01:06,620 --> 00:01:07,420
+and Docker.
+
+20
+00:01:08,850 --> 00:01:10,350
+Customized build environments.
+
+21
+00:01:11,710 --> 00:01:15,730
+You can bring your own build environments to use with AWS CodeBuild,
+
+22
+00:01:15,740 --> 00:01:18,060
+such as for the Microsoft .NET framework.
+
+23
+00:01:18,780 --> 00:01:23,170
+You can package the runtime and tools for your build into a Docker image and
+
+24
+00:01:23,170 --> 00:01:25,510
+upload it to a public Docker hub repository,
+
+25
+00:01:25,520 --> 00:01:28,950
+or Amazon Elastic Container Registry, or Amazon ECR.
+
+26
+00:01:29,990 --> 00:01:31,880
+When you create a new build project,
+
+27
+00:01:31,910 --> 00:01:34,390
+you can specify the location of your Docker image.
+
+28
+00:01:35,310 --> 00:01:39,410
+CodeBuild will pull the image and use it as the build project configuration.
+
+29
+00:01:41,140 --> 00:01:45,060
+The following are the configurable settings features for AWS CodeBuild.
+
+30
+00:01:46,630 --> 00:01:48,080
+Specify build commands.
+
+31
+00:01:48,910 --> 00:01:50,620
+You can define the specific commands
+
+32
+00:01:50,740 --> 00:01:53,280
+that you want AWS CodeBuild to perform,
+
+33
+00:01:53,400 --> 00:01:56,540
+such as installing build tool packages, running unit tests,
+
+34
+00:01:56,580 --> 00:01:57,880
+and packaging your code.
+
+35
+00:01:58,940 --> 00:02:01,340
+The build specification is a YAML file
+
+36
+00:02:01,480 --> 00:02:05,450
+that lets you choose the commands to run at each phase of the build and other settings.
+
+37
+00:02:06,490 --> 00:02:09,889
+CodeBuild helps you get started quickly with sample build
+
+38
+00:02:09,889 --> 00:02:14,560
+specification files for common scenarios such as builds using Apache Maven,
+
+39
+00:02:14,600 --> 00:02:16,030
+Gradle, or npm.
+
+40
+00:02:17,550 --> 00:02:18,810
+Select compute type.
+
+41
+00:02:20,030 --> 00:02:23,690
+You can select the compute type that is best suited to your development needs.
+
+42
+00:02:24,820 --> 00:02:27,920
+You can choose from different levels of compute capacity
+
+43
+00:02:28,000 --> 00:02:31,900
+that vary by the amount of virtual CPU, memory, and disk space.
+
+44
+00:02:32,670 --> 00:02:33,940
+CodeBuild supports Linux
+
+45
+00:02:34,340 --> 00:02:35,950
+and Windows operating systems.
+
+46
+00:02:37,480 --> 00:02:38,920
+Choose source integrations.
+
+47
+00:02:39,790 --> 00:02:43,650
+You can initiate builds with AWS CodeBuild in several ways.
+
+48
+00:02:44,290 --> 00:02:45,270
+For example,
+
+49
+00:02:45,310 --> 00:02:49,100
+you can initiate builds in CodeBuild by connecting to source providers,
+
+50
+00:02:49,140 --> 00:02:52,090
+such as AWS CodeCommit, GitHub,
+
+51
+00:02:52,220 --> 00:02:55,210
+GitHub Enterprise, Bitbucket, or Amazon S3.
+
+52
+00:02:56,910 --> 00:02:59,460
+Continuous integration and delivery workflows.
+
+53
+00:03:00,200 --> 00:03:03,910
+You can integrate CodeBuild into your existing continuous integration and
+
+54
+00:03:03,910 --> 00:03:08,420
+continuous delivery, or CI/CD, workflow using its source integrations,
+
+55
+00:03:08,430 --> 00:03:10,840
+build commands, or Jenkins integration.
+
+56
+00:03:12,360 --> 00:03:15,510
+You can plug CodeBuild into AWS CodePipeline,
+
+57
+00:03:15,520 --> 00:03:18,100
+which automates building and testing code in CodeBuild
+
+58
+00:03:18,160 --> 00:03:21,210
+each time you commit a change to your source repository.
+
+59
+00:03:23,280 --> 00:03:27,260
+CodeBuild also belongs to a family of AWS code services
+
+60
+00:03:27,280 --> 00:03:29,180
+that helps you practice CI/CD.
+
+61
+00:03:30,530 --> 00:03:32,830
+You can create this continuous integration, or CI,
+
+62
+00:03:32,830 --> 00:03:36,100
+workflow by using the AWS CodePipeline wizard
+
+63
+00:03:36,160 --> 00:03:40,520
+to connect your source repository and then select CodeBuild as the build provider.
+
+64
+00:03:41,990 --> 00:03:45,550
+You can easily extend your continuous integration workflow into
+
+65
+00:03:45,550 --> 00:03:49,370
+continuous delivery with CodePipeline, by integrating third-party load
+
+66
+00:03:49,380 --> 00:03:54,470
+or user interface testing tools, such as BlazeMeter Ghost Inspector,
+
+67
+00:03:54,470 --> 00:03:57,080
+that initiate after CodeBuild completes the build.
+
+68
+00:03:58,330 --> 00:04:01,760
+You can then deploy to your instances or on-premises servers
+
+69
+00:04:01,770 --> 00:04:04,880
+using services integrated with AWS CodePipeline,
+
+70
+00:04:04,980 --> 00:04:08,920
+such as AWS CodeDeploy and AWS Elastic Beanstalk.
+
+71
+00:04:10,750 --> 00:04:12,180
+Security and permissions.
+
+72
+00:04:13,260 --> 00:04:16,880
+Your build artifacts are encrypted with customer-specific keys
+
+73
+00:04:16,890 --> 00:04:20,550
+that are managed by the AWS Key Management Service, or KMS.
+
+74
+00:04:21,209 --> 00:04:26,180
+AWS CodeBuild is integrated with AWS Identity and Access Management,
+
+75
+00:04:26,190 --> 00:04:29,040
+so you can set granular controls over which users
+
+76
+00:04:29,040 --> 00:04:32,100
+and AWS resources have access to your builds.
+
+77
+00:04:33,420 --> 00:04:34,400
+Monitoring.
+
+78
+00:04:35,450 --> 00:04:41,240
+You can use the AWS CodeBuild console, AWS CLI, SDKs, and APIs,
+
+79
+00:04:41,250 --> 00:04:45,260
+or Amazon CloudWatch to view detailed information about your builds.
+
+80
+00:04:46,420 --> 00:04:50,380
+AWS CodeBuild shows you information such as the build start time,
+
+81
+00:04:50,820 --> 00:04:53,920
+end time, status, and commit ID.
+
+82
+00:04:53,980 --> 00:04:57,940
+CodeBuild also streams build metrics and logs to CloudWatch.
+
+83
+00:04:59,140 --> 00:05:00,540
+Receive notifications.
+
+84
+00:05:01,480 --> 00:05:05,070
+You can create notifications for events impacting your build projects.
+
+85
+00:05:06,360 --> 00:05:10,340
+Notifications will come in the form of Amazon SNS notifications.
+
+86
+00:05:11,350 --> 00:05:14,020
+Each notification includes a status message
+
+87
+00:05:14,120 --> 00:05:17,760
+as well as a link to the resources whose event generated that notification.
+

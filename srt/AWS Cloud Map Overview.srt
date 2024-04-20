@@ -1,0 +1,244 @@
+1
+00:00:00,000 --> 00:00:02,040
+AWS Cloud Map Overview.
+
+2
+00:00:03,010 --> 00:00:05,270
+Why use AWS Cloud Map?
+
+3
+00:00:05,280 --> 00:00:08,160
+Before we talk about AWS Cloud Map,
+
+4
+00:00:08,170 --> 00:00:11,900
+let's look at the challenges we are facing in the growing complexity of our modern architectures.
+
+5
+00:00:11,900 --> 00:00:16,090
+Modern applications are typically composed of multiple
+
+6
+00:00:16,090 --> 00:00:18,140
+services that are accessible over an API
+
+7
+00:00:18,140 --> 00:00:20,610
+and perform a specific function.
+
+8
+00:00:20,620 --> 00:00:25,590
+Each service interacts with a variety of other resources, such as databases,
+
+9
+00:00:25,600 --> 00:00:29,760
+queues, object stores, and customer-defined microservices.
+
+10
+00:00:30,330 --> 00:00:32,659
+Each service needs to be able to find the location
+
+11
+00:00:32,659 --> 00:00:35,590
+of all the infrastructure resources on which it depends
+
+12
+00:00:35,600 --> 00:00:36,900
+in order to function.
+
+13
+00:00:36,940 --> 00:00:39,980
+In most cases, you manage all these resource names
+
+14
+00:00:39,980 --> 00:00:44,030
+and their locations manually within the application code.
+
+15
+00:00:44,040 --> 00:00:47,270
+However, manual resource management becomes time-consuming
+
+16
+00:00:47,270 --> 00:00:49,930
+and error-prone as the number of dependent infrastructure
+
+17
+00:00:49,930 --> 00:00:53,720
+resources increases, or the number of microservices dynamically
+
+18
+00:00:53,720 --> 00:00:55,860
+scale up and down based on traffic.
+
+19
+00:00:56,240 --> 00:00:59,050
+You can also use third-party service discovery products,
+
+20
+00:00:59,060 --> 00:01:01,030
+but this requires installing and
+
+21
+00:01:01,030 --> 00:01:03,470
+managing additional software and infrastructure.
+
+22
+00:01:04,290 --> 00:01:05,970
+With AWS Cloud Map,
+
+23
+00:01:05,980 --> 00:01:08,530
+you can easily locate all these dynamic resources
+
+24
+00:01:08,550 --> 00:01:10,770
+used by the services in your application.
+
+25
+00:01:12,000 --> 00:01:15,930
+AWS Cloud Map is a cloud resource discovery service.
+
+26
+00:01:15,940 --> 00:01:20,630
+It builds the dynamic map of your cloud. With Cloud Map,
+
+27
+00:01:20,640 --> 00:01:24,540
+you can define and register custom names for your application resources.
+
+28
+00:01:25,190 --> 00:01:29,670
+It maintains the updated location of these dynamically changing resources.
+
+29
+00:01:29,680 --> 00:01:32,890
+AWS Cloud Map also integrates with open-source solutions
+
+30
+00:01:32,890 --> 00:01:36,740
+such as Kubernetes, Consul, and Istio.
+
+31
+00:01:36,750 --> 00:01:40,700
+Some common use cases include service discovery for microservices,
+
+32
+00:01:40,710 --> 00:01:44,120
+automated health monitoring, and continuous integration and delivery.
+
+33
+00:01:45,280 --> 00:01:46,670
+Here are the key benefits.
+
+34
+00:01:47,540 --> 00:01:49,600
+Increase application availability.
+
+35
+00:01:49,610 --> 00:01:52,960
+Cloud Map constantly monitors the health of every IP-based
+
+36
+00:01:52,960 --> 00:01:56,570
+component of your application and dynamically updates the location
+
+37
+00:01:56,570 --> 00:01:59,630
+of each microservice as it is added or removed.
+
+38
+00:02:00,330 --> 00:02:02,980
+This ensures that your applications only discover
+
+39
+00:02:02,980 --> 00:02:05,150
+the most up-to-date location of its resources
+
+40
+00:02:05,260 --> 00:02:07,560
+increasing the availability of the application.
+
+41
+00:02:08,699 --> 00:02:10,669
+Increased developer productivity.
+
+42
+00:02:10,680 --> 00:02:14,940
+Cloud Map provides a single registry for all your application services.
+
+43
+00:02:15,470 --> 00:02:18,810
+This increases your developer team's productivity because they don't
+
+44
+00:02:18,810 --> 00:02:21,850
+have to constantly store, track, and update resource
+
+45
+00:02:21,850 --> 00:02:24,200
+name and location information or make
+
+46
+00:02:24,200 --> 00:02:26,320
+changes directly within the application code.
+
+47
+00:02:27,550 --> 00:02:28,700
+This is how it works.
+
+48
+00:02:29,370 --> 00:02:34,340
+If you are not using Cloud Map, endpoints are statically coded into your application.
+
+49
+00:02:34,850 --> 00:02:35,860
+In this example,
+
+50
+00:02:35,870 --> 00:02:40,840
+backend service has updated from version one to version two. To access the backend
+
+51
+00:02:40,840 --> 00:02:43,790
+service, code change is required to update its endpoint
+
+52
+00:02:43,790 --> 00:02:46,280
+location from version one to version two.
+
+53
+00:02:48,530 --> 00:02:49,560
+On the other hand,
+
+54
+00:02:49,570 --> 00:02:54,100
+with Cloud Map, endpoints are dynamically located. In this example,
+
+55
+00:02:54,110 --> 00:02:58,890
+backend service has again updated from version one to version two.
+
+56
+00:02:58,890 --> 00:03:02,820
+AWS Cloud Map always maintains the most up-to-date resource location and
+
+57
+00:03:02,820 --> 00:03:06,380
+therefore has already updated endpoint from version one to version two.
+
+58
+00:03:07,020 --> 00:03:09,820
+The frontend service only needs a dynamic lookup
+
+59
+00:03:09,820 --> 00:03:12,510
+to Cloud Map to find the location of version two.
+
+60
+00:03:13,490 --> 00:03:15,600
+Frontend service can then be connected to a
+
+61
+00:03:15,600 --> 00:03:18,180
+new endpoint in version two of the backend service.
+

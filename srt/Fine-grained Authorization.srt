@@ -1,0 +1,300 @@
+1
+00:00:00,120 --> 00:00:04,019
+Amazon API Gateway - Fine-Grained Authorization.
+
+2
+00:00:05,270 --> 00:00:09,700
+In a customer-facing application, after users log into the application,
+
+3
+00:00:09,710 --> 00:00:14,540
+all API requests from users first go through the Amazon API Gateway.
+
+4
+00:00:15,110 --> 00:00:18,320
+It then forwards requests to other AWS services,
+
+5
+00:00:18,840 --> 00:00:20,710
+for example, in this case,
+
+6
+00:00:20,830 --> 00:00:22,280
+an AWS Lambda.
+
+7
+00:00:22,950 --> 00:00:24,680
+Without access control,
+
+8
+00:00:24,800 --> 00:00:29,730
+your APIs might be exposed to unintended access and unauthorized users.
+
+9
+00:00:33,000 --> 00:00:35,970
+If you need fine-grained access control for your users,
+
+10
+00:00:36,290 --> 00:00:41,760
+you can protect your APIs using Amazon Cognito, AWS Lambda authorizer
+
+11
+00:00:41,890 --> 00:00:43,890
+in Amazon API Gateway,
+
+12
+00:00:44,080 --> 00:00:48,480
+and AWS Identity and Access Management, or AWS IAM.
+
+13
+00:00:49,160 --> 00:00:54,720
+With IAM, you can create advanced policies to further refine access to your APIs
+
+14
+00:00:54,840 --> 00:00:58,420
+and store the policies in Amazon DynamoDB.
+
+15
+00:00:59,390 --> 00:01:03,620
+Now, let us go through how it works in more details.
+
+16
+00:01:04,730 --> 00:01:09,260
+First, you need to create a user pool in Amazon Cognito.
+
+17
+00:01:09,260 --> 00:01:11,760
+A user pool is a user directory.
+
+18
+00:01:12,160 --> 00:01:13,080
+When a user
+
+19
+00:01:13,230 --> 00:01:15,820
+signs into your web or mobile application,
+
+20
+00:01:16,060 --> 00:01:19,410
+Amazon Cognito verifies the login information.
+
+21
+00:01:20,820 --> 00:01:22,410
+If the login is successful,
+
+22
+00:01:22,540 --> 00:01:24,680
+Amazon Cognito creates a session
+
+23
+00:01:24,840 --> 00:01:26,870
+and returns an ID, access,
+
+24
+00:01:27,030 --> 00:01:28,140
+and refresh token
+
+25
+00:01:28,300 --> 00:01:29,730
+for the authenticated user.
+
+26
+00:01:30,670 --> 00:01:33,460
+In this solution, we will use the access token.
+
+27
+00:01:34,590 --> 00:01:37,890
+After successful authentication and getting tokens from
+
+28
+00:01:37,890 --> 00:01:41,410
+Amazon Cognito, using the access token,
+
+29
+00:01:41,710 --> 00:01:45,750
+a user makes an API request to the Amazon API Gateway.
+
+30
+00:01:46,510 --> 00:01:47,200
+The token
+
+31
+00:01:47,310 --> 00:01:49,400
+is included in the header of the request.
+
+32
+00:01:52,590 --> 00:01:54,310
+Amazon API Gateway
+
+33
+00:01:54,480 --> 00:01:57,260
+then forwards the request to a Lambda authorizer
+
+34
+00:01:57,270 --> 00:01:59,270
+also known as a custom authorizer.
+
+35
+00:02:00,190 --> 00:02:04,470
+A Lambda authorizer is an API Gateway feature that uses
+
+36
+00:02:04,470 --> 00:02:07,140
+a Lambda function to control access to an API.
+
+37
+00:02:08,560 --> 00:02:10,850
+The Lambda authorizer verifies the token.
+
+38
+00:02:11,910 --> 00:02:15,600
+If there is no authorization header or the header value is invalid,
+
+39
+00:02:15,760 --> 00:02:17,050
+the request is denied.
+
+40
+00:02:21,410 --> 00:02:22,680
+If the token is valid,
+
+41
+00:02:22,840 --> 00:02:27,120
+Lambda authorizer finds the Amazon Cognito group that the user belongs to
+
+42
+00:02:27,270 --> 00:02:28,090
+in the token.
+
+43
+00:02:28,940 --> 00:02:31,140
+It then looks up the corresponding IAM
+
+44
+00:02:31,140 --> 00:02:35,540
+policy in Amazon DynamoDB where the policies are stored.
+
+45
+00:02:36,410 --> 00:02:38,000
+If there is no policy found,
+
+46
+00:02:38,180 --> 00:02:39,970
+API request will be denied.
+
+47
+00:02:40,960 --> 00:02:42,310
+If policy is found,
+
+48
+00:02:42,470 --> 00:02:45,280
+Amazon DynamoDB returns the found policy
+
+49
+00:02:45,410 --> 00:02:46,650
+to Lambda authorizer.
+
+50
+00:02:49,380 --> 00:02:50,640
+Lambda authorizer
+
+51
+00:02:51,060 --> 00:02:52,490
+then returns the policy
+
+52
+00:02:52,650 --> 00:02:54,720
+and, optionally, context
+
+53
+00:02:54,720 --> 00:02:56,330
+to Amazon API Gateway.
+
+54
+00:02:57,510 --> 00:03:03,250
+The context map contains key-value pairs, including information about the user,
+
+55
+00:03:03,380 --> 00:03:05,790
+the service, or anything that provides
+
+56
+00:03:05,790 --> 00:03:08,210
+additional information to the upstream service.
+
+57
+00:03:09,420 --> 00:03:11,160
+Amazon API Gateway
+
+58
+00:03:11,300 --> 00:03:12,290
+policy engine
+
+59
+00:03:12,440 --> 00:03:13,940
+then evaluates the policy
+
+60
+00:03:14,350 --> 00:03:17,240
+to determine if the request is allowed or denied.
+
+61
+00:03:19,120 --> 00:03:20,030
+For example,
+
+62
+00:03:20,150 --> 00:03:21,090
+in this policy,
+
+63
+00:03:21,250 --> 00:03:25,150
+the user that is part of the Amazon Cognito group "pet-veterinarian"
+
+64
+00:03:25,580 --> 00:03:27,820
+is allowed to make API requests
+
+65
+00:03:27,940 --> 00:03:29,280
+to these two endpoints.
+
+66
+00:03:35,080 --> 00:03:35,870
+If allowed,
+
+67
+00:03:36,040 --> 00:03:37,600
+Amazon API Gateway
+
+68
+00:03:37,730 --> 00:03:39,930
+invokes the AWS Lambda function.
+
+69
+00:03:40,880 --> 00:03:43,510
+The API request with the context information
+
+70
+00:03:43,620 --> 00:03:45,500
+is forwarded to AWS Lambda.
+
+71
+00:03:46,760 --> 00:03:52,870
+AWS Lambda then returns the response to the application through Amazon API Gateway.
+
+72
+00:03:54,060 --> 00:03:55,090
+As you can see,
+
+73
+00:03:55,220 --> 00:03:59,510
+this architecture can provide access control for your Amazon Gateway APIs
+
+74
+00:03:59,900 --> 00:04:01,390
+using Amazon IAM
+
+75
+00:04:01,560 --> 00:04:02,970
+and Amazon Cognito.
+

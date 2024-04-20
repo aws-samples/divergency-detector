@@ -1,0 +1,224 @@
+1
+00:00:00,000 --> 00:00:03,640
+Amazon Virtual Private Cloud (VPC) Overview.
+
+2
+00:00:03,700 --> 00:00:05,840
+Amazon Virtual Private Cloud.
+
+3
+00:00:05,840 --> 00:00:10,420
+Amazon VPC is like your own private cloud within the AWS Cloud.
+
+4
+00:00:10,540 --> 00:00:14,560
+It lets you provision a logically isolated section of the AWS Cloud,
+
+5
+00:00:14,640 --> 00:00:18,870
+where you can launch AWS resources in a virtual network that you define.
+
+6
+00:00:19,810 --> 00:00:23,130
+This is a virtual network dedicated to your AWS account.
+
+7
+00:00:23,730 --> 00:00:29,020
+Alternatively, your AWS account comes with a preconfigured default VPC in each Region.
+
+8
+00:00:29,060 --> 00:00:33,050
+You can launch your resources into the default VPC right away.
+
+9
+00:00:34,040 --> 00:00:36,960
+Amazon VPC also provides you with complete
+
+10
+00:00:36,960 --> 00:00:39,360
+control over your virtual networking environment,
+
+11
+00:00:39,430 --> 00:00:41,940
+including selection of your own IP address range,
+
+12
+00:00:41,950 --> 00:00:43,160
+creation of subnets,
+
+13
+00:00:43,290 --> 00:00:45,930
+and configuration of route tables and network gateways.
+
+14
+00:00:47,620 --> 00:00:49,720
+To get started with creating a VPC,
+
+15
+00:00:49,870 --> 00:00:52,690
+you must assign it with a range of private IP addresses.
+
+16
+00:00:53,490 --> 00:00:57,060
+Amazon VPC supports IPv4 and IPv6.
+
+17
+00:00:57,090 --> 00:01:02,340
+Your resources can communicate over IPv4 or IPv6 or both.
+
+18
+00:01:02,380 --> 00:01:06,200
+By default, it uses the IPv4 addressing protocol.
+
+19
+00:01:06,800 --> 00:01:09,060
+You can also bring your own IP prefixes.
+
+20
+00:01:09,800 --> 00:01:13,060
+A VPC spans all of the Availability Zones in the Region.
+
+21
+00:01:13,240 --> 00:01:18,350
+After creating a VPC, you can add one or more subnets in each Availability Zone.
+
+22
+00:01:19,210 --> 00:01:23,080
+A subnet is a partition of a VPC's IP address range.
+
+23
+00:01:23,130 --> 00:01:24,070
+For example,
+
+24
+00:01:24,090 --> 00:01:29,360
+your VPC has a total of 1,024 IP addresses, and you configure four subnets.
+
+25
+00:01:29,380 --> 00:01:31,990
+Each has 251 IP addresses.
+
+26
+00:01:32,750 --> 00:01:36,270
+Each subnet must reside entirely within one Availability Zone.
+
+27
+00:01:36,680 --> 00:01:40,150
+You can launch instances into subnets in multiple Availability Zones
+
+28
+00:01:40,250 --> 00:01:44,390
+to improve fault tolerance and hence building highly available applications.
+
+29
+00:01:45,010 --> 00:01:47,680
+Creating multiple VPCs is supported.
+
+30
+00:01:47,740 --> 00:01:49,470
+In one AWS account,
+
+31
+00:01:49,470 --> 00:01:52,840
+you can create up to five VPCs per Region by default.
+
+32
+00:01:52,850 --> 00:01:57,130
+If more is required, this limit can be increased through AWS Support.
+
+33
+00:01:58,300 --> 00:02:02,220
+Now let's talk about the key benefits of Amazon VPC.
+
+34
+00:02:02,220 --> 00:02:03,600
+First, it is simple.
+
+35
+00:02:03,640 --> 00:02:06,050
+Using the AWS Management Console,
+
+36
+00:02:06,050 --> 00:02:08,610
+VPC can be quickly and easily created.
+
+37
+00:02:08,620 --> 00:02:11,100
+You spend less time setting up and managing,
+
+38
+00:02:11,140 --> 00:02:15,220
+so you can concentrate on building the applications that run in your VPCs.
+
+39
+00:02:15,950 --> 00:02:16,990
+Customizable.
+
+40
+00:02:17,050 --> 00:02:21,320
+You can easily customize the network configuration of your Amazon VPC.
+
+41
+00:02:21,320 --> 00:02:22,200
+For example,
+
+42
+00:02:22,280 --> 00:02:24,450
+you can create a public-facing subnet for your
+
+43
+00:02:24,450 --> 00:02:26,720
+web servers that have access to the internet.
+
+44
+00:02:27,290 --> 00:02:30,930
+You can also place your backend systems such as databases or
+
+45
+00:02:30,930 --> 00:02:34,840
+application servers in a private-facing subnet with no internet access.
+
+46
+00:02:34,850 --> 00:02:38,330
+When you configure VPC to connect to your corporate network,
+
+47
+00:02:38,340 --> 00:02:41,050
+it can serve as an extension of your own data center.
+
+48
+00:02:41,060 --> 00:02:44,650
+In addition, VPC can also be connected to other VPCs.
+
+49
+00:02:44,810 --> 00:02:45,950
+Secure.
+
+50
+00:02:46,130 --> 00:02:50,000
+Amazon VPC provides multiple layers of advanced security features
+
+51
+00:02:50,020 --> 00:02:53,000
+such as network access control lists, or NACLs,
+
+52
+00:02:53,080 --> 00:02:56,320
+and security groups to enable inbound and outbound filtering
+
+53
+00:02:56,360 --> 00:02:58,200
+at the subnet and instance level.
+
+54
+00:02:58,680 --> 00:02:59,420
+In addition,
+
+55
+00:02:59,430 --> 00:03:02,840
+you can store data in Amazon S3 and restrict access
+
+56
+00:03:02,920 --> 00:03:06,410
+so that it's only accessible from instances inside your VPC.
+

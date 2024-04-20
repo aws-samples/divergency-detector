@@ -1,0 +1,180 @@
+1
+00:00:00,000 --> 00:00:03,510
+Amazon Elastic Load Balancing (ELB) Features.
+
+2
+00:00:04,640 --> 00:00:06,710
+High Availability and Health Checks.
+
+3
+00:00:07,160 --> 00:00:09,870
+Elastic Load Balancer is highly available.
+
+4
+00:00:09,880 --> 00:00:13,050
+You can distribute incoming traffic across your Amazon EC2
+
+5
+00:00:13,050 --> 00:00:18,040
+instances in a single Availability Zone or multiple Availability Zones.
+
+6
+00:00:18,100 --> 00:00:21,450
+Elastic Load Balancer automatically scales its request-handling
+
+7
+00:00:21,460 --> 00:00:24,860
+capacity in response to incoming application traffic.
+
+8
+00:00:25,410 --> 00:00:27,820
+To ensure that your targets are available and healthy,
+
+9
+00:00:27,910 --> 00:00:30,610
+Elastic Load Balancer runs health checks on targets.
+
+10
+00:00:31,700 --> 00:00:35,120
+To discover the availability of your Amazon EC2 instances,
+
+11
+00:00:35,230 --> 00:00:37,590
+the load balancer periodically sends pings,
+
+12
+00:00:37,600 --> 00:00:42,030
+attempts connections, or sends requests to test the Amazon EC2 instances.
+
+13
+00:00:42,790 --> 00:00:44,360
+With Elastic Load Balancing,
+
+14
+00:00:44,370 --> 00:00:47,890
+you get improved insight into the health of your applications in two ways.
+
+15
+00:00:47,900 --> 00:00:52,720
+First, health check improvements that allow you to configure detailed error codes,
+
+16
+00:00:53,260 --> 00:00:54,920
+and second, new metrics
+
+17
+00:00:55,070 --> 00:00:59,350
+that give insight into traffic for each of the services running on an EC2 instance.
+
+18
+00:01:00,780 --> 00:01:02,660
+Security.
+
+19
+00:01:02,660 --> 00:01:06,890
+ELB provisioned within an Amazon Virtual Private Cloud, or Amazon VPC,
+
+20
+00:01:06,900 --> 00:01:10,950
+can leverage its network security features. When using VPC,
+
+21
+00:01:10,960 --> 00:01:13,070
+you can create and manage security groups
+
+22
+00:01:13,070 --> 00:01:15,750
+associated with Elastic Load Balancing to provide
+
+23
+00:01:15,750 --> 00:01:18,810
+additional networking and security options for Application
+
+24
+00:01:18,810 --> 00:01:21,130
+Load Balancer and Classic Load Balancer.
+
+25
+00:01:21,870 --> 00:01:24,180
+You can configure any of the load balancers to be
+
+26
+00:01:24,180 --> 00:01:27,310
+internet-facing, or create a load balancer without public IP
+
+27
+00:01:27,310 --> 00:01:30,300
+addresses to serve as an internal load balancer.
+
+28
+00:01:32,110 --> 00:01:36,060
+High throughput. Elastic Load Balancer is designed to handle traffic as
+
+29
+00:01:36,060 --> 00:01:39,570
+it grows and can load-balance millions of requests per second.
+
+30
+00:01:39,580 --> 00:01:42,310
+It can also handle sudden volatile traffic patterns.
+
+31
+00:01:43,110 --> 00:01:46,240
+Elastic Load Balancers support sticky sessions.
+
+32
+00:01:46,250 --> 00:01:49,270
+Sticky sessions are a mechanism to route requests
+
+33
+00:01:49,280 --> 00:01:51,530
+from the same client to the same target.
+
+34
+00:01:51,540 --> 00:01:54,260
+Stickiness is defined at a target group level.
+
+35
+00:01:55,440 --> 00:01:56,550
+Delete protection.
+
+36
+00:01:57,170 --> 00:02:00,550
+You can enable deletion protection on an Elastic Load Balancer
+
+37
+00:02:00,550 --> 00:02:02,810
+to prevent it from being accidentally deleted.
+
+38
+00:02:04,010 --> 00:02:06,280
+Operational Monitoring and Logging.
+
+39
+00:02:06,310 --> 00:02:08,380
+Amazon CloudWatch reports
+
+40
+00:02:08,380 --> 00:02:12,220
+Application and Classic Load Balancer metrics such as request counts,
+
+41
+00:02:12,230 --> 00:02:15,220
+request latency, error types and counts, and more.
+
+42
+00:02:15,980 --> 00:02:20,370
+Amazon CloudWatch also tracks Network and Gateway Load Balancer metrics,
+
+43
+00:02:20,490 --> 00:02:24,170
+such as active flow count, new flow count, processed bytes, and more.
+
+44
+00:02:24,820 --> 00:02:28,970
+Elastic Load Balancers are also integrated with AWS CloudTrail,
+
+45
+00:02:28,990 --> 00:02:31,570
+which tracks API calls to the ELB.
+

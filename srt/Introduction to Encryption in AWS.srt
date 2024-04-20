@@ -1,0 +1,308 @@
+1
+00:00:00,000 --> 00:00:05,850
+AWS Key Management Service - Introduction to Encryption in AWS.
+
+2
+00:00:07,120 --> 00:00:09,270
+First, let's define encryption.
+
+3
+00:00:10,010 --> 00:00:14,120
+Encryption works by using an algorithm with a key
+
+4
+00:00:14,130 --> 00:00:18,020
+to convert plaintext, or readable data, into ciphertext.
+
+5
+00:00:19,280 --> 00:00:21,610
+Ciphertext is unreadable data
+
+6
+00:00:22,050 --> 00:00:27,930
+that can only become readable again when decrypted with the right key.
+
+7
+00:00:28,090 --> 00:00:31,890
+Protecting and managing keys becomes a critical part of any encryption solution.
+
+8
+00:00:34,710 --> 00:00:37,740
+Using a hardware security module, or HSM,
+
+9
+00:00:37,840 --> 00:00:40,860
+is a best practice to maximize key security.
+
+10
+00:00:41,750 --> 00:00:42,750
+An HSM
+
+11
+00:00:42,870 --> 00:00:44,840
+is a specialized computing device
+
+12
+00:00:44,950 --> 00:00:49,220
+that has security controls to prevent encryption keys from leaving the device.
+
+13
+00:00:50,370 --> 00:00:51,480
+Tamper response
+
+14
+00:00:51,620 --> 00:00:54,090
+is one such control in modern HSMs.
+
+15
+00:00:54,870 --> 00:00:56,840
+When an HSM detects physical
+
+16
+00:00:56,950 --> 00:01:00,950
+or logical attempts to access plaintext keys without authorization,
+
+17
+00:01:00,990 --> 00:01:03,720
+it destroys the keys before the attack succeeds.
+
+18
+00:01:04,390 --> 00:01:06,260
+At Amazon Web Services, or AWS,
+
+19
+00:01:07,240 --> 00:01:09,250
+we offer two services that use
+
+20
+00:01:09,430 --> 00:01:11,640
+HSMs to protect customers' keys.
+
+21
+00:01:12,350 --> 00:01:18,410
+You can have AWS Key Management Service, or AWS KMS, which manages a fleet of HSMs
+
+22
+00:01:18,410 --> 00:01:25,880
+on your behalf. Or you can manage your own HSMs by using AWS CloudHSM.
+
+23
+00:01:26,780 --> 00:01:28,870
+In both AWS KMS
+
+24
+00:01:29,000 --> 00:01:30,240
+and CloudHSM,
+
+25
+00:01:31,340 --> 00:01:32,190
+HSMs are validated
+
+26
+00:01:32,360 --> 00:01:34,680
+under the FIPS 140-2 program,
+
+27
+00:01:34,820 --> 00:01:37,690
+the standard for evaluating cryptographic modules.
+
+28
+00:01:40,920 --> 00:01:42,570
+Envelope encryption.
+
+29
+00:01:44,170 --> 00:01:47,970
+The keys in AWS KMS or CloudHSM can be
+
+30
+00:01:47,970 --> 00:01:51,770
+used to encrypt data directly or encrypt other keys.
+
+31
+00:01:57,920 --> 00:02:01,100
+Envelope encryption is the practice of encrypting
+
+32
+00:02:01,100 --> 00:02:03,770
+plaintext data with a plaintext data key,
+
+33
+00:02:04,590 --> 00:02:06,220
+and then encrypting the data key
+
+34
+00:02:06,380 --> 00:02:07,350
+under another key.
+
+35
+00:02:09,620 --> 00:02:10,630
+In the HSM,
+
+36
+00:02:10,740 --> 00:02:11,870
+the plaintext key
+
+37
+00:02:11,990 --> 00:02:14,260
+is used to encrypt a copy of the data key.
+
+38
+00:02:15,330 --> 00:02:16,340
+The application
+
+39
+00:02:16,470 --> 00:02:18,360
+can then store the encrypted data key
+
+40
+00:02:18,510 --> 00:02:19,830
+with the encrypted data.
+
+41
+00:02:20,520 --> 00:02:22,700
+Once the application encrypts the data,
+
+42
+00:02:22,830 --> 00:02:23,940
+the best practice
+
+43
+00:02:24,360 --> 00:02:27,050
+is to delete the plaintext data key from its memory.
+
+44
+00:02:27,750 --> 00:02:29,050
+To decrypt the data,
+
+45
+00:02:29,170 --> 00:02:31,310
+you will first need to obtain the plaintext data
+
+46
+00:02:31,310 --> 00:02:34,420
+key again by decrypting the stored encrypted data key.
+
+47
+00:02:38,410 --> 00:02:39,970
+Independent key management.
+
+48
+00:02:40,580 --> 00:02:42,710
+While AWS KMS
+
+49
+00:02:42,820 --> 00:02:47,470
+and AWS CloudHSM can protect plaintext keys on your behalf,
+
+50
+00:02:47,640 --> 00:02:51,590
+you are still responsible for managing access controls to your keys.
+
+51
+00:02:52,920 --> 00:02:55,050
+Using AWS KMS,
+
+52
+00:02:55,170 --> 00:02:56,080
+you can assign
+
+53
+00:02:56,220 --> 00:02:59,270
+one set of administrators who can manage only keys
+
+54
+00:02:59,700 --> 00:03:01,930
+and a different set of administrators who can
+
+55
+00:03:01,930 --> 00:03:04,850
+manage only access to the underlying encrypted data.
+
+56
+00:03:06,050 --> 00:03:09,400
+This configuration helps provide the separation of duties
+
+57
+00:03:09,400 --> 00:03:14,840
+you might want to avoid accidentally allowing unauthorized users to decrypt data.
+
+58
+00:03:17,380 --> 00:03:21,400
+Encrypting data at rest and in motion.
+
+59
+00:03:21,860 --> 00:03:24,010
+All AWS services that handle customer data
+
+60
+00:03:24,150 --> 00:03:26,070
+support encrypting data at rest
+
+61
+00:03:26,200 --> 00:03:27,080
+and in motion.
+
+62
+00:03:27,770 --> 00:03:35,460
+All AWS services that offer encryption at rest by using AWS KMS or AWS CloudHSM
+
+63
+00:03:35,690 --> 00:03:39,170
+use an AES-256 encryption algorithm.
+
+64
+00:03:39,980 --> 00:03:43,410
+None of these services store plaintext encryption keys at rest.
+
+65
+00:03:44,160 --> 00:03:46,070
+When encrypting data in motion,
+
+66
+00:03:46,190 --> 00:03:49,330
+AWS services use the Transport Layer Security, or TLS,
+
+67
+00:03:49,370 --> 00:03:55,340
+protocol to provide encryption between your application and the AWS service.
+
+68
+00:03:55,990 --> 00:04:02,190
+AWS has developed our own implementation of TLS known as s2n, or signal to noise,
+
+69
+00:04:02,200 --> 00:04:04,300
+which were designed to be small and fast.
+
+70
+00:04:05,370 --> 00:04:06,890
+Implementing TLS
+
+71
+00:04:06,990 --> 00:04:10,540
+requires the use of encryption keys and digital certificates
+
+72
+00:04:10,680 --> 00:04:12,660
+that assert the ownership of those keys.
+
+73
+00:04:13,820 --> 00:04:15,890
+AWS Certificate Manager and
+
+74
+00:04:16,440 --> 00:04:18,760
+AWS Private Certificate Authority can help you
+
+75
+00:04:18,760 --> 00:04:20,910
+issue and rotate digital certificates.
+
+76
+00:04:21,890 --> 00:04:27,250
+Both services also use a combination of AWS KMS and AWS CloudHSM
+
+77
+00:04:28,090 --> 00:04:32,090
+to generate and protect the keys used in the digital certificates they issue.
+
