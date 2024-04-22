@@ -1,15 +1,22 @@
-Here is a statement:
 
-<statement>
-{{text}}
-</statement>
 
-Classify the statement as true, false or ambiguous;
-Write the answer in JSON format using the following example:
+Human: Here is a statement of a new law:
+
+<law>
+  {{text}}
+</law>
+
+Here is knowledge base information relevant to the statement:
+
+<knowledge_base_info>
+  {{knowledge_base_info}}
+</knowledge_base_info>
+
+Look for divergences between the regulations and the new law statement, and for every divergence, list them.
+List them in JSON format using the following example:
 <example>
 {
   "statement": "The statement text",
-  "classification": "true|false|ambiguous",
   "justification": "The justification for the classification"
 }
 </example>

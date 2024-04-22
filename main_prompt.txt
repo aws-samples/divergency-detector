@@ -1,20 +1,19 @@
-Human: Here is a text:
 
-<text>
+Human: Here is a proposal of a new law:
+
+<law>
     {{text}}
-</text>
+</law>
 
-List the statements of the text and classify each statements as true, false or ambiguous. Only show the false statements. List in JSON format like this example:
+List the statements of the law. List in JSON format like this example:
 
 <example>
 [
   {
-    "original_statement": "some statement",
-    "truth_value": "true|false|ambiguous"
+    "original_statement": "Some statement",
   },
   {
-    "original_statement": "another statement",
-    "truth_value": "true|false|ambiguous"
+    "original_statement": "Another statement",
   }
 ]
 </example>
