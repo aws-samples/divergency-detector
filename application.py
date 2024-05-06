@@ -43,9 +43,6 @@ def process_file():
        
         
         source_file_name = s3_source_location.split('/')[-1]
-       
-
-        print(source_file_name)
 
         deep_answer_record['sourceFileName'] = source_file_name
         json_records.append(deep_answer_record)

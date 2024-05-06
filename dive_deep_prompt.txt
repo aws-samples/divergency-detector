@@ -2,9 +2,9 @@
 
 Human: Here is a statement of a new law:
 
-<law>
+<text>
   {{text}}
-</law>
+</text>
 
 Here is knowledge base information relevant to the statement:
 
@@ -21,6 +21,7 @@ List them in JSON format using the following example:
 }
 </example>
 
-Write only the JSON content and nothing else.
+Write only the JSON content and nothing else. Statements separated by commas, such as "a faixa etária com maior população masculina é de 20 a 24 anos, e na população feminina é de 40 a 44 anos" must be considered as a single statement, such as {"statement":"a faixa etária com maior população masculina é de 20 a 24 anos, e na população feminina é de 40 a 44 anos."...}. Do not include brackets in the answer.
+
 
 Assistant:

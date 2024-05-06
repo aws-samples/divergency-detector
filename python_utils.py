@@ -73,7 +73,6 @@ def ask_claude(prompt_text, knowledge_base_id, kb_query, DEBUG=False):
 
             response_body = json.loads(response.get("body").read())
             results = get_text(response_body).lower().strip()
-
             request_time = round(time.time()-start_time,2)
             if DEBUG:
                 print("Recieved:",results)

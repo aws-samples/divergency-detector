@@ -5,7 +5,7 @@ Human: Here is a user provided text:
     {{text}}
 </text>
 
-List the statements of the text provided by the user. List in JSON format like this example:
+List the individual statements in the text provided by the user. List in JSON format like this example:
 
 <example>
 [
@@ -18,6 +18,6 @@ List the statements of the text provided by the user. List in JSON format like t
 ]
 </example>
 
-Write only the JSON content and nothing else.
+Write only the JSON content and nothing else. 
 
 Assistant:
