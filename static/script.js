@@ -1,3 +1,4 @@
+
 const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
 const form = document.getElementById('upload-form');
 const fileInput = document.getElementById('file-input');
@@ -6,6 +7,11 @@ const loaderContainer = document.querySelector('.loader-container');
 const body = document.querySelector('body');
 const MAX_INTERACTIONS_PER_PAGE = 3;
 const darkModeToggle = document.getElementById('dark-mode-toggle');
+const fileNameSpan = document.getElementById('file-name');
+const initialState = document.getElementById('initial-state');
+const mainContent = document.getElementById('main-content');
+const tryAnotherFileButton = document.getElementById('try-another-file');
+const paginationContainer = document.getElementById('pagination-container');
 
 let currentPage = 0;
 const pages = [];
@@ -21,31 +27,43 @@ updatePages();
 displayInteractions();
 toggleDarkMode(isDarkMode);
 
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
+// Adicionar um ouvinte de evento para quando um arquivo for selecionado
+fileInput.addEventListener('change', async function() {
+  // Obter o nome do arquivo selecionado
+  const fileName = this.files[0].name;
+
+  // Atualizar o conteúdo do span com o nome do arquivo
+  fileNameSpan.textContent = fileName;
+
+  // Show the loader container
   loaderContainer.style.display = 'flex';
-  const formData = new FormData();
-  formData.append('file', fileInput.files[0]);
+
   try {
+    const formData = new FormData();
+    formData.append('file', fileInput.files[0]);
+
     const response = await fetch('/process', {
       method: 'POST',
       body: formData
     });
     const data = await response.json();
-    const fileName = fileInput.files[0].name;
     const timestamp = new Date().getTime();
     const interaction = { fileName, data, timestamp };
     interactions.push(interaction); // Add new interaction at the end
     updatePages();
     displayInteractions();
     saveInteractionsToLocalStorage();
+
+    initialState.style.display = 'none';
+    mainContent.style.display = 'block';
+    paginationContainer.style.display = 'flex'; // Show the pagination container
   } catch (error) {
     console.error('Error:', error);
   } finally {
+    // Hide the loader container
     loaderContainer.style.display = 'none';
   }
 });
-
 function displayInteractions() {
   responseContainer.innerHTML = '';
   // Display the current page
@@ -78,36 +96,58 @@ function displayInteractions() {
         for (const record of interaction.data) {
           const itemContainer = document.createElement('div');
           itemContainer.classList.add('item-container');
+
+          const itemHeaderElement = document.createElement('div');
+          itemHeaderElement.classList.add('item-header');
           const itemNumberElement = document.createElement('div');
           itemNumberElement.classList.add('item-number');
           itemNumberElement.textContent = itemNumber;
-          itemContainer.appendChild(itemNumberElement);
+          const sourceFileContainer = document.createElement('div');
+          sourceFileContainer.classList.add('source-file-container');
+          const sourceFileTooltip = document.createElement('span');
+          sourceFileTooltip.classList.add('source-file-tooltip');
+          sourceFileTooltip.textContent = record.sourceFileName || 'N/A';
+          const sourceFileLabel = document.createElement('span');
+          sourceFileLabel.classList.add('source-file-label');
+          sourceFileLabel.textContent = 'Fonte';
+          sourceFileContainer.appendChild(sourceFileTooltip);
+          sourceFileContainer.appendChild(sourceFileLabel);
+          
+          itemHeaderElement.appendChild(sourceFileContainer);
+          
+          itemHeaderElement.appendChild(sourceFileContainer);
+          itemHeaderElement.appendChild(itemNumberElement);
+          itemContainer.appendChild(itemHeaderElement);
 
-          // Prioritize statement display:
           for (const [key, value] of Object.entries(record)) {
             if (key === 'statement') {
               const statementCell = document.createElement('div');
               statementCell.classList.add('cell', 'statement');
-              statementCell.textContent = 'Declaração: ';
-              itemContainer.appendChild(statementCell);
+              const statementLabelCell = document.createElement('span');
+              statementLabelCell.classList.add('cell-label');
+              statementLabelCell.textContent = 'Declaração:';
+              statementCell.appendChild(statementLabelCell);
               const statementValueCell = document.createElement('div');
-              statementValueCell.classList.add('cell', 'statement-value');
+              statementValueCell.classList.add('cell-value');
               statementValueCell.textContent = value;
-              itemContainer.appendChild(statementValueCell);
+              statementCell.appendChild(statementValueCell);
+              itemContainer.appendChild(statementCell);
             }
           }
 
-          // Then display justification:
           for (const [key, value] of Object.entries(record)) {
             if (key === 'justification') {
-              const justificationCell = document.createElement('div');
-              justificationCell.classList.add('cell', 'justification');
-              justificationCell.textContent = 'Justificativa: ';
-              itemContainer.appendChild(justificationCell);
-              const justificationValueCell = document.createElement('div');
-              justificationValueCell.classList.add('cell', 'justification-value');
-              justificationValueCell.textContent = value;
-              itemContainer.appendChild(justificationValueCell);
+              const divergenceCell = document.createElement('div');
+              divergenceCell.classList.add('cell', 'divergence');
+              const divergenceLabelCell = document.createElement('span');
+              divergenceLabelCell.classList.add('cell-label');
+              divergenceLabelCell.textContent = 'Divergência:';
+              divergenceCell.appendChild(divergenceLabelCell);
+              const divergenceValueCell = document.createElement('div');
+              divergenceValueCell.classList.add('cell-value');
+              divergenceValueCell.textContent = value;
+              divergenceCell.appendChild(divergenceValueCell);
+              itemContainer.appendChild(divergenceCell);
             }
           }
 
@@ -203,4 +243,38 @@ darkModeToggle.addEventListener('click', () => {
   const isDarkMode = body.classList.contains('dark-mode');
   toggleDarkMode(!isDarkMode);
   localStorage.setItem('isDarkMode', !isDarkMode);
+});
+
+const dropZone = document.querySelector('.drop-zone');
+
+dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('dragover');
+});
+
+dropZone.addEventListener('dragleave', () => {
+    dropZone.classList.remove('dragover');
+});
+
+dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    fileInput.files = e.dataTransfer.files;
+    const fileName = file.name;
+    fileNameSpan.textContent = fileName;
+});
+
+
+fileInput.addEventListener('change', function() {
+  initialState.style.display = 'none';
+  mainContent.style.display = 'block';
+});
+
+tryAnotherFileButton.addEventListener('click', function() {
+  initialState.style.display = 'flex';
+  mainContent.style.display = 'none';
+  paginationContainer.style.display = 'none'; // Hide the pagination container
+  fileInput.value = ''; // Clear the selected file
+  fileNameSpan.textContent = ''; // Clear the file name
 });

@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Verificador</title>
+    <title>O Editor-Chefe</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-<body>
-    <div class="header dark-mode-element" style="background-color: #007bff;">
-        <h1>Verificador de Afirmações</h1>
+  <body>
+    <div class="header dark-mode-element" style="background-color: #3d5a80;">
+        <h1>O Editor-Chefe</h1>
         <div class="dark-mode-toggle dark-mode-element" id="dark-mode-toggle">🌙</div>
     </div>
     <div class="content">
-        <form id="upload-form" enctype="multipart/form-data">
-            <div class="form-group dark-mode-element">
-                <input type="file" id="file-input" name="file" required class="dark-mode-element">
-                <button type="submit" class="dark-mode-element">Enviar</button>
-                <div class="loader-container dark-mode-element">
-                    <span>Processando arquivo...</span>
-                    <div class="loader dark-mode-element"></div>
+        <div id="initial-state" class="initial-state">
+            <div class="file-input-container">
+                <div class="file-input">
+                    <label for="file-input" class="btn dark-mode-element">Selecionar arquivo</label>
+                    <input type="file" id="file-input" name="file" required class="dark-mode-element">
+                    <span id="file-name"></span>
                 </div>
             </div>
-        </form>
-        <div class="chat-container dark-mode-element" id="response-container"></div>
+            <span class="or-text">ou</span>
+            <div class="drop-zone dark-mode-element">
+                <span>Arraste e solte o arquivo aqui</span>
+            </div>
+        </div>
+        <div id="main-content" class="main-content" style="display: none;">
+    <div class="file-input-container">
+        <button id="try-another-file" class="try-another-file">
+            <i class="fas fa-plus"></i> Tentar outro arquivo
+        </button>
+        <div class="loader-container dark-mode-element">
+            <span>Processando arquivo...</span>
+            <div class="loader dark-mode-element"></div>
+        </div>
+    </div>
+    <form id="upload-form" enctype="multipart/form-data">
+    </form>
+    <div class="chat-container dark-mode-element" id="response-container"></div>
+    <div class="pagination-container dark-mode-element" id="pagination-container"></div>
+</div>
     </div>
     <div class="pagination-container dark-mode-element" id="pagination-container"></div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
-</body>
 </html>

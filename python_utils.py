@@ -16,10 +16,10 @@ def ask_claude(prompt_text, knowledge_base_id, kb_query, DEBUG=False):
     MAX_ATTEMPTS = 5
     if not "Assistant:" in prompt_text:
         prompt_text = "\n\nHuman:" + prompt_text + "\n\Assistant: "
-    
+    s3_source_location = ''
     if kb_query:
         # Create the Bedrock Knowledge Base client
-        bedrock_client = boto3.client('bedrock-agent-runtime')
+        bedrock_client = boto3.client('bedrock-agent-runtime', region_name='us-east-1')
 
         # Query the Bedrock Knowledge Base with the prompt text
         knowledge_base_retrieve = bedrock_client.retrieve(
@@ -29,7 +29,7 @@ def ask_claude(prompt_text, knowledge_base_id, kb_query, DEBUG=False):
             }
         )
         knowledge_base_info = knowledge_base_retrieve['retrievalResults'][0]['content']['text']
-        print("Knowledge Base Info: " + knowledge_base_info + "\n")
+        s3_source_location = knowledge_base_retrieve['retrievalResults'][0]['location']['s3Location']['uri']
         print("-" * 80)
 
         prompt_text = prompt_text.replace('{{knowledge_base_info}}', knowledge_base_info)
@@ -88,8 +88,8 @@ def ask_claude(prompt_text, knowledge_base_id, kb_query, DEBUG=False):
                 break
             else:#retry in 10 seconds
                 time.sleep(10)
-
-    return results
+    
+    return results, s3_source_location
 
 def read_file(file_name):
     file = open(file_name, "r")

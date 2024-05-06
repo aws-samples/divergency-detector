@@ -12,7 +12,7 @@ Here is knowledge base information relevant to the statement:
   {{knowledge_base_info}}
 </knowledge_base_info>
 
-Look for divergences between the regulations and the new law statement, and for every divergence, list them.
+Look for divergences between the user provided text and the knowledge bases, and for every divergence, list them.
 List them in JSON format using the following example:
 <example>
 {

@@ -1,11 +1,11 @@
 
-Human: Here is a proposal of a new law:
+Human: Here is a user provided text:
 
-<law>
+<text>
     {{text}}
-</law>
+</text>
 
-List the statements of the law. List in JSON format like this example:
+List the statements of the text provided by the user. List in JSON format like this example:
 
 <example>
 [

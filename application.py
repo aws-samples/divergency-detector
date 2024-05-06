@@ -5,8 +5,7 @@ import json
 import time
 import os
 
-# Import the necessary functions from the modified classify_statements.py
-from classify_statements import get_text, ask_claude, read_file, clean_text
+from python_utils import get_text, ask_claude, read_file, clean_text
 
 application = Flask(__name__)
 application.static_folder = 'static'
@@ -24,10 +23,10 @@ def process_file():
     cleaned_text = clean_text(content)
 
     # Replace 'your_knowledge_base_id' with the actual ID or name of your Bedrock Knowledge Base
-    knowledge_base_id = 'BDZCQVC7FT'
+    knowledge_base_id = 'WKHIYMT04G'
 
     prompt_template = read_file('main_prompt.txt').replace('{{text}}', cleaned_text)
-    answer = ask_claude(prompt_template, knowledge_base_id, kb_query=None,  DEBUG=False)
+    answer, _ = ask_claude(prompt_template, knowledge_base_id, kb_query=None, DEBUG=False)
 
     print("Statements: " + answer + "\n")
 
@@ -37,12 +36,22 @@ def process_file():
         deep_record = answer_record['original_statement']
         dive_deep_prompt_template = read_file('dive_deep_prompt.txt').replace('{{text}}', deep_record)
         print("Deep Record: " + deep_record + "\n")
-        deep_answer = ask_claude(dive_deep_prompt_template, knowledge_base_id, deep_record, DEBUG=False)
+        deep_answer, s3_source_location = ask_claude(dive_deep_prompt_template, knowledge_base_id, deep_record, DEBUG=False)
         print("Deep Answer: " + deep_answer + "\n")
         deep_answer_record = json.loads(deep_answer)
+
+       
+        
+        source_file_name = s3_source_location.split('/')[-1]
+       
+
+        print(source_file_name)
+
+        deep_answer_record['sourceFileName'] = source_file_name
         json_records.append(deep_answer_record)
+
     print("-" * 80)
     return jsonify(json_records)
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    application.run(debug=True) 

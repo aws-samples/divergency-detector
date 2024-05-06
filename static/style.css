@@ -4,7 +4,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa; /* Lighter background */
-  color: #343a40; /* Darker text color for contrast */
+  color: #000000; /* Darker text color for contrast */
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-  background-color: #007bff; /* Maintained blue header */
+  background-color: #3d5a80; /* Maintained blue header */
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -54,7 +54,7 @@ body {
 }
 
 .form-group button {
-  background-color: #007bff;
+  background-color: #3d5a80;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -76,7 +76,7 @@ body {
 
 .loader {
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #007bff; 
+  border-top: 4px solid #3d5a80; 
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -117,7 +117,7 @@ body {
 }
 
 .file-name {
-  background-color: #007bff;
+  background-color: #3d5a80;
   color: #fff;
   padding: 5px 10px;
   border-radius: 3px;
@@ -132,11 +132,20 @@ body {
   background-color: #fff;
 }
 
+.item-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
 .item-number {
+  font-weight: bold;
+  margin-right: 10px;
   position: absolute;
   top: -12px;
   left: -12px;
-  background-color: #007bff; 
+  background-color: #3d5a80;
   color: #fff;
   width: 24px;
   height: 24px;
@@ -144,7 +153,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+}
+
+.source-file-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+}
+
+.source-file-label {
+  margin-right: 5px;
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  background-color: #3d5a80;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.source-file-tooltip {
+  position: absolute;
+  top: -25px;
+  right: 25px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.source-file-container:hover .source-file-tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 .no-results {
@@ -163,7 +209,7 @@ body {
 
 .pagination-container button {
   margin: 0 5px;
-  background-color: #007bff;
+  background-color: #3d5a80;
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -184,29 +230,29 @@ body {
 
 /* Statement and Justification Styles */
 .cell {
+  display: flex;
+  align-items: center;
   padding: 5px;
-  border: 1px solid #dee2e6; 
+  border: 1px solid #dee2e6;
 }
 
-.statement {
-  font-weight: bold;
-  background-color: #e8f0fe; /* Light blue */
-  color: #00ff1e; /* Dark blue text */
+.cell-label {
+  padding: 5px;
+  border-right: 1px solid #dee2e6;
 }
 
-.justification {
-  font-weight: bold;
-  background-color: #e8f0fe; /* Light yellow */ 
-  color: #cb9800; /* Dark yellow text */ 
+.statement .cell-label {
+  color: #3d5a80;
 }
 
-.statement-value,
-.justification-value {
+.divergence .cell-label {
+  color: #ee6c4d;
+}
+
+.cell-value {
+  padding: 5px;
   flex-grow: 1;
 }
-
-/* ... (Dark mode styles - same as before) */ 
-
 
 /* Dark Mode Styles */
 body.dark-mode {
@@ -257,6 +303,11 @@ body.dark-mode {
   background-color: #525865;
 }
 
+.dark-mode .source-file-label {
+  background-color: #525865;
+  color: #f5f5f5;
+}
+
 .dark-mode .no-results {
   color: #bbb; 
 }
@@ -277,36 +328,169 @@ body.dark-mode {
   background-color: #444;
 }
 
-.cell {
-  padding: 5px;
-  border: 1px solid #ccc;
-}
-
-.statement {
-  font-weight: bold;
-  background-color: #f2f2f2;
-}
-
-.justification {
-  font-weight: bold;
-  background-color: #e6e6e6;
-}
-
-.statement-value,
-.justification-value {
-  flex-grow: 1;
-}
-
 .dark-mode .cell {
   border-color: #555555;
 }
 
-.dark-mode .statement {
-  background-color: #454a56;
-  color: #00ff1e;
+.dark-mode .statement .cell-label {
+  color: #ffc107;
 }
 
-.dark-mode .justification {
-  background-color: #454a56;
-  color: #ffc001; 
+.dark-mode .divergence .cell-label {
+  color: #ffc001;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.drop-zone.dragover {
+  border-color: #3d5a80;
+}
+
+.dark-mode .drop-zone {
+  border-color: #555;
+}
+
+.dark-mode .drop-zone.dragover {
+  border-color: #3d5a80;
+}
+
+.initial-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.file-input-container {
+  margin-bottom: 20px;
+}
+
+.try-another-file {
+  background-color: #ee6c4d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.try-another-file i {
+  margin-right: 5px;
+}
+
+.try-another-file:hover {
+  background-color: #0069d9;
+}
+
+.dark-mode .try-another-file {
+  background-color: #525865;
+  color: #f5f5f5;
+}
+
+.dark-mode .try-another-file:hover {
+  background-color: #686e7b;
+}
+
+.file-input {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.file-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.file-input label {
+  background-color: #ee6c4d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-input label:hover {
+  background-color: #0069d9;
+}
+
+.file-input input[type="file"] {
+  display: none;
+}
+
+.file-input span {
+  margin-left: 10px;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.dark-mode .file-input label {
+  background-color: #525865;
+  color: #f5f5f5;
+}
+
+.dark-mode .file-input label:hover {
+  background-color: #686e7b;
+}
+
+.initial-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+.file-input-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.file-input label {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.file-input span {
+  font-size: 1.2rem;
+}
+
+.drop-zone {
+  border: 4px dashed #ccc;
+  padding: 3rem;
+  font-size: 1.5rem;
+  width: 80%;
+  max-width: 600px;
+}
+
+.drop-zone.dragover {
+  border-color: #3d5a80;
+}
+
+@media (max-width: 768px) {
+  .drop-zone {
+    width: 90%;
+  }
+}
+
+.or-text {
+  font-size: 1.5rem;
+  margin: 1rem 0;
 }
