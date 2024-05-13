@@ -43,7 +43,8 @@
     <div class="pagination-container dark-mode-element" id="pagination-container"></div>
 
     <script>
-        var scriptSrc = "{{ url_for('static', filename='script.js') | js_encode }}";
+        var scriptSrc = "{{ url_for('static', filename='script.js') }}";
+        scriptSrc = ESAPI.encoder().encodeForJavaScript(scriptSrc);
         var scriptElement = document.createElement('script');
         scriptElement.src = scriptSrc;
         document.body.appendChild(scriptElement);
