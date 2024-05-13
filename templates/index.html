@@ -42,6 +42,11 @@
     </div>
     <div class="pagination-container dark-mode-element" id="pagination-container"></div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        var scriptSrc = "{{ url_for('static', filename='script.js') | js_encode }}";
+        var scriptElement = document.createElement('script');
+        scriptElement.src = scriptSrc;
+        document.body.appendChild(scriptElement);
+    </script>
   </body>
 </html>
