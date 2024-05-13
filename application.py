@@ -23,7 +23,7 @@ def process_file():
     cleaned_text = clean_text(content)
 
     # Replace 'your_knowledge_base_id' with the actual ID or name of your Bedrock Knowledge Base
-    knowledge_base_id = 'WKHIYMT04G'
+    knowledge_base_id = 'your_knowledge_base_id'
 
     prompt_template = read_file('main_prompt.txt').replace('{{text}}', cleaned_text)
     answer, _ = ask_claude(prompt_template, knowledge_base_id, kb_query=None, DEBUG=False)
