@@ -27,12 +27,9 @@ updatePages();
 displayInteractions();
 toggleDarkMode(isDarkMode);
 
-// Adicionar um ouvinte de evento para quando um arquivo for selecionado
 fileInput.addEventListener('change', async function() {
-  // Obter o nome do arquivo selecionado
   const fileName = this.files[0].name;
 
-  // Atualizar o conteúdo do span com o nome do arquivo
   fileNameSpan.textContent = fileName;
 
   // Show the loader container

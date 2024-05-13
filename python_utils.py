@@ -85,13 +85,11 @@ def ask_claude(prompt_text, knowledge_base_id, kb_query, DEBUG=False):
                 results = str(e)
                 request_time = -1
                 break
-            else:#retry in 10 seconds
-                time.sleep(10)
     
     return results, s3_source_location
 
 def read_file(file_name):
-    file = open(file_name, "r")
+    file = open(file_name, "r", encoding="utf-8")
     content = file.read()
     file.close()
     return content
@@ -147,7 +145,7 @@ def main(video_script_file_name, output_folder_name):
     if (len(json_records)>0):     
         json_file_name = output_folder_name + '/' + base_name + ".json"
         json_records_string = json.dumps(json_records, indent=2)
-        with open(json_file_name, "w") as write_file:
+        with open(json_file_name, "w", encoding="utf-8") as write_file:
             print(json_records_string)
             print('writing file ' + json_file_name)
             write_file.write(json_records_string)

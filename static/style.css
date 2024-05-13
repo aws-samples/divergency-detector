@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Base Styles (Light Mode) */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa; /* Lighter background */
-  color: #000000; /* Darker text color for contrast */
+  background-color: #f8f9fa; 
+  color: #000000; 
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,7 +13,7 @@ body {
 }
 
 .header {
-  background-color: #3d5a80; /* Maintained blue header */
+  background-color: #3d5a80; 
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -48,7 +47,7 @@ body {
 .form-group input[type="file"] {
   flex-grow: 1;
   padding: 10px;
-  border: 1px solid #ced4da; /* Lighter border */
+  border: 1px solid #ced4da; 
   border-radius: 3px;
   font-size: 16px;
 }
@@ -65,7 +64,7 @@ body {
 }
 
 .form-group button:hover {
-  background-color: #0069d9; /* Slightly darker blue on hover */
+  background-color: #0069d9; 
 }
 
 .loader-container {
@@ -91,7 +90,7 @@ body {
 .chat-container {
   flex: 1;
   overflow-y: auto;
-  border: 1px solid #dee2e6; /* Lighter border */
+  border: 1px solid #dee2e6; 
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -195,7 +194,7 @@ body {
 
 .no-results {
   font-style: italic;
-  color: #6c757d; /* Lighter gray */
+  color: #6c757d; 
 }
 
 .pagination-container {
@@ -228,7 +227,6 @@ body {
   color: #6c757d; 
 }
 
-/* Statement and Justification Styles */
 .cell {
   display: flex;
   align-items: center;
@@ -254,7 +252,6 @@ body {
   flex-grow: 1;
 }
 
-/* Dark Mode Styles */
 body.dark-mode {
   background-color: #1e212b; 
   color: #f5f5f5;
