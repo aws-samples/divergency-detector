@@ -1,4 +1,3 @@
-```markdown
 # O Editor-Chefe
 
 O Editor-Chefe is a web application that processes text files and provides insights using natural language processing. It leverages the power of models available in Amazon Bedrock to analyze statements against an Amazon Bedrock Knowledge Base.
@@ -28,4 +27,3 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
-```
