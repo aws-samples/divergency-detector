@@ -1,6 +1,6 @@
-# O Editor-Chefe
+# Divergency Detector
 
-O Editor-Chefe is a web application that processes text files and provides insights using natural language processing. It leverages the power of models available in Amazon Bedrock to analyze statements against an Amazon Bedrock Knowledge Base.
+Divergency Detector is a web application that processes text files and provides insights using natural language processing. It leverages the power of models available in Amazon Bedrock to analyze statements against an Amazon Bedrock Knowledge Base.
 
 ## Prerequisites
 
