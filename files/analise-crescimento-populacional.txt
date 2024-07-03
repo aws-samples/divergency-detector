@@ -1,0 +1,19 @@
+Com base no gráfico de crescimento populacional apresentado, posso fazer a seguinte análise:
+
+Entre 1872 e 1890, houve um crescimento populacional relativamente lento.
+
+De 1890 a 1920, o crescimento se acelerou um pouco em relação ao período anterior.
+
+Entre 1920 e 1940, o crescimento populacional teve uma taxa ainda maior que os intervalos precedentes.
+
+De 1940 a 1970, houve um aumento acentuado na taxa de crescimento populacional, mostrando um dos períodos de maior crescimento registrado.
+
+Entre 1970 e 1991, o crescimento desacelerou ligeiramente em relação ao período anterior, mas ainda manteve um ritmo elevado.
+
+De 1991 a 2010, a taxa de crescimento diminuiu consideravelmente comparada aos intervalos desde 1940.
+
+No último intervalo analisado, de 2010 a 2022, é possível notar uma queda adicional na taxa de crescimento populacional em relação aos períodos anteriores a partir de 1950.
+
+Portanto, os intervalos com maior crescimento foram aqueles entre 1940 e 1991, enquanto o menor crescimento ocorreu no período inicial de 1872 a 1890.
+
+Comparando especificamente o último intervalo de 2010 a 2022 com os intervalos a partir de 1950, fica evidente que a taxa de crescimento populacional diminuiu substancialmente nesse período mais recente.
