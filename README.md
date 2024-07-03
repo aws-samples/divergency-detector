@@ -21,19 +21,19 @@ Na página do IBGE é possível baixar vários datasets e gráficos. O PDF que t
 
 O PDF usado para enriquecer o modelo via knowledge bases faz um resumo dos dados mais relevantes pesquisados durante o CENSO-2022.
 
-Ele pode ser encontrado em [/files/Panorama-do-Censo-2022.pdf](https://github.com/aws-samples/divergency-detector/files/Panorama-do-Censo-2022.pdf)
+Ele pode ser encontrado em [/files/Panorama-do-Censo-2022.pdf](https://github.com/aws-samples/divergency-detector/blob/main/files/Panorama-do-Censo-2022.pdf)
 
 Observe que esse PDF mostra dados essencialmente por imagens e gráficos. Dados sobre crescimento populacional histórico, densidade demográfica, pirâmide etária, entre outros. 
 
 
-[![Video de exploracao do PDF](https://github.com/aws-samples/divergency-detector/files/pdf-censo.png)](https://github.com/aws-samples/divergency-detector/recordings/demo-explanation.mov "CENSO")
+[![Video de exploracao do PDF](https://github.com/aws-samples/divergency-detector/blob/main/files/pdf-censo.png)](https://github.com/aws-samples/divergency-detector/blob/main/recordings/demo-explanation.mov "CENSO")
 
 
 ## Testando a solução
 
 Para testar o modelo, recomenda-se o uso de um texto sobre dados do Brasil cheio de fatos incorretos.
 
-Uma sugestão é o arquivo [/files/texto-incorreto.txt](https://github.com/aws-samples/divergency-detector/files/texto-incorreto.txt)
+Uma sugestão é o arquivo [/files/texto-incorreto.txt](https://github.com/aws-samples/divergency-detector/blob/main/files/texto-incorreto.txt)
 
 
 ## Acessando a solução
@@ -43,7 +43,7 @@ Agora vamos acessar a solução. Ela foi carinhosamente chamada de O Editor Chef
 
     Obs.: a implantação da solução será descrita abaixo 
 
-Para usar a solução, faça o upload do [/files/texto-incorreto.txt](https://github.com/aws-samples/divergency-detector/files/texto-incorreto.txt). 
+Para usar a solução, faça o upload do [/files/texto-incorreto.txt](https://github.com/aws-samples/divergency-detector/blob/main/files/texto-incorreto.txt). 
 
 Após alguns segundos, será mostrada uma lista de divergências encontradas no texto. 
 
@@ -54,7 +54,7 @@ Vamos analisar algumas:
    
 Observe que o modelo fez uma análise das imagens de um PDF para poder dar estas respostas.
 
-Um vídeo de como a solução deveria funcionar está aqui [recordings/demo-editor-chefe.mp4](https://github.com/aws-samples/divergency-detector/recordings/demo-editor-chefe.mp4)
+Um vídeo de como a solução deveria funcionar está aqui [recordings/demo-editor-chefe.mp4](https://github.com/aws-samples/divergency-detector/blob/main/recordings/demo-editor-chefe.mp4)
 
 
 # Como implantar a solução
