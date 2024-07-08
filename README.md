@@ -1,5 +1,9 @@
 # Detector de Divergências
 
+Para ver um vídeo dessa demonstração, acesse
+[![o video de demonstracao](https://github.com/aws-samples/divergency-detector/blob/main/files/youtube-demo.png)](https://youtu.be/3XrG_KXDkac?t=2596 "demonstracao")
+ 
+
 É intuitivo pensar em geração e sumarização de textos ao se falar de Generative AI. 
 Esse repositório traz outros dois casos de uso para essa tecnologia: **interpretação de texto** e **interpretação de imagem**.
 
